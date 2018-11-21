@@ -1,0 +1,59 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": "0",
+      "name": "微信",
+      "image": "ic_wechat",
+      "platform": 0
+    },
+    {
+      "id": "1",
+      "name": "QQ",
+      "image": "ic_qq",
+      "platform": 1
+    },
+    {
+      "id": "2",
+      "name": "朋友圈",
+      "image": "ic_moments",
+      "platform": 2
+    },
+    {
+      "id": "3",
+      "name": "QQ空间",
+      "image": "ic_qzone",
+      "platform": 3
+    },
+    {
+      "id": "4",
+      "name": "微博",
+      "image": "ic_weibo",
+      "platform": 4
+    },
+    {
+      "id": "5",
+      "name": "Telegram",
+      "image": "ic_telegram",
+      "platform": 5
+    },
+    {
+      "id": "6",
+      "name": "复制",
+      "image": "ic_ link",
+      "platform": 6
+    },
+    {
+      "id": "7",
+      "name": "举报",
+      "image": "ic_report",
+      "platform": 7
+    },
+    {
+      "id": "8",
+      "name": "删除",
+      "image": "ic_delete",
+      "platform": 8
+    }
+  ]
+}
