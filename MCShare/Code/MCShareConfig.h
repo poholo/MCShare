@@ -15,8 +15,6 @@ typedef NS_ENUM(NSInteger, SocialPlatform) {
     SocialPlatformWeiBo,
     SocialPlatformTelegram,
     SocialPlatformLink,
-    SocialPlatformReport,
-    SocialPlatformDel
 };
 
 typedef NS_ENUM(NSInteger, ShareType) {
@@ -34,10 +32,8 @@ extern NSString *const QQAppKey;
 extern NSString *const SinaAppID;
 extern NSString *const SinaAppKey;
 
+extern NSString *const kTelegramGroup;
 extern NSString *const kShareAppName;
-
-
-extern NSInteger const kShareErrorCodeDel;
 
 @interface MCShareConfig : NSObject
 

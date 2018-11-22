@@ -9,9 +9,11 @@
 
 @implementation DeviceUtils
 
-//return [SDiOSVersion deviceVersion] == iPhoneX || [SDiOSVersion resolutionSize] == iPhoneXR || [SDiOSVersion resolutionSize] == iPhoneXSMax || [SDiOSVersion resolutionSize] == iPhoneXS;
 + (BOOL)iPhoneX {
-    return [SDiOSVersion deviceVersion] > 15 && [SDiOSVersion deviceVersion] < 21;
+    return [SDiOSVersion deviceVersion] == iPhoneX
+            || [SDiOSVersion deviceVersion] == iPhoneXR
+            || [SDiOSVersion deviceVersion] == iPhoneXS
+            || [SDiOSVersion deviceVersion] == iPhoneXSMax;
 }
 
 + (CGFloat)xTop {

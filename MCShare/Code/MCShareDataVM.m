@@ -71,17 +71,6 @@
 }
 
 - (BOOL)limitHide:(SocialPlatformDto *)dto {
-    if (self.shareDto.sourceDto == nil) {
-        if (dto.platform == SocialPlatformDel) {
-            return YES;
-        } else if (dto.platform == SocialPlatformReport) {
-            return YES;
-        }
-    } else {
-        if (dto.platform == SocialPlatformDel) {
-            return YES;
-        }
-    }
     return NO;
 }
 

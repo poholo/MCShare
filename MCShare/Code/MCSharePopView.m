@@ -282,13 +282,7 @@
 
     SocialPlatformDto *platformDto = self.dataVM.dataList[indexPath.item];
 
-    if (platformDto.platform == SocialPlatformDel) {
-        if (self.compeleteBlock) {
-            self.compeleteBlock(YES, nil);
-        }
-    } else if (platformDto.platform == SocialPlatformReport) {
-
-    } else if (platformDto.platform == SocialPlatformTelegram) {
+    if (platformDto.platform == SocialPlatformTelegram) {
         BOOL success = [self.dataVM share2Telegram];
         [self.dataVM.shareDto logProcess:[NSString stringWithFormat:@"%ld", (long) [ShareDto target:platformDto.platform]]];
         if (self.compeleteBlock) {
@@ -352,7 +346,7 @@
         [path addLineToPoint:CGPointMake(0, scrrenHeight - r)];
         [path addLineToPoint:CGPointMake(0, r)];
         [path closePath];
-        _contentShapeLayer.fillColor = [UIColor rgba:0x191b28e6].CGColor;
+        _contentShapeLayer.fillColor = [MCShareColor whiteColor].CGColor;
         _contentShapeLayer.path = path.CGPath;
     }
     return _contentShapeLayer;
@@ -379,7 +373,7 @@
         _cancelBtn = [UIButton new];
         [_cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
         [_cancelBtn addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchUpInside];
-        [_cancelBtn setBackgroundColor:[MCShareColor colorIII] forState:UIControlStateNormal];
+        [_cancelBtn setBackgroundColor:[MCShareColor colorVI] forState:UIControlStateNormal];
         [_cancelBtn setTitleColor:[MCShareColor colorI] forState:UIControlStateNormal];
         _cancelBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     }

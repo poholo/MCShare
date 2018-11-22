@@ -36,5 +36,8 @@
  * 副主色 - 浅红色
  */
 + (UIColor *)colorV;
-
+/**
+ * 背景色
+ */
++ (UIColor *)colorVI;
 @end

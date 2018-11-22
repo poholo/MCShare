@@ -30,4 +30,8 @@
 }
 
 
++ (UIColor *)colorVI {
+    return [UIColor colorWithHexInt:0xf7f7f9];
+}
+
 @end

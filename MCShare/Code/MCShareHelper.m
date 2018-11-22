@@ -137,7 +137,7 @@
 
 
 + (void)openGroup {
-    NSURL *URL = [NSURL URLWithString:@"https://0.plus/firebull"];
+    NSURL *URL = [NSURL URLWithString:kTelegramGroup];
     if ([UIDevice currentDevice].systemName.floatValue > 10) {
         @weakify(self);
         [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:^(BOOL success) {

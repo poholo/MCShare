@@ -42,18 +42,6 @@
       "name": "复制",
       "image": "ic_ link",
       "platform": 6
-    },
-    {
-      "id": "7",
-      "name": "举报",
-      "image": "ic_report",
-      "platform": 7
-    },
-    {
-      "id": "8",
-      "name": "删除",
-      "image": "ic_delete",
-      "platform": 8
     }
   ]
 }

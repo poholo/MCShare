@@ -17,10 +17,8 @@ NSString *const QQAppID = @"QQAppID";
 NSString *const QQAppKey = @"QQAppKey";
 NSString *const SinaAppID = @"SinaAppID";
 NSString *const SinaAppKey = @"SinaAppKey";
-
+NSString *const kTelegramGroup = @"https://0.plus/firebull";  ///< 你的telegram、币用群组
 NSString *const kShareAppName = @"MCShare";
-
-NSInteger const kShareErrorCodeDel = -99;
 
 @implementation MCShareConfig
 
