@@ -65,6 +65,7 @@
 		1A6665B94E07620999CD99A8 /* SocialShareDataVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialShareDataVM.h; sourceTree = "<group>"; };
 		1A6665C38FF7C40D5CA201FD /* SocialShareConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialShareConfig.h; sourceTree = "<group>"; };
 		1A6665EE583B64B197805255 /* GCDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDGroup.m; sourceTree = "<group>"; };
+		1A6666431EF6D9CE65885BE0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1A6666800238FA320196EBE6 /* GCDReTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDReTimer.h; sourceTree = "<group>"; };
 		1A66678C97248E92491601F3 /* UIColor+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
 		1A6667EB3DEAC1C2A5112199 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
@@ -249,6 +250,7 @@
 				25AA033621A41CD10009A1D9 /* Products */,
 				94C7CC65AA4AE4266966B51C /* Pods */,
 				487283DFD7C182D97719891E /* Frameworks */,
+				1A6666431EF6D9CE65885BE0 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
