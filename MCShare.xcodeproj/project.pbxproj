@@ -66,6 +66,7 @@
 		1A6666431EF6D9CE65885BE0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1A6666800238FA320196EBE6 /* GCDReTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDReTimer.h; sourceTree = "<group>"; };
 		1A66678C97248E92491601F3 /* UIColor+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
+		1A6667BBCAB4C5E326CB5565 /* ScreenShot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ScreenShot.jpg; sourceTree = "<group>"; };
 		1A6667EB3DEAC1C2A5112199 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
 		1A666810B8F9ACF4EFDD81F0 /* UIButton+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BackgroundColor.h"; sourceTree = "<group>"; };
 		1A66681EAB9615C6AFF685EB /* NSObject+ShareApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ShareApi.m"; sourceTree = "<group>"; };
@@ -238,6 +239,14 @@
 			path = GCD;
 			sourceTree = "<group>";
 		};
+		1A666F70A5B6A2071187FAA3 /* ScreenShot */ = {
+			isa = PBXGroup;
+			children = (
+				1A6667BBCAB4C5E326CB5565 /* ScreenShot.jpg */,
+			);
+			path = ScreenShot;
+			sourceTree = "<group>";
+		};
 		25AA032C21A41CD10009A1D9 = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +255,7 @@
 				94C7CC65AA4AE4266966B51C /* Pods */,
 				487283DFD7C182D97719891E /* Frameworks */,
 				1A6666431EF6D9CE65885BE0 /* README.md */,
+				1A666F70A5B6A2071187FAA3 /* ScreenShot */,
 			);
 			sourceTree = "<group>";
 		};
@@ -579,15 +589,17 @@
 			baseConfigurationReference = F106022A4B5AF4208E12CF7B /* Pods-MCShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D8RJFY6RH2;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6FNUHS4H7D;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MCShare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.poholo.MCShare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gymchina.MCShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = RootDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
@@ -598,15 +610,17 @@
 			baseConfigurationReference = F4759F2888BE5ABC76D2044B /* Pods-MCShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D8RJFY6RH2;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6FNUHS4H7D;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MCShare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.poholo.MCShare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gymchina.MCShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = RootDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
