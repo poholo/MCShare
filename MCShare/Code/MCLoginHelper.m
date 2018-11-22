@@ -1,13 +1,13 @@
 
 //
-//  SocialLoginHelper.m
+//  MCLoginHelper.m
 //  WaQuVideo
 //
 //  Created by majiancheng on 16/11/30.
 //  Copyright © 2016年 poholo inc. All rights reserved.
 //
 
-#import "SocialLoginHelper.h"
+#import "MCLoginHelper.h"
 
 #import <LDSDKManager/LDSDKShareService.h>
 
@@ -16,7 +16,7 @@
 #import "LDSDKAuthService.h"
 #import "GCD.h"
 
-@implementation SocialLoginHelper
+@implementation MCLoginHelper
 
 + (void)resgister {
     NSArray *regPlatformConfigList = @[

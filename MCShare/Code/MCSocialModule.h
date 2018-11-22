@@ -1,5 +1,5 @@
 //
-//  SocialModule.h
+//  MCSocialModule.h
 //  poholo
 //
 //  Created by majiancheng on 2017/3/17.
@@ -12,6 +12,6 @@
 
 @end
 
-@interface SocialModule : NSObject<MMModule>
+@interface MCSocialModule : NSObject<MMModule>
 
 @end

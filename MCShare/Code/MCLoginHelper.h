@@ -1,5 +1,5 @@
 //
-//  SocialLoginHelper.h
+//  MCLoginHelper.h
 //  WaQuVideo
 //
 //  Created by majiancheng on 16/11/30.
@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import "SocialShareConfig.h"
+#import "MCShareConfig.h"
 
 
 typedef void (^OauthResult)(NSDictionary * userInfo, NSError * error);
 
-@interface SocialLoginHelper : NSObject
+@interface MCLoginHelper : NSObject
 
 + (void)resgister;
 

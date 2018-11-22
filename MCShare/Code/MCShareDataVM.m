@@ -3,28 +3,28 @@
 // Copyright (c) 2018 poholo Inc. All rights reserved.
 //
 
-#import "SocialShareDataVM.h"
+#import "MCShareDataVM.h"
 
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <ReactiveCocoa.h>
 
-#import "SocialShareConfig.h"
+#import "MCShareConfig.h"
 #import "ShareDto.h"
 #import "WXApi.h"
 #import "SocialPlatformDto.h"
 #import "NSString+URLEncoded.h"
 #import "NSObject+ShareApi.h"
-#import "ShareHelper.h"
-#import "SocialShareHelper.h"
+#import "MCShareHelper.h"
+#import "MCShareHelper.h"
 #import "StringUtils.h"
 
-@interface SocialShareDataVM ()
+@interface MCShareDataVM ()
 
 @property(nonatomic, strong) NSMutableArray<SocialPlatformDto *> *supportPlatforms;
 
 @end
 
-@implementation SocialShareDataVM
+@implementation MCShareDataVM
 
 - (void)parseSupportPlatform {
     if (self.supportPlatforms.count > 0)
@@ -63,9 +63,9 @@
     @weakify(self);
     return [signal map:^id(id value) {
         @strongify(self);
-        [SocialShareConfig share].shareDynamicDto = [ShareDynamicDto createDto:value];
-        self.shareDto.title = self.shareDto.title ?: [SocialShareConfig share].shareDynamicDto.title;
-        self.shareDto.desc = self.shareDto.desc ?: [SocialShareConfig share].shareDynamicDto.desc;
+        [MCShareConfig share].shareDynamicDto = [ShareDynamicDto createDto:value];
+        self.shareDto.title = self.shareDto.title ?: [MCShareConfig share].shareDynamicDto.title;
+        self.shareDto.desc = self.shareDto.desc ?: [MCShareConfig share].shareDynamicDto.desc;
         return nil;
     }];
 }
@@ -93,12 +93,12 @@
 }
 
 - (LDSDKPlatformType)platform:(SocialPlatform)platform {
-    return [SocialShareHelper platform:platform];
+    return [MCShareHelper platform:platform];
 }
 
 
 - (LDSDKShareToModule)shareType:(SocialPlatform)platform {
-    return [SocialShareHelper shareType:platform];
+    return [MCShareHelper shareType:platform];
 }
 
 
@@ -107,7 +107,7 @@
     NSString *text = [StringUtils hasText:self.shareDto.pasteText] ? self.shareDto.pasteText : self.shareDto.title;
     NSString *url = [NSString stringWithFormat:@"tg://msg_url?text=%@&url=%@", [text urlEncode], [self.shareDto.shareUrl urlEncode]];
 
-    BOOL success = [ShareHelper action2Telegram:[NSURL URLWithString:url] schema:schema];
+    BOOL success = [MCShareHelper action2Telegram:[NSURL URLWithString:url] schema:schema];
     return success;
 }
 

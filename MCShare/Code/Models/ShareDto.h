@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "SocialShareConfig.h"
+#import "MCShareConfig.h"
 #import "Dto.h"
 
 @class UIImage;

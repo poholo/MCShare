@@ -4,14 +4,14 @@
 //
 
 #import "LDSDKManager.h"
-#import "SocialShareConfig.h"
+#import "MCShareConfig.h"
 #import "LDSDKShareService.h"
 
 @class ShareDto;
 @class RACSignal;
 
 
-@interface SocialShareDataVM : NSObject
+@interface MCShareDataVM : NSObject
 @property(nonatomic, strong) NSMutableArray *dataList;
 @property(nonatomic, strong) NSNumber *currentPos;
 

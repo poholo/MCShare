@@ -3,7 +3,7 @@
 // Copyright (c) 2018 poholo Inc. All rights reserved.
 //
 
-#import "SocialShareConfig.h"
+#import "MCShareConfig.h"
 #import "ShareDto.h"
 
 #pragma mark - ShareConfig
@@ -22,11 +22,11 @@ NSString *const kShareAppName = @"MCShare";
 
 NSInteger const kShareErrorCodeDel = -99;
 
-@implementation SocialShareConfig
+@implementation MCShareConfig
 
 + (instancetype)share {
     static dispatch_once_t predicate;
-    static SocialShareConfig *instance;
+    static MCShareConfig *instance;
     dispatch_once(&predicate, ^{
         instance = [[self class] new];
     });

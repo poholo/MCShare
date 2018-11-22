@@ -1,27 +1,27 @@
 //
-//  SocialModule.m
+//  MCSocialModule.m
 //  poholo
 //
 //  Created by majiancheng on 2017/3/17.
 //  Copyright © 2017年 poholo inc. All rights reserved.
 //
 
-#import "SocialModule.h"
+#import "MCSocialModule.h"
 
 #import <AlipaySDK/AlipaySDK.h>
 
-#import "SocialLoginHelper.h"
+#import "MCLoginHelper.h"
 #import "LDSDKManager.h"
 
-@interface SocialModule ()
+@interface MCSocialModule ()
 
 @end
 
-@implementation SocialModule
+@implementation MCSocialModule
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    [SocialLoginHelper resgister];
+    [MCLoginHelper resgister];
 
     return YES;
 }

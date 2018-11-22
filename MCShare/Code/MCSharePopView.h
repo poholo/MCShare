@@ -1,5 +1,5 @@
 //
-//  SocialSharePopView.h
+//  MCSharePopView.h
 //  WaQuVideo
 //
 //  Created by majiancheng on 16/11/30.
@@ -11,7 +11,7 @@
 
 @class ShareDto;
 
-@interface SocialSharePopView : MMPopupView
+@interface MCSharePopView : MMPopupView
 
 - (void)show NS_UNAVAILABLE;
 

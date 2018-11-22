@@ -7,11 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "SocialModule.h"
+#import "MCSocialModule.h"
 
 @interface AppDelegate ()
 
-@property(nonatomic, strong) SocialModule *socialModule;
+@property(nonatomic, strong) MCSocialModule *socialModule;
 
 @end
 
@@ -51,9 +51,9 @@
 
 #pragma mark - getter
 
-- (SocialModule *)socialModule {
+- (MCSocialModule *)socialModule {
     if (!_socialModule) {
-        _socialModule = [SocialModule new];
+        _socialModule = [MCSocialModule new];
     }
     return _socialModule;
 }

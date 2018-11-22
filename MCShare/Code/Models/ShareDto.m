@@ -37,7 +37,7 @@
 }
 
 - (void)updatePaste {
-    self.pasteText = [NSString stringWithFormat:@"%@ %@ %@", [StringUtils hasText:self.title] ? self.title : @"", [StringUtils hasText:[SocialShareConfig share].shareDynamicDto.videoDesc] ? [SocialShareConfig share].shareDynamicDto.videoDesc : @"", self.shareUrl];
+    self.pasteText = [NSString stringWithFormat:@"%@ %@ %@", [StringUtils hasText:self.title] ? self.title : @"", [StringUtils hasText:[MCShareConfig share].shareDynamicDto.videoDesc] ? [MCShareConfig share].shareDynamicDto.videoDesc : @"", self.shareUrl];
 
 
 }
@@ -119,11 +119,11 @@
 
 + (NSString *)dynamicHost:(NSString *)url platform:(SocialPlatform)platform {
     NSURLComponents *components = [NSURLComponents componentsWithString:url];
-    NSURL *shareURLHost = [NSURL URLWithString:[SocialShareConfig share].shareDynamicDto.wechatHost];
+    NSURL *shareURLHost = [NSURL URLWithString:[MCShareConfig share].shareDynamicDto.wechatHost];
     if (platform == SocialPlatformWeiBo) {
-        shareURLHost = [NSURL URLWithString:[SocialShareConfig share].shareDynamicDto.sinaHost];
+        shareURLHost = [NSURL URLWithString:[MCShareConfig share].shareDynamicDto.sinaHost];
     } else if (platform == SocialPlatformQQ || platform == SocialPlatformQQZone) {
-        shareURLHost = [NSURL URLWithString:[SocialShareConfig share].shareDynamicDto.qqHost];
+        shareURLHost = [NSURL URLWithString:[MCShareConfig share].shareDynamicDto.qqHost];
     }
     components.host = shareURLHost.host;
     components.scheme = shareURLHost.scheme;

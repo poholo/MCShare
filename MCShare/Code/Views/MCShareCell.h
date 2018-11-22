@@ -1,5 +1,5 @@
 //
-//  SocialShareCell.h
+//  MCShareCell.h
 //  WaQuVideo
 //
 //  Created by majiancheng on 16/11/30.
@@ -10,7 +10,7 @@
 
 @class SocialPlatformDto;
 
-@interface SocialShareCell : UICollectionViewCell
+@interface MCShareCell : UICollectionViewCell
 
 - (void)loadData:(SocialPlatformDto *)dto;
 

@@ -39,7 +39,7 @@ extern NSString *const kShareAppName;
 
 extern NSInteger const kShareErrorCodeDel;
 
-@interface SocialShareConfig : NSObject
+@interface MCShareConfig : NSObject
 
 @property(nonatomic, strong) ShareDynamicDto *shareDynamicDto;
 @property(nonatomic, strong) NSNumber *textShareMode;

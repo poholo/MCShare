@@ -1,21 +1,21 @@
 //
-//  SocialShareCell.m
+//  MCShareCell.m
 //  WaQuVideo
 //
 //  Created by majiancheng on 16/11/30.
 //  Copyright © 2016年 poholo inc. All rights reserved.
 //
 
-#import "SocialShareCell.h"
+#import "MCShareCell.h"
 
 #import <Masonry.h>
 #import <ReactiveCocoa.h>
 
 #import "SocialPlatformDto.h"
-#import "AppColor.h"
+#import "MCShareColor.h"
 
 
-@interface SocialShareCell ()
+@interface MCShareCell ()
 
 @property(nonatomic, strong) UIImageView *iconImageView;
 @property(nonatomic, strong) UILabel *titleLabel;
@@ -23,7 +23,7 @@
 @end
 
 
-@implementation SocialShareCell
+@implementation MCShareCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -49,7 +49,7 @@
         }];
 
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
-        self.titleLabel.textColor = [AppColor colorII];
+        self.titleLabel.textColor = [MCShareColor colorII];
         self.titleLabel.font = [UIFont systemFontOfSize:12];
     }
     return self;

@@ -5,7 +5,7 @@
 
 #import "Dto.h"
 
-#import "SocialShareConfig.h"
+#import "MCShareConfig.h"
 
 @interface SocialPlatformDto : Dto
 

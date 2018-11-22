@@ -17,7 +17,7 @@ MCShare是一个iOS分享组件，旨在减少分享模块的开发工作量，�
                                         desc:@"，接到公交公司报警后，涪城分局城北派出所迅速开展调查工作并依法将违法嫌疑人张某某(女，53岁，雅安市名山区人)传唤至派出所，张某某如实交代了自己因急于下车一时冲动而抢夺方向盘的违法事实，同时表示后悔和自责，希望得到公众谅解。"
                                        image:@"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1903202034,3702680589&fm=55&app=22&f=JPEG?w=121&h=81&s=AD336397508303F1059CBC0D0300E042"
                                    pasteText:@""];
-    SocialSharePopView *sharePopView = [SocialSharePopView new];
+    MCSharePopView *sharePopView = [MCSharePopView new];
     [sharePopView shareCommenShareDto:shareDto callBack:^(BOOL success, NSError *error) {
 
     }];

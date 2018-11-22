@@ -1,31 +1,31 @@
 //
-//  SocialSharePopView.m
+//  MCSharePopView.m
 //  WaQuVideo
 //
 //  Created by majiancheng on 16/11/30.
 //  Copyright © 2016年 poholo inc. All rights reserved.
 //
 
-#import "SocialSharePopView.h"
+#import "MCSharePopView.h"
 
 #import <Masonry.h>
 #import <ReactiveCocoa.h>
 #import <SDWebImage/SDWebImageManager.h>
 
 #import "ShareDto.h"
-#import "SocialShareCell.h"
+#import "MCShareCell.h"
 #import "SocialPlatformDto.h"
-#import "SocialShareDataVM.h"
+#import "MCShareDataVM.h"
 #import "ShareDto.h"
-#import "SocialShareHelper.h"
+#import "MCShareHelper.h"
 #import "ToastUtils.h"
 #import "StringUtils.h"
 #import "UIColor+Extend.h"
-#import "AppColor.h"
+#import "MCShareColor.h"
 #import "UIButton+BackgroundColor.h"
 #import "DeviceUtils.h"
 
-@interface SocialSharePopView () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface MCSharePopView () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property(nonatomic, strong) UIView *backgroundView;
 @property(nonatomic, strong) UIView *contentView;
@@ -38,11 +38,11 @@
 
 @property(nonatomic, copy) void (^compeleteBlock)(BOOL success, NSError *error);
 
-@property(nonatomic, strong) SocialShareDataVM *dataVM;
+@property(nonatomic, strong) MCShareDataVM *dataVM;
 
 @end
 
-@implementation SocialSharePopView
+@implementation MCSharePopView
 
 #pragma mark  interface
 
@@ -175,7 +175,7 @@
 
 - (void)shareCommen:(SocialPlatform)socialPlatform {
     ShareDto *dto = self.dataVM.shareDto;
-    [SocialShareHelper shareCommenShareDto:dto platform:socialPlatform callBack:self.compeleteBlock];
+    [MCShareHelper shareCommenShareDto:dto platform:socialPlatform callBack:self.compeleteBlock];
 }
 
 - (void)openSchema:(SocialPlatform)socialPlatform {
@@ -273,7 +273,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     SocialPlatformDto *platformDto = self.dataVM.dataList[indexPath.item];
-    SocialShareCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[SocialShareCell identifier] forIndexPath:indexPath];
+    MCShareCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[MCShareCell identifier] forIndexPath:indexPath];
     [cell loadData:platformDto];
     return cell;
 }
@@ -299,7 +299,7 @@
         if (socialPlatform == SocialPlatformWeiBo
                 || socialPlatform == SocialPlatformLink
                 || ![self __isPasteShareStyle]) {
-            if (socialPlatform == SocialPlatformQQ && [SocialShareConfig share].textShareMode.boolValue) {
+            if (socialPlatform == SocialPlatformQQ && [MCShareConfig share].textShareMode.boolValue) {
                 [self.dataVM.shareDto updatePaste];
                 [self __copy];
                 [self openSchema:socialPlatform];
@@ -368,7 +368,7 @@
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.backgroundColor = [UIColor clearColor];
-        [_collectionView registerClass:[SocialShareCell class] forCellWithReuseIdentifier:[SocialShareCell identifier]];
+        [_collectionView registerClass:[MCShareCell class] forCellWithReuseIdentifier:[MCShareCell identifier]];
 
     }
     return _collectionView;
@@ -379,8 +379,8 @@
         _cancelBtn = [UIButton new];
         [_cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
         [_cancelBtn addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchUpInside];
-        [_cancelBtn setBackgroundColor:[AppColor colorVII] forState:UIControlStateNormal];
-        [_cancelBtn setTitleColor:[AppColor colorI] forState:UIControlStateNormal];
+        [_cancelBtn setBackgroundColor:[MCShareColor colorIII] forState:UIControlStateNormal];
+        [_cancelBtn setTitleColor:[MCShareColor colorI] forState:UIControlStateNormal];
         _cancelBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     }
     return _cancelBtn;
@@ -389,7 +389,7 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         _titleLabel = [UILabel new];
-        _titleLabel.textColor = [AppColor colorI];
+        _titleLabel.textColor = [MCShareColor colorI];
         _titleLabel.font = [UIFont systemFontOfSize:16];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.numberOfLines = 0;
@@ -400,7 +400,7 @@
 - (UILabel *)mentionLabel {
     if (!_mentionLabel) {
         _mentionLabel = [UILabel new];
-        _mentionLabel.textColor = [AppColor colorI];
+        _mentionLabel.textColor = [MCShareColor colorI];
         _mentionLabel.font = [UIFont systemFontOfSize:13];
         _mentionLabel.textAlignment = NSTextAlignmentCenter;
         _mentionLabel.text = @"马上粘贴给朋友";
@@ -408,9 +408,9 @@
     return _mentionLabel;
 }
 
-- (SocialShareDataVM *)dataVM {
+- (MCShareDataVM *)dataVM {
     if (!_dataVM) {
-        _dataVM = [SocialShareDataVM new];
+        _dataVM = [MCShareDataVM new];
     }
     return _dataVM;
 }

@@ -8,8 +8,8 @@
 
 #import "ViewController.h"
 #import "UIButton+BackgroundColor.h"
-#import "AppColor.h"
-#import "SocialSharePopView.h"
+#import "MCShareColor.h"
+#import "MCSharePopView.h"
 #import "ShareDto.h"
 
 @interface ViewController ()
@@ -28,7 +28,7 @@
 }
 
 - (void)shareButtonClick {
-    SocialSharePopView *sharePopView = [SocialSharePopView new];
+    MCSharePopView *sharePopView = [MCSharePopView new];
 
     [sharePopView shareCommenShareDto:self.shareDto callBack:^(BOOL success, NSError *error) {
 
@@ -43,7 +43,7 @@
         _shareButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
         _shareButton.center = self.view.center;
         [_shareButton setTitle:@"分享" forState:UIControlStateNormal];
-        [_shareButton setBackgroundColor:[AppColor colorXII] forState:UIControlStateNormal];
+        [_shareButton setBackgroundColor:[MCShareColor colorV] forState:UIControlStateNormal];
         [_shareButton addTarget:self action:@selector(shareButtonClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _shareButton;
