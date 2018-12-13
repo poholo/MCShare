@@ -20,49 +20,21 @@
 @implementation MCSocialModule
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
     [MCLoginHelper resgister];
 
     return YES;
 }
 
-// 分享SSO免登陆配置
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    return [LDSDKManager handleOpenURL:url];
+    return [[LDSDKManager share] handleURL:url];
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    /*if ([url.host isEqualToString:@"safepay"]) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificaitonAlipayResult object:url];
-        [[BindHelper share] aliPayProcessAuth_V2Result:url];
-        return YES;
-    }
-
-    BOOL open = [WXApi handleOpenURL:url delegate:(id <WXApiDelegate>) [WechatPayHelper share]];
-*/
-    BOOL open;
-    if (!open) {
-//        open = [SchemaOpenUtils handleOpenURL:url];
-    }
-    return open;
+    return [[LDSDKManager share] handleURL:url];
 }
 
-// Availability : iOS (9.0 and later)
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary *)options {
-    /*
-     if ([url.host isEqualToString:@"safepay"]) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificaitonAlipayResult object:url];
-        [[BindHelper share] aliPayProcessAuth_V2Result:url];
-        return YES;
-    }
-
-    BOOL open = [WXApi handleOpenURL:url delegate:(id <WXApiDelegate>) [WechatPayHelper share]];
-    */
-    BOOL open;
-    if (!open) {
-//        open = [SchemaOpenUtils handleOpenURL:url];
-    }
-    return open;
+    return [[LDSDKManager share] handleURL:url];
 }
 
 @end

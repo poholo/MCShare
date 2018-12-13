@@ -29,9 +29,9 @@
                     LDSDKConfigAppPlatformTypeKey: @(LDSDKPlatformQQ)},
             @{LDSDKConfigAppIdKey: SinaAppID,
                     LDSDKConfigAppSecretKey: SinaAppKey,
-                    LDSDKShareContentRedirectURIKey: SinaRedirectUri,
+                    LDSDKShareRedirectURIKey: SinaRedirectUri,
                     LDSDKConfigAppPlatformTypeKey: @(LDSDKPlatformWeibo)}];
-    [LDSDKManager registerWithPlatformConfigList:regPlatformConfigList];
+    [[LDSDKManager share] registerWithPlatformConfigList:regPlatformConfigList];
 }
 
 + (void)loginType:(SocialPlatform)socialPlatform callback:(OauthResult)callback {
@@ -51,7 +51,8 @@
 }
 
 + (void)loginQQCallback:(OauthResult)callback {
-    [[LDSDKManager getAuthService:LDSDKPlatformQQ] loginToPlatformWithCallback:^(NSDictionary *oauthInfo, NSDictionary *userInfo, NSError *error) {
+    id <LDSDKAuthService> authService = [[LDSDKManager share] authService:LDSDKPlatformQQ];
+    [authService authPlatformCallback:^(LDSDKLoginCode code, NSError *error, NSDictionary *oauthInfo, NSDictionary *userInfo) {
         [[GCDQueue mainQueue] execute:^{
             if (callback) {
                 NSLog(@"NSLocalizedDescription");
@@ -71,7 +72,8 @@
 }
 
 + (void)loginWeiChatCallback:(OauthResult)callback {
-    [[LDSDKManager getAuthService:LDSDKPlatformWeChat] loginToPlatformWithCallback:^(NSDictionary *oauthInfo, NSDictionary *userInfo, NSError *error) {
+    id <LDSDKAuthService> authService = [[LDSDKManager share] authService:LDSDKPlatformWeChat];
+    [authService authPlatformCallback:^(LDSDKLoginCode code, NSError *error, NSDictionary *oauthInfo, NSDictionary *userInfo) {
         [[GCDQueue mainQueue] execute:^{
             if (callback) {
                 if (error) {
@@ -88,7 +90,8 @@
 }
 
 + (void)loginWeiBoCallback:(OauthResult)callback {
-    [[LDSDKManager getAuthService:LDSDKPlatformWeibo] loginToPlatformWithCallback:^(NSDictionary *oauthInfo, NSDictionary *userInfo, NSError *error) {
+    id <LDSDKAuthService> authService = [[LDSDKManager share] authService:LDSDKPlatformWeibo];
+    [authService authPlatformCallback:^(LDSDKLoginCode code, NSError *error, NSDictionary *oauthInfo, NSDictionary *userInfo) {
         [[GCDQueue mainQueue] execute:^{
             if (callback) {
                 if (error) {
@@ -104,5 +107,6 @@
 
     }];
 }
+
 @end
 

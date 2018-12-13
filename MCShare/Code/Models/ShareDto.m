@@ -13,13 +13,12 @@
 @implementation ShareDto
 
 - (NSDictionary *)shareDict {
-    NSMutableDictionary *param = @{LDSDKShareContentTitleKey: self.title ?: @"",
-            LDSDKShareContentImageKey: self.image ?: [UIImage imageNamed:@"icon_commen"],
-            LDSDKShareContentDescriptionKey: self.desc ?: @"",
-            LDSDKShareContentTextKey: self.desc ?: @"",
-            LDSDKShareContentRedirectURIKey: @"https://sns.whalecloud.com/sina2/callback"}.mutableCopy;
+    NSMutableDictionary *param = @{LDSDKShareTitleKey: self.title ?: @"",
+            LDSDKShareImageKey: self.image ?: [UIImage imageNamed:@"icon_commen"],
+            LDSDKShareDescKey: self.desc ?: @"",
+            LDSDKShareRedirectURIKey: @"https://sns.whalecloud.com/sina2/callback"}.mutableCopy;
 
-    param[LDSDKShareContentWapUrlKey] = [NSString stringWithFormat:@"%@&%@", self.shareUrl, [ShareDto sharePlatform:self.platform]];
+    param[LDSDKShareUrlKey] = [NSString stringWithFormat:@"%@&%@", self.shareUrl, [ShareDto sharePlatform:self.platform]];
 
     return param;
 }

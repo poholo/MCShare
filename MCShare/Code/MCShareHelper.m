@@ -53,21 +53,24 @@
     NSDictionary *param = [shareDto shareDict];
     if (socialPlatform == SocialPlatformLink) {
         UIPasteboard *general = [UIPasteboard generalPasteboard];
-        NSString *pasteText = [StringUtils hasText:shareDto.pasteText] ? shareDto.pasteText : param[LDSDKShareContentWapUrlKey];
+        NSString *pasteText = [StringUtils hasText:shareDto.pasteText] ? shareDto.pasteText : param[LDSDKShareUrlKey];
         [general setString:pasteText];
         [ToastUtils showOnTabTopTitle:@"复制成功"];
     } else {
-        [[LDSDKManager getShareService:[MCShareHelper platform:socialPlatform]] shareWithContent:param shareModule:[MCShareHelper shareType:socialPlatform] onComplete:^(BOOL success, NSError *error) {
-            [GCDQueue executeInMainQueue:^{
-                if (success) {
-                    NSString *targat = [NSString stringWithFormat:@"%ld", (long) [ShareDto target:shareDto.platform]];
-                    [shareDto logResult:targat];
-                }
-                if (successBlock) {
-                    successBlock(success, error);
-                }
-            }];
-        }];
+        id<LDSDKShareService> shareService = [[LDSDKManager share] shareService:[MCShareHelper platform:socialPlatform]];
+        [shareService shareContent:param];
+//
+//        [shareService shareWithContent:param shareModule:[MCShareHelper shareType:socialPlatform] onComplete:^(BOOL success, NSError *error) {
+//            [GCDQueue executeInMainQueue:^{
+//                if (success) {
+//                    NSString *targat = [NSString stringWithFormat:@"%ld", (long) [ShareDto target:shareDto.platform]];
+//                    [shareDto logResult:targat];
+//                }
+//                if (successBlock) {
+//                    successBlock(success, error);
+//                }
+//            }];
+//        }];
     }
 }
 
