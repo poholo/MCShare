@@ -7,7 +7,8 @@ MCShare是一个iOS分享组件，旨在减少分享模块的开发工作量，�
 2 支持自定义的分享功能
 
 ## Screenshot
-<img src='./ScreenShot/ScreenShot.jpg' style='width:30%;'>UI截图</img>
+
+<img src="./ScreenShot/ScreenShot.jpg" width="25%">UI截图</img>
 
 ## 配置方法
 1. 各平台账号秘钥配置
