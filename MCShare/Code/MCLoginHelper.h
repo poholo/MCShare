@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "MCShareConfig.h"
+#import "LDSDKConfig.h"
 
 
 typedef void (^OauthResult)(NSDictionary * userInfo, NSError * error);
@@ -17,6 +18,6 @@ typedef void (^OauthResult)(NSDictionary * userInfo, NSError * error);
 
 + (void)resgister;
 
-+ (void)loginType:(SocialPlatform)socialPlatform callback:(OauthResult)callback;
++ (void)loginType:(LDSDKPlatformType)socialPlatform callback:(OauthResult)callback;
 
 @end

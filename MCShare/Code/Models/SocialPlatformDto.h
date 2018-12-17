@@ -6,10 +6,12 @@
 #import "Dto.h"
 
 #import "MCShareConfig.h"
+#import "LDSDKConfig.h"
 
 @interface SocialPlatformDto : Dto
 
-@property(nonatomic, assign) SocialPlatform platform;
+@property(nonatomic, assign) LDSDKPlatformType platform;
+@property(nonatomic, assign) LDSDKShareToModule module;
 @property(nonatomic, copy) NSString *image;
 @property(nonatomic, copy) NSString *name;
 

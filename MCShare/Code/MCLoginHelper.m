@@ -34,15 +34,15 @@
     [[LDSDKManager share] registerWithPlatformConfigList:regPlatformConfigList];
 }
 
-+ (void)loginType:(SocialPlatform)socialPlatform callback:(OauthResult)callback {
++ (void)loginType:(LDSDKPlatformType)socialPlatform callback:(OauthResult)callback {
     switch (socialPlatform) {
-        case SocialPlatformQQ:
+        case LDSDKPlatformQQ:
             [self loginQQCallback:callback];
             break;
-        case SocialPlatformWeiBo:
+        case LDSDKPlatformWeibo:
             [self loginWeiBoCallback:callback];
             break;
-        case SocialPlatformWeChat:
+        case LDSDKPlatformWeChat:
             [self loginWeiChatCallback:callback];
             break;
         default:

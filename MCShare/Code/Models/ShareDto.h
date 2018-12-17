@@ -5,10 +5,13 @@
 
 #import <Foundation/Foundation.h>
 
+#import <LDSDKManager/LDSDKConfig.h>
+
 #import "MCShareConfig.h"
 #import "Dto.h"
 
 @class UIImage;
+@class SocialPlatformDto;
 
 typedef void (^ShareCallBack)(id value);
 
@@ -19,9 +22,11 @@ typedef void (^ShareCallBack)(id value);
 @property(nonatomic, copy) NSString *shareUrl;
 @property(nonatomic, strong) UIImage *image;
 @property(nonatomic, copy) NSString *desc;
-@property(nonatomic, copy) NSString *pasteText;
 @property(nonatomic, strong) id sourceDto;
-@property(nonatomic, assign) SocialPlatform platform;
+
+@property(nonatomic, assign) LDSDKPlatformType toPlatform;
+@property(nonatomic, assign) LDSDKShareToModule toModule;
+@property(nonatomic, assign) LDSDKShareType toType;
 
 @property(nonatomic, strong) NSArray *sharePlatformsArray;
 @property(nonatomic, copy) NSString *logProcessEventName;
@@ -36,12 +41,9 @@ typedef void (^ShareCallBack)(id value);
 
 - (void)logResult:(NSString *)target;
 
-- (void)updateShareURL:(SocialPlatform)platform;;
+- (void)updateShareURL:(LDSDKPlatformType)platform;
 
-- (void)updatePaste;
-
-+ (NSInteger)target:(SocialPlatform)platform;
-
+- (void)updateSocialPlatform:(SocialPlatformDto *)platformDto;
 
 + (ShareDto *)createShareURL:(NSString *)url;
 

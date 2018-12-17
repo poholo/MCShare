@@ -13,11 +13,7 @@
 
 @interface MCShareHelper : NSObject
 
-+ (void)shareCommenShareDto:(ShareDto *)shareDto platform:(SocialPlatform)socialPlatform callBack:(void (^)(BOOL success, NSError *error))successBlock;
-
-+ (LDSDKPlatformType)platform:(SocialPlatform)platform;
-
-+ (LDSDKShareToModule)shareType:(SocialPlatform)platform;
++ (void)shareCommenShareDto:(ShareDto *)shareDto callBack:(void (^)(BOOL success, NSError *error))successBlock;
 
 + (BOOL)action2Telegram:(NSURL *)URL schema:(NSURL *)schema;
 

@@ -26,7 +26,7 @@ NSString *const kShareAppName = @"MCShare";
     static dispatch_once_t predicate;
     static MCShareConfig *instance;
     dispatch_once(&predicate, ^{
-        instance = [[self class] new];
+        instance = [MCShareConfig new];
     });
     return instance;
 }

@@ -5,10 +5,10 @@
 
 #import "ShareDto.h"
 
-#import <ReactiveCocoa.h>
+#import <UIKit/UIKit.h>
 
-#import "LDSDKShareService.h"
 #import "StringUtils.h"
+#import "SocialPlatformDto.h"
 
 @implementation ShareDto
 
@@ -18,7 +18,7 @@
             LDSDKShareDescKey: self.desc ?: @"",
             LDSDKShareRedirectURIKey: @"https://sns.whalecloud.com/sina2/callback"}.mutableCopy;
 
-    param[LDSDKShareUrlKey] = [NSString stringWithFormat:@"%@&%@", self.shareUrl, [ShareDto sharePlatform:self.platform]];
+    param[LDSDKShareUrlKey] = [NSString stringWithFormat:@"%@&%@", self.shareUrl, [ShareDto sharePlatform:self.toPlatform type:self.toModule]];
 
     return param;
 }
@@ -31,50 +31,17 @@
     //log result
 }
 
-- (void)updateShareURL:(SocialPlatform)platform {
-    self.shareUrl = [ShareDto dynamicHost:self.shareUrl platform:platform];
+- (void)updateShareURL:(LDSDKPlatformType)platform {
+    self.shareUrl = [ShareDto dynamicHost:self.shareUrl platform:platform module:self.toModule];
 }
 
-- (void)updatePaste {
-    self.pasteText = [NSString stringWithFormat:@"%@ %@ %@", [StringUtils hasText:self.title] ? self.title : @"", [StringUtils hasText:[MCShareConfig share].shareDynamicDto.videoDesc] ? [MCShareConfig share].shareDynamicDto.videoDesc : @"", self.shareUrl];
-
-
+- (void)updateSocialPlatform:(SocialPlatformDto *)platformDto {
+    self.toPlatform = platformDto.platform;
+    self.toModule = platformDto.module;
 }
 
-
-+ (NSInteger)target:(SocialPlatform)platform {
-    NSInteger result = 0;
-    switch (platform) {
-        case SocialPlatformWeChat:
-            result = 0;
-            break;
-        case SocialPlatformWeChatFriend:
-            result = 1;
-            break;
-        case SocialPlatformQQ:
-            result = 2;
-            break;
-        case SocialPlatformWeiBo:
-            result = 3;
-            break;
-        case SocialPlatformQQZone:
-            result = 4;
-            break;
-        case SocialPlatformLink:
-            result = 10;
-            break;
-        case SocialPlatformTelegram:
-            result = 15;
-            break;
-        default:
-            break;
-    }
-    return result;
-}
-
-
-+ (NSString *)sharePlatform:(SocialPlatform)socialPlatform {
-    return [NSString stringWithFormat:@"appfrom=ios-%@-%zd", kShareAppName, [ShareDto target:socialPlatform]];
++ (NSString *)sharePlatform:(LDSDKPlatformType)platformType type:(LDSDKShareToModule)module {
+    return [NSString stringWithFormat:@"appfrom=ios-%@-%zd-%zd", kShareAppName, platformType, module];
 }
 
 + (NSString *)shareCommenParams {
@@ -84,7 +51,7 @@
 + (ShareDto *)createShareURL:(NSString *)url {
     NSParameterAssert(url);
     ShareDto *dto = [ShareDto new];
-    dto.shareUrl = [ShareDto dynamicHost:url platform:SocialPlatformWeChat];
+    dto.shareUrl = [ShareDto dynamicHost:url platform:LDSDKPlatformWeChat module:LDSDKShareToContact];
     dto.sourceDto = @"web";
 
     //日志参数构造
@@ -102,10 +69,9 @@
     ShareDto *dto = [ShareDto new];
     dto.title = title;
     dto.desc = desc;
-    dto.shareUrl = [ShareDto dynamicHost:url platform:SocialPlatformWeChat];
+    dto.shareUrl = url;
     dto.imgUrl = image;
     dto.sourceDto = @"web";
-    dto.pasteText = pasteText;
 
     //日志参数构造
     {
@@ -116,14 +82,15 @@
     return dto;
 }
 
-+ (NSString *)dynamicHost:(NSString *)url platform:(SocialPlatform)platform {
++ (NSString *)dynamicHost:(NSString *)url platform:(LDSDKPlatformType)platform module:(LDSDKShareToModule)module {
     NSURLComponents *components = [NSURLComponents componentsWithString:url];
     NSURL *shareURLHost = [NSURL URLWithString:[MCShareConfig share].shareDynamicDto.wechatHost];
-    if (platform == SocialPlatformWeiBo) {
-        shareURLHost = [NSURL URLWithString:[MCShareConfig share].shareDynamicDto.sinaHost];
-    } else if (platform == SocialPlatformQQ || platform == SocialPlatformQQZone) {
-        shareURLHost = [NSURL URLWithString:[MCShareConfig share].shareDynamicDto.qqHost];
-    }
+//    if (platform == LDSDKShareToWeiboStory) {
+//        shareURLHost = [NSURL URLWithString:[MCShareConfig share].shareDynamicDto.sinaHost];
+//    } else if (platform == SocialPlatformQQ || platform == SocialPlatformQQZone) {
+//        shareURLHost = [NSURL URLWithString:[MCShareConfig share].shareDynamicDto.qqHost];
+//    }
+    //TODO:: 动态域名
     components.host = shareURLHost.host;
     components.scheme = shareURLHost.scheme;
     return components.URL.absoluteString;

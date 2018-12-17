@@ -7,22 +7,6 @@
 
 @class ShareDynamicDto;
 
-typedef NS_ENUM(NSInteger, SocialPlatform) {
-    SocialPlatformWeChat,
-    SocialPlatformQQ,
-    SocialPlatformWeChatFriend,
-    SocialPlatformQQZone,
-    SocialPlatformWeiBo,
-    SocialPlatformTelegram,
-    SocialPlatformLink,
-};
-
-typedef NS_ENUM(NSInteger, ShareType) {
-    ShareTypeVideo,
-    ShareTypeApp,
-    ShareTypeWeb,
-};
-
 #pragma mark - ShareConfig
 extern NSString *const SinaRedirectUri;
 extern NSString *const WXAppID;
@@ -38,7 +22,6 @@ extern NSString *const kShareAppName;
 @interface MCShareConfig : NSObject
 
 @property(nonatomic, strong) ShareDynamicDto *shareDynamicDto;
-@property(nonatomic, strong) NSNumber *textShareMode;
 
 + (instancetype)share;
 

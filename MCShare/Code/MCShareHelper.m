@@ -6,19 +6,15 @@
 #import "MCShareHelper.h"
 
 #import <SDWebImage/SDWebImageManager.h>
-#import <ReactiveCocoa.h>
 
 #import "ShareDto.h"
-#import "GCDQueue.h"
-#import "StringUtils.h"
-#import "ToastUtils.h"
 
 
 @implementation MCShareHelper
 
-+ (void)shareCommenShareDto:(ShareDto *)dto platform:(SocialPlatform)socialPlatform callBack:(void (^)(BOOL success, NSError *error))successBlock {
++ (void)shareCommenShareDto:(ShareDto *)dto callBack:(void (^)(BOOL success, NSError *error))successBlock {
     if (dto.image && !dto.imgUrl) {
-        [self shareCommentAfterGetImageWithSocialPlatform:socialPlatform dto:dto callBack:successBlock];
+        [self shareCommentAfterGetImageWithShareDto:dto callBack:successBlock];
         return;
     }
 
@@ -31,7 +27,7 @@
         } else if (iDisk) {
             dto.image = iDisk;
         }
-        [MCShareHelper shareCommentAfterGetImageWithSocialPlatform:socialPlatform dto:dto callBack:successBlock];
+        [MCShareHelper shareCommentAfterGetImageWithShareDto:dto callBack:successBlock];
     } else {
         [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:dto.imgUrl]
                                                               options:0
@@ -40,25 +36,22 @@
                                                                 if (image) {
                                                                     dto.image = image;
                                                                 }
-                                                                [[self class] shareCommentAfterGetImageWithSocialPlatform:socialPlatform dto:dto callBack:successBlock];
+                                                                [[self class] shareCommentAfterGetImageWithShareDto:dto callBack:successBlock];
                                                             }];
     }
 }
 
-+ (void)shareCommentAfterGetImageWithSocialPlatform:(SocialPlatform)socialPlatform dto:(ShareDto *)shareDto callBack:(void (^)(BOOL success, NSError *error))successBlock {
-    [shareDto updateShareURL:socialPlatform];
-    [shareDto logProcess:[@([ShareDto target:socialPlatform]) stringValue]];
++ (void)shareCommentAfterGetImageWithShareDto:(ShareDto *)shareDto callBack:(void (^)(BOOL success, NSError *error))successBlock {
+    [shareDto updateShareURL:shareDto.toPlatform];
+//    [shareDto logProcess:[@([ShareDto target:shareDto.toPlatform]) stringValue]];
 
-    shareDto.platform = socialPlatform;
     NSDictionary *param = [shareDto shareDict];
-    if (socialPlatform == SocialPlatformLink) {
-        UIPasteboard *general = [UIPasteboard generalPasteboard];
-        NSString *pasteText = [StringUtils hasText:shareDto.pasteText] ? shareDto.pasteText : param[LDSDKShareUrlKey];
-        [general setString:pasteText];
-        [ToastUtils showOnTabTopTitle:@"复制成功"];
-    } else {
-        id<LDSDKShareService> shareService = [[LDSDKManager share] shareService:[MCShareHelper platform:socialPlatform]];
-        [shareService shareContent:param];
+//        UIPasteboard *general = [UIPasteboard generalPasteboard];
+//        NSString *pasteText = [StringUtils hasText:shareDto.pasteText] ? shareDto.pasteText : param[LDSDKShareUrlKey];
+//        [general setString:pasteText];
+//        [ToastUtils showOnTabTopTitle:@"复制成功"];
+    id <LDSDKShareService> shareService = [[LDSDKManager share] shareService:shareDto.toPlatform];
+    [shareService shareContent:param];
 //
 //        [shareService shareWithContent:param shareModule:[MCShareHelper shareType:socialPlatform] onComplete:^(BOOL success, NSError *error) {
 //            [GCDQueue executeInMainQueue:^{
@@ -71,53 +64,13 @@
 //                }
 //            }];
 //        }];
-    }
 }
-
-+ (LDSDKPlatformType)platform:(SocialPlatform)platform {
-    switch (platform) {
-        case SocialPlatformQQ:
-            return LDSDKPlatformQQ;
-            break;
-        case SocialPlatformQQZone:
-            return LDSDKPlatformQQ;
-            break;
-        case SocialPlatformWeiBo:
-            return LDSDKPlatformWeibo;
-            break;
-        case SocialPlatformWeChat:
-            return LDSDKPlatformWeChat;
-            break;
-        case SocialPlatformWeChatFriend:
-            return LDSDKPlatformWeChat;
-            break;
-        default:
-            break;
-    }
-    return LDSDKPlatformQQ;
-}
-
-
-+ (LDSDKShareToModule)shareType:(SocialPlatform)platform {
-    switch (platform) {
-        case SocialPlatformQQZone:
-        case SocialPlatformWeChatFriend:
-            return LDSDKShareToTimeLine;
-            break;
-        default:
-            break;
-    }
-    return LDSDKShareToContact;
-}
-
 
 + (BOOL)action2Telegram:(NSURL *)URL schema:(NSURL *)schema {
     __block BOOL isOpen = NO;
     __block BOOL isFinish = NO;
     if ([UIDevice currentDevice].systemName.floatValue > 10) {
-        @weakify(self);
         [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:^(BOOL success) {
-            @strongify(self);
             isOpen = success;
             isFinish = YES;
             if (!isOpen) {
@@ -142,10 +95,7 @@
 + (void)openGroup {
     NSURL *URL = [NSURL URLWithString:kTelegramGroup];
     if ([UIDevice currentDevice].systemName.floatValue > 10) {
-        @weakify(self);
-        [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:^(BOOL success) {
-            @strongify(self);
-        }];
+        [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:NULL];
 
     } else {
         [[UIApplication sharedApplication] openURL:URL];

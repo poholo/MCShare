@@ -8,15 +8,12 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <ReactiveCocoa.h>
 
-#import "MCShareConfig.h"
 #import "ShareDto.h"
 #import "WXApi.h"
 #import "SocialPlatformDto.h"
 #import "NSString+URLEncoded.h"
 #import "NSObject+ShareApi.h"
 #import "MCShareHelper.h"
-#import "MCShareHelper.h"
-#import "StringUtils.h"
 
 @interface MCShareDataVM ()
 
@@ -43,10 +40,10 @@
     [self parseSupportPlatform];
 
     for (SocialPlatformDto *platformDto in self.supportPlatforms) {
-        SocialPlatform platform = platformDto.platform;
-        if (platform == SocialPlatformWeChat || platform == SocialPlatformWeChatFriend) {
+        LDSDKPlatformType platform = platformDto.platform;
+        if (platform == LDSDKPlatformWeChat) {
             if (!([WXApi isWXAppInstalled] && [WXApi isWXAppSupportApi])) continue;
-        } else if (platform == SocialPlatformQQ || platform == SocialPlatformQQZone) {
+        } else if (platform == LDSDKPlatformQQ) {
             if (!([QQApiInterface isQQInstalled] && [QQApiInterface isQQSupportApi])) continue;
         }
         if (![self limitHide:platformDto]) {
@@ -58,7 +55,7 @@
 }
 
 - (RACSignal *)shareHost {
-    RACSignal *signal = [self apiGetShareHost: @"10"];
+    RACSignal *signal = [self apiGetShareHost:@"10"];
 
     @weakify(self);
     return [signal map:^id(id value) {
@@ -81,19 +78,10 @@
     return _supportPlatforms;
 }
 
-- (LDSDKPlatformType)platform:(SocialPlatform)platform {
-    return [MCShareHelper platform:platform];
-}
-
-
-- (LDSDKShareToModule)shareType:(SocialPlatform)platform {
-    return [MCShareHelper shareType:platform];
-}
-
 
 - (BOOL)share2Telegram {
     NSURL *schema = [NSURL URLWithString:@"tg://"];
-    NSString *text = [StringUtils hasText:self.shareDto.pasteText] ? self.shareDto.pasteText : self.shareDto.title;
+    NSString *text = self.shareDto.title;
     NSString *url = [NSString stringWithFormat:@"tg://msg_url?text=%@&url=%@", [text urlEncode], [self.shareDto.shareUrl urlEncode]];
 
     BOOL success = [MCShareHelper action2Telegram:[NSURL URLWithString:url] schema:schema];
@@ -101,13 +89,13 @@
 }
 
 #pragma mark - getter
+
 - (NSMutableArray *)dataList {
     if (!_dataList) {
         _dataList = [NSMutableArray new];
     }
     return _dataList;
 }
-
 
 
 @end
