@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ShareListController.h
 //  MCShare
 //
 //  Created by majiancheng on 2018/11/20.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ShareListController : UIViewController
 
 
 @end

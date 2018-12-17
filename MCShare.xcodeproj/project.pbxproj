@@ -10,10 +10,13 @@
 		1A66600DE2C9B67202516CA2 /* GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66698ED0A631B1EBB7BC83 /* GCDQueue.m */; };
 		1A66608E25E063ED6120B4AB /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6667EB3DEAC1C2A5112199 /* DeviceUtils.m */; };
 		1A6661003CBB7615C91C89CB /* ToastUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66647FC63518DA2BE2EF02 /* ToastUtils.m */; };
+		1A6661D83ECCD26474C05464 /* ShareListDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666A1EA188FAD2CA82C3F0 /* ShareListDataVM.m */; };
+		1A6662B7730A0463C4DDB09F /* ShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666F1BF842BED3CA90909A /* ShareItem.m */; };
 		1A6662DA808990AA33595377 /* MCShareDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666E92A03E2B117884FA3D /* MCShareDataVM.m */; };
 		1A66631E781C4AF92F98E6A9 /* SharePlatform.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A666027DFE98510D564C20E /* SharePlatform.json */; };
 		1A66632DA43D9694DB787EC8 /* ShareDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66621BA0339C2415510E3F /* ShareDto.m */; };
 		1A6663C9CE3CA86EC2DAEA20 /* MCSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666FA99D4B9C00269C319D /* MCSharePopView.m */; };
+		1A66640D48865CA066E05759 /* ShareListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666EC43AB55703156AAA31 /* ShareListController.m */; };
 		1A66652C32913377598232C0 /* MCSocialModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6663A43E5BD20AB1D84756 /* MCSocialModule.m */; };
 		1A666588D545D1A2C9996952 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6669FEAF4A8B34BD55E9B4 /* GCDTimer.m */; };
 		1A666640484CF78636273A94 /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666A38DE7E89EB6031955E /* UIColor+Extend.m */; };
@@ -34,7 +37,6 @@
 		1A666FC8AB4DD4945D003790 /* MCShareColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666B2823DA1E1EEC5F946F /* MCShareColor.m */; };
 		1A666FE6A022C59A2DDC6989 /* MCLoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666AE7E4C71511C819A8DF /* MCLoginHelper.m */; };
 		25AA033A21A41CD10009A1D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AA033921A41CD10009A1D9 /* AppDelegate.m */; };
-		25AA033D21A41CD10009A1D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AA033C21A41CD10009A1D9 /* ViewController.m */; };
 		25AA034021A41CD10009A1D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25AA033E21A41CD10009A1D9 /* Main.storyboard */; };
 		25AA034221A41CD40009A1D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25AA034121A41CD40009A1D9 /* Assets.xcassets */; };
 		25AA034521A41CD40009A1D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25AA034321A41CD40009A1D9 /* LaunchScreen.storyboard */; };
@@ -68,15 +70,18 @@
 		1A66678C97248E92491601F3 /* UIColor+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
 		1A6667BBCAB4C5E326CB5565 /* ScreenShot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ScreenShot.jpg; sourceTree = "<group>"; };
 		1A6667EB3DEAC1C2A5112199 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
+		1A66680BC066EC3EAB51A833 /* ShareListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareListController.h; sourceTree = "<group>"; };
 		1A666810B8F9ACF4EFDD81F0 /* UIButton+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BackgroundColor.h"; sourceTree = "<group>"; };
 		1A66681EAB9615C6AFF685EB /* NSObject+ShareApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ShareApi.m"; sourceTree = "<group>"; };
 		1A66682B417CEFB3C94A7B23 /* MCShareHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareHelper.m; sourceTree = "<group>"; };
 		1A666848C14516CB9755BC54 /* NSString+URLEncoded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoded.m"; sourceTree = "<group>"; };
 		1A6668A10614323749691F2B /* MCShareConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareConfig.m; sourceTree = "<group>"; };
 		1A6668A366AD41376F721B69 /* MCSocialModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSocialModule.h; sourceTree = "<group>"; };
+		1A666938E66E5BF33C33BF48 /* ShareListDataVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareListDataVM.h; sourceTree = "<group>"; };
 		1A66697072B45AF5ED3378A3 /* ShareDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareDto.h; sourceTree = "<group>"; };
 		1A66698ED0A631B1EBB7BC83 /* GCDQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDQueue.m; sourceTree = "<group>"; };
 		1A6669FEAF4A8B34BD55E9B4 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
+		1A666A1EA188FAD2CA82C3F0 /* ShareListDataVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareListDataVM.m; sourceTree = "<group>"; };
 		1A666A38DE7E89EB6031955E /* UIColor+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extend.m"; sourceTree = "<group>"; };
 		1A666AE747E02B1EB627D330 /* MCShareHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareHelper.h; sourceTree = "<group>"; };
 		1A666AE7E4C71511C819A8DF /* MCLoginHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLoginHelper.m; sourceTree = "<group>"; };
@@ -87,6 +92,7 @@
 		1A666C7747921628E3E9D184 /* MCShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareCell.h; sourceTree = "<group>"; };
 		1A666CDA1487F62D03B60569 /* GCDUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDUtils.h; sourceTree = "<group>"; };
 		1A666D386A6BB3C5E03C7323 /* GCDReTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDReTimer.m; sourceTree = "<group>"; };
+		1A666D8E83051D1B40FC29E7 /* ShareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareItem.h; sourceTree = "<group>"; };
 		1A666DE9EF8315755663030E /* ToastUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToastUtils.h; sourceTree = "<group>"; };
 		1A666DEA8AA2226939A3E8AC /* GCDQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDQueue.h; sourceTree = "<group>"; };
 		1A666E0608792E3770B98B35 /* NSObject+ShareApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ShareApi.h"; sourceTree = "<group>"; };
@@ -94,14 +100,14 @@
 		1A666E2979EA524700147582 /* SocialPlatformDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialPlatformDto.h; sourceTree = "<group>"; };
 		1A666E3A878D428A6DC0F326 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
 		1A666E92A03E2B117884FA3D /* MCShareDataVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareDataVM.m; sourceTree = "<group>"; };
+		1A666EC43AB55703156AAA31 /* ShareListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareListController.m; sourceTree = "<group>"; };
+		1A666F1BF842BED3CA90909A /* ShareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareItem.m; sourceTree = "<group>"; };
 		1A666F85FB3AC8F8A4A6E75C /* MCShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareCell.m; sourceTree = "<group>"; };
 		1A666FA99D4B9C00269C319D /* MCSharePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSharePopView.m; sourceTree = "<group>"; };
 		1A666FD02D8DBC01CD145267 /* Dto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dto.m; sourceTree = "<group>"; };
 		25AA033521A41CD10009A1D9 /* MCShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AA033821A41CD10009A1D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		25AA033921A41CD10009A1D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		25AA033B21A41CD10009A1D9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		25AA033C21A41CD10009A1D9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		25AA033F21A41CD10009A1D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25AA034121A41CD40009A1D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25AA034421A41CD40009A1D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -150,6 +156,19 @@
 				1A666027DFE98510D564C20E /* SharePlatform.json */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		1A6665EF6F189D8901F78AF2 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				1A66680BC066EC3EAB51A833 /* ShareListController.h */,
+				1A666EC43AB55703156AAA31 /* ShareListController.m */,
+				1A666A1EA188FAD2CA82C3F0 /* ShareListDataVM.m */,
+				1A666938E66E5BF33C33BF48 /* ShareListDataVM.h */,
+				1A666F1BF842BED3CA90909A /* ShareItem.m */,
+				1A666D8E83051D1B40FC29E7 /* ShareItem.h */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		1A66694ED1AE418080793E8A /* Utils */ = {
@@ -272,14 +291,13 @@
 			children = (
 				25AA033821A41CD10009A1D9 /* AppDelegate.h */,
 				25AA033921A41CD10009A1D9 /* AppDelegate.m */,
-				25AA033B21A41CD10009A1D9 /* ViewController.h */,
-				25AA033C21A41CD10009A1D9 /* ViewController.m */,
 				25AA033E21A41CD10009A1D9 /* Main.storyboard */,
 				25AA034121A41CD40009A1D9 /* Assets.xcassets */,
 				25AA034321A41CD40009A1D9 /* LaunchScreen.storyboard */,
 				25AA034621A41CD40009A1D9 /* Info.plist */,
 				25AA034721A41CD40009A1D9 /* main.m */,
 				1A666E8D9CAAE985549EB353 /* Code */,
+				1A6665EF6F189D8901F78AF2 /* Demo */,
 			);
 			path = MCShare;
 			sourceTree = "<group>";
@@ -415,7 +433,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25AA033D21A41CD10009A1D9 /* ViewController.m in Sources */,
 				25AA034821A41CD40009A1D9 /* main.m in Sources */,
 				25AA033A21A41CD10009A1D9 /* AppDelegate.m in Sources */,
 				1A66686FC29194F00A42220C /* NSObject+ShareApi.m in Sources */,
@@ -443,6 +460,9 @@
 				1A6666BACCE4053D2D1AE22A /* UIButton+BackgroundColor.m in Sources */,
 				1A66608E25E063ED6120B4AB /* DeviceUtils.m in Sources */,
 				1A66652C32913377598232C0 /* MCSocialModule.m in Sources */,
+				1A66640D48865CA066E05759 /* ShareListController.m in Sources */,
+				1A6661D83ECCD26474C05464 /* ShareListDataVM.m in Sources */,
+				1A6662B7730A0463C4DDB09F /* ShareItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

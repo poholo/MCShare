@@ -9,7 +9,6 @@
 #import "MCShareCell.h"
 
 #import <Masonry.h>
-#import <ReactiveCocoa.h>
 
 #import "SocialPlatformDto.h"
 #import "MCShareColor.h"
@@ -34,16 +33,13 @@
         self.titleLabel = [UILabel new];
         [self.contentView addSubview:self.titleLabel];
 
-        @weakify(self);
         [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            @strongify(self);
             make.left.right.top.equalTo(self.contentView);
             make.height.equalTo(self.iconImageView.mas_width);
             make.centerX.equalTo(self.contentView.mas_centerX);
         }];
 
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            @strongify(self);
             make.top.equalTo(self.iconImageView.mas_bottom).offset(5);
             make.centerX.equalTo(self.contentView.mas_centerX);
         }];

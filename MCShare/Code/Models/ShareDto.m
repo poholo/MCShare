@@ -13,13 +13,17 @@
 @implementation ShareDto
 
 - (NSDictionary *)shareDict {
-    NSMutableDictionary *param = @{LDSDKShareTitleKey: self.title ?: @"",
-            LDSDKShareImageKey: self.image ?: [UIImage imageNamed:@"icon_commen"],
-            LDSDKShareDescKey: self.desc ?: @"",
-            LDSDKShareRedirectURIKey: @"https://sns.whalecloud.com/sina2/callback"}.mutableCopy;
-
+    NSMutableDictionary *param = [NSMutableDictionary new];
+    param[LDSDKIdentifierKey] = self.dtoId;
+    param[LDSDKShareTitleKey] = self.title;
+    param[LDSDKShareImageKey] = self.image ?: [UIImage imageNamed:@"icon_commen"];
+    param[LDSDKShareDescKey] = self.desc;
+    param[LDSDKShareRedirectURIKey] = @"https://sns.whalecloud.com/sina2/callback";
     param[LDSDKShareUrlKey] = [NSString stringWithFormat:@"%@&%@", self.shareUrl, [ShareDto sharePlatform:self.toPlatform type:self.toModule]];
-
+    param[LDSDKShareCallBackKey] = self.shareCallback;
+    param[LDSDKPlatformTypeKey] = @(self.toPlatform);
+    param[LDSDKShareToMoudleKey] = @(self.toModule);
+    param[LDSDKShareTypeKey] = @(self.toType);
     return param;
 }
 
@@ -45,7 +49,7 @@
 }
 
 + (NSString *)shareCommenParams {
-    return [NSString stringWithFormat:@"source=mobileclient&platform=ios&from=singlemessage&appVersion=%@&appName=firebull", [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"]];
+    return [NSString stringWithFormat:@"source=mobileclient&platform=ios&from=singlemessage&appVersion=%@&appName=AppName", [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"]];
 }
 
 + (ShareDto *)createShareURL:(NSString *)url {
@@ -64,7 +68,7 @@
 }
 
 
-+ (ShareDto *)createShareURL:(NSString *)url title:(NSString *)title desc:(NSString *)desc image:(NSString *)image pasteText:(NSString *)pasteText {
++ (ShareDto *)createShareURL:(NSString *)url title:(NSString *)title desc:(NSString *)desc image:(NSString *)image {
     NSParameterAssert(url);
     ShareDto *dto = [ShareDto new];
     dto.title = title;

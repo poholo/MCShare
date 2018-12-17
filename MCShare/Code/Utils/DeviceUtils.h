@@ -31,6 +31,4 @@
 
 + (CGFloat)xProgress;
 
-+ (BOOL)showSpecialAnimate;
-
 @end

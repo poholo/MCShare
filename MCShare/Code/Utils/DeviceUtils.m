@@ -94,9 +94,4 @@
     return 0.0f;
 }
 
-+ (BOOL)showSpecialAnimate {
-    return NO;
-}
-
-
 @end

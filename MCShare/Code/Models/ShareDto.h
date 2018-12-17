@@ -57,8 +57,7 @@ typedef void (^ShareCallBack)(id value);
  * @param logParam
  * @return
  */
-+ (ShareDto *)createShareURL:(NSString *)url title:(NSString *)title desc:(NSString *)desc image:(NSString *)image pasteText:(NSString *)pasteText;
-
++ (ShareDto *)createShareURL:(NSString *)url title:(NSString *)title desc:(NSString *)desc image:(NSString *)image;
 
 @end
 
