@@ -15,7 +15,7 @@
 
 - (void)show NS_UNAVAILABLE;
 
-- (void)shareCommenShareDto:(ShareDto *)shareDto callBack:(void (^)(BOOL success, NSError *error))successBlock;
+- (void)shareCommenShareDto:(ShareDto *)shareDto;
 
 
 @end

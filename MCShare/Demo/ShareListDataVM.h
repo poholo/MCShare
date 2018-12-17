@@ -4,8 +4,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <LDSDKManager/LDSDKShareService.h>
+#import "LDSDKConfig.h"
 
 @class ShareItem;
+@class ShareDto;
 
 
 @interface ShareListDataVM : NSObject
@@ -15,5 +18,7 @@
 @property(nonatomic, assign) NSInteger selectIdx;
 
 - (void)refresh;
+
+- (ShareDto *)prepareShareDto:(LDSDKShareType)shareType shareCallBack:(LDSDKShareCallback)shareCallBack;
 
 @end

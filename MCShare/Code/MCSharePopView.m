@@ -33,8 +33,6 @@
 @property(nonatomic, strong) UICollectionView *collectionView;
 @property(nonatomic, strong) UIButton *cancelBtn;
 
-@property(nonatomic, copy) void (^compeleteBlock)(BOOL success, NSError *error);
-
 @property(nonatomic, strong) MCShareDataVM *dataVM;
 
 @end
@@ -43,8 +41,7 @@
 
 #pragma mark  interface
 
-- (void)shareCommenShareDto:(ShareDto *)shareDto callBack:(void (^)(BOOL success, NSError *error))successBlock {
-    self.compeleteBlock = successBlock;
+- (void)shareCommenShareDto:(ShareDto *)shareDto {
     self.dataVM.shareDto = shareDto;
 
     [self initilizer];
@@ -158,7 +155,7 @@
     [self.dataVM.shareDto updateSocialPlatform:platformDto];
 
     ShareDto *dto = self.dataVM.shareDto;
-    [MCShareHelper shareCommenShareDto:dto callBack:self.compeleteBlock];
+    [MCShareHelper shareCommenShareDto:dto callBack:nil];
 
     [self hide];
 }

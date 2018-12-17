@@ -29,6 +29,7 @@
 		1A666A135D1090D43330B960 /* SocialPlatformDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66604CA8B917A8CB6F04C8 /* SocialPlatformDto.m */; };
 		1A666B52DB27C21AC3EB7EBF /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66647B84BF9BE9F94EEBA7 /* UIView+Toast.m */; };
 		1A666B9F4F6183C9C13775E3 /* MCShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666F85FB3AC8F8A4A6E75C /* MCShareCell.m */; };
+		1A666C8B6BFC18FF24476776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A66632C0E0A9C2D21A28F53 /* Assets.xcassets */; };
 		1A666DEFB9ECC155E372A0DD /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666307DFED1C2142919469 /* GCDSemaphore.m */; };
 		1A666E4B9873C80820EB065D /* MCShareConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6668A10614323749691F2B /* MCShareConfig.m */; };
 		1A666E8BE3D1FE3BADB0FCC9 /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666304CFA4AF73FC98AF18 /* StringUtils.m */; };
@@ -36,9 +37,10 @@
 		1A666F3C10E32A95D86F76F2 /* GCDUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666C4C33C80D4A533F0E37 /* GCDUtils.m */; };
 		1A666FC8AB4DD4945D003790 /* MCShareColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666B2823DA1E1EEC5F946F /* MCShareColor.m */; };
 		1A666FE6A022C59A2DDC6989 /* MCLoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666AE7E4C71511C819A8DF /* MCLoginHelper.m */; };
+		255F70A321C78E850059A14C /* media.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 255F70A121C78E850059A14C /* media.mp4 */; };
+		255F70A421C78E850059A14C /* think.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 255F70A221C78E850059A14C /* think.jpg */; };
 		25AA033A21A41CD10009A1D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AA033921A41CD10009A1D9 /* AppDelegate.m */; };
 		25AA034021A41CD10009A1D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25AA033E21A41CD10009A1D9 /* Main.storyboard */; };
-		25AA034221A41CD40009A1D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25AA034121A41CD40009A1D9 /* Assets.xcassets */; };
 		25AA034521A41CD40009A1D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25AA034321A41CD40009A1D9 /* LaunchScreen.storyboard */; };
 		25AA034821A41CD40009A1D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AA034721A41CD40009A1D9 /* main.m */; };
 		9C497ACA887D1E667298E4BC /* libPods-MCShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C70A28D74463BC6A068300 /* libPods-MCShare.a */; };
@@ -55,6 +57,7 @@
 		1A66622B6255DAB4766904D8 /* MCShareColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareColor.h; sourceTree = "<group>"; };
 		1A666304CFA4AF73FC98AF18 /* StringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtils.m; sourceTree = "<group>"; };
 		1A666307DFED1C2142919469 /* GCDSemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDSemaphore.m; sourceTree = "<group>"; };
+		1A66632C0E0A9C2D21A28F53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A66637F0B70DD4B22E0796D /* GCDSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDSemaphore.h; sourceTree = "<group>"; };
 		1A66638D702E2A35173F310D /* MCSharePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSharePopView.h; sourceTree = "<group>"; };
 		1A6663A43E5BD20AB1D84756 /* MCSocialModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSocialModule.m; sourceTree = "<group>"; };
@@ -105,11 +108,12 @@
 		1A666F85FB3AC8F8A4A6E75C /* MCShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareCell.m; sourceTree = "<group>"; };
 		1A666FA99D4B9C00269C319D /* MCSharePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSharePopView.m; sourceTree = "<group>"; };
 		1A666FD02D8DBC01CD145267 /* Dto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dto.m; sourceTree = "<group>"; };
+		255F70A121C78E850059A14C /* media.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = media.mp4; sourceTree = "<group>"; };
+		255F70A221C78E850059A14C /* think.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = think.jpg; sourceTree = "<group>"; };
 		25AA033521A41CD10009A1D9 /* MCShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AA033821A41CD10009A1D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		25AA033921A41CD10009A1D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		25AA033F21A41CD10009A1D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		25AA034121A41CD40009A1D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25AA034421A41CD40009A1D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25AA034621A41CD40009A1D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25AA034721A41CD40009A1D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -212,6 +216,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		1A666D354F7846FAA82C300A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				255F70A121C78E850059A14C /* media.mp4 */,
+				255F70A221C78E850059A14C /* think.jpg */,
+				1A66632C0E0A9C2D21A28F53 /* Assets.xcassets */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		1A666E8D9CAAE985549EB353 /* Code */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,12 +306,12 @@
 				25AA033821A41CD10009A1D9 /* AppDelegate.h */,
 				25AA033921A41CD10009A1D9 /* AppDelegate.m */,
 				25AA033E21A41CD10009A1D9 /* Main.storyboard */,
-				25AA034121A41CD40009A1D9 /* Assets.xcassets */,
 				25AA034321A41CD40009A1D9 /* LaunchScreen.storyboard */,
 				25AA034621A41CD40009A1D9 /* Info.plist */,
 				25AA034721A41CD40009A1D9 /* main.m */,
 				1A666E8D9CAAE985549EB353 /* Code */,
 				1A6665EF6F189D8901F78AF2 /* Demo */,
+				1A666D354F7846FAA82C300A /* Source */,
 			);
 			path = MCShare;
 			sourceTree = "<group>";
@@ -379,9 +393,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				25AA034521A41CD40009A1D9 /* LaunchScreen.storyboard in Resources */,
-				25AA034221A41CD40009A1D9 /* Assets.xcassets in Resources */,
 				25AA034021A41CD10009A1D9 /* Main.storyboard in Resources */,
+				255F70A421C78E850059A14C /* think.jpg in Resources */,
 				1A66631E781C4AF92F98E6A9 /* SharePlatform.json in Resources */,
+				255F70A321C78E850059A14C /* media.mp4 in Resources */,
+				1A666C8B6BFC18FF24476776 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

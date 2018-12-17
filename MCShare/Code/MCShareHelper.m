@@ -13,9 +13,11 @@
 @implementation MCShareHelper
 
 + (void)shareCommenShareDto:(ShareDto *)dto callBack:(void (^)(BOOL success, NSError *error))successBlock {
+    [self shareCommentAfterGetImageWithShareDto:dto callBack:successBlock];
+    return;
+
     if (dto.image && !dto.imgUrl) {
-        [self shareCommentAfterGetImageWithShareDto:dto callBack:successBlock];
-        return;
+
     }
 
     NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:[NSURL URLWithString:dto.imgUrl]];

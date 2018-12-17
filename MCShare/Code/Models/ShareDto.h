@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 
 #import <LDSDKManager/LDSDKConfig.h>
+#import <LDSDKManager/LDSDKShareService.h>
 
 #import "MCShareConfig.h"
 #import "Dto.h"
@@ -13,13 +14,12 @@
 @class UIImage;
 @class SocialPlatformDto;
 
-typedef void (^ShareCallBack)(id value);
-
 @interface ShareDto : Dto
 
 @property(nonatomic, copy) NSString *title;
 @property(nonatomic, copy) NSString *imgUrl;
 @property(nonatomic, copy) NSString *shareUrl;
+@property(nonatomic, copy) NSString *meidaUrl;
 @property(nonatomic, strong) UIImage *image;
 @property(nonatomic, copy) NSString *desc;
 @property(nonatomic, strong) id sourceDto;
@@ -28,36 +28,30 @@ typedef void (^ShareCallBack)(id value);
 @property(nonatomic, assign) LDSDKShareToModule toModule;
 @property(nonatomic, assign) LDSDKShareType toType;
 
-@property(nonatomic, strong) NSArray *sharePlatformsArray;
-@property(nonatomic, copy) NSString *logProcessEventName;
-@property(nonatomic, copy) NSString *logResultEventName;
-
-@property(nonatomic, copy) ShareCallBack shareCallback;
+@property(nonatomic, copy) LDSDKShareCallback shareCallback;
 
 
 - (NSDictionary *)shareDict;
-
-- (void)logProcess:(NSString *)target;
-
-- (void)logResult:(NSString *)target;
 
 - (void)updateShareURL:(LDSDKPlatformType)platform;
 
 - (void)updateSocialPlatform:(SocialPlatformDto *)platformDto;
 
-+ (ShareDto *)createShareURL:(NSString *)url;
++ (ShareDto *)createShareText:(NSString *)text callBack:(LDSDKShareCallback)callBack;
 
-/**
- * web 页面分享~
- * @param url
- * @param title
- * @param desc
- * @param image
- * @param copyText
- * @param logParam
- * @return
- */
-+ (ShareDto *)createShareURL:(NSString *)url title:(NSString *)title desc:(NSString *)desc image:(NSString *)image;
++ (ShareDto *)createShareImage:(NSString *)image callBack:(LDSDKShareCallback)callBack;
+
++ (ShareDto *)createShareNews:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image callBack:(LDSDKShareCallback)callBack;
+
++ (ShareDto *)createShareAudio:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image media:(NSString *)meidaUrl callBack:(LDSDKShareCallback)callBack;
+
++ (ShareDto *)createShareVideo:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image media:(NSString *)meidaUrl callBack:(LDSDKShareCallback)callBack;
+
++ (ShareDto *)createShareFile:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image file:(NSString *)filePath callBack:(LDSDKShareCallback)callBack;
+
++ (ShareDto *)createShareMiniProgram:(NSString *)programKey miniProgramType:(LDSDKMiniProgramType)type link:(NSString *)link callBack:(LDSDKShareCallback)callBack;
+
++ (ShareDto *)createCommenShareURL:(NSString *)url title:(NSString *)title desc:(NSString *)desc image:(NSString *)image;
 
 @end
 

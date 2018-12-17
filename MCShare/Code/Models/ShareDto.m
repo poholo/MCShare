@@ -14,29 +14,27 @@
 
 - (NSDictionary *)shareDict {
     NSMutableDictionary *param = [NSMutableDictionary new];
-    param[LDSDKIdentifierKey] = self.dtoId;
-    param[LDSDKShareTitleKey] = self.title;
-    param[LDSDKShareImageKey] = self.image ?: [UIImage imageNamed:@"icon_commen"];
-    param[LDSDKShareDescKey] = self.desc;
-    param[LDSDKShareRedirectURIKey] = @"https://sns.whalecloud.com/sina2/callback";
-    param[LDSDKShareUrlKey] = [NSString stringWithFormat:@"%@&%@", self.shareUrl, [ShareDto sharePlatform:self.toPlatform type:self.toModule]];
     param[LDSDKShareCallBackKey] = self.shareCallback;
     param[LDSDKPlatformTypeKey] = @(self.toPlatform);
     param[LDSDKShareToMoudleKey] = @(self.toModule);
     param[LDSDKShareTypeKey] = @(self.toType);
+
+    param[LDSDKIdentifierKey] = self.dtoId;
+    param[LDSDKShareTitleKey] = self.title;
+    param[LDSDKShareDescKey] = self.desc;
+    param[LDSDKShareImageKey] = self.image;
+    param[LDSDKShareUrlKey] = [NSString stringWithFormat:@"%@&%@", self.shareUrl, [ShareDto sharePlatform:self.toPlatform type:self.toModule]];
+    param[LDSDKShareMeidaUrlKey] = self.meidaUrl;
+    param[LDSDKShareRedirectURIKey] = @"https://sns.whalecloud.com/sina2/callback";
+
     return param;
 }
 
-- (void)logProcess:(NSString *)target {
-    // log process
-}
-
-- (void)logResult:(NSString *)target {
-    //log result
-}
 
 - (void)updateShareURL:(LDSDKPlatformType)platform {
-    self.shareUrl = [ShareDto dynamicHost:self.shareUrl platform:platform module:self.toModule];
+    if ([self.shareUrl hasPrefix:@"http"]) {
+        self.shareUrl = [ShareDto dynamicHost:self.shareUrl platform:platform module:self.toModule];
+    }
 }
 
 - (void)updateSocialPlatform:(SocialPlatformDto *)platformDto {
@@ -52,39 +50,67 @@
     return [NSString stringWithFormat:@"source=mobileclient&platform=ios&from=singlemessage&appVersion=%@&appName=AppName", [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"]];
 }
 
-+ (ShareDto *)createShareURL:(NSString *)url {
-    NSParameterAssert(url);
++ (ShareDto *)createShareText:(NSString *)text callBack:(LDSDKShareCallback)callBack {
     ShareDto *dto = [ShareDto new];
-    dto.shareUrl = [ShareDto dynamicHost:url platform:LDSDKPlatformWeChat module:LDSDKShareToContact];
-    dto.sourceDto = @"web";
-
-    //日志参数构造
-    {
-        dto.logProcessEventName = @"share";
-        dto.logResultEventName = @"share_suc";
-    }
-
+    dto.desc = text;
+    dto.shareCallback = callBack;
+    dto.toType = LDSDKShareTypeText;
     return dto;
 }
 
-
-+ (ShareDto *)createShareURL:(NSString *)url title:(NSString *)title desc:(NSString *)desc image:(NSString *)image {
-    NSParameterAssert(url);
++ (ShareDto *)createShareImage:(NSString *)image callBack:(LDSDKShareCallback)callBack {
     ShareDto *dto = [ShareDto new];
+    if ([image hasPrefix:@"http"]) {
+        dto.imgUrl = image;
+    } else if ([image hasPrefix:@"file:"]) {
+        dto.image = [UIImage imageWithContentsOfFile:image];
+    } else if (image.length > 0) {
+        dto.image = [UIImage imageNamed:image];
+    }
+    dto.shareCallback = callBack;
+    dto.toType = LDSDKShareTypeImage;
+    return dto;
+}
+
++ (ShareDto *)createShareNews:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image callBack:(LDSDKShareCallback)callBack {
+    ShareDto *dto = [ShareDto createShareImage:image callBack:callBack];
     dto.title = title;
     dto.desc = desc;
-    dto.shareUrl = url;
-    dto.imgUrl = image;
-    dto.sourceDto = @"web";
-
-    //日志参数构造
-    {
-        dto.logProcessEventName = @"share";
-        dto.logResultEventName = @"share_suc";
-    }
-
+    dto.shareUrl = link;
+    dto.toType = LDSDKShareTypeNews;
     return dto;
 }
+
++ (ShareDto *)createShareAudio:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image media:(NSString *)meidaUrl callBack:(LDSDKShareCallback)callBack {
+    ShareDto *dto = [ShareDto createShareNews:title desc:desc link:link image:image callBack:callBack];
+    dto.meidaUrl = meidaUrl;
+    dto.toType = LDSDKShareTypeAudio;
+    return dto;
+}
+
++ (ShareDto *)createShareVideo:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image media:(NSString *)meidaUrl callBack:(LDSDKShareCallback)callBack {
+    ShareDto *dto = [ShareDto createShareNews:title desc:desc link:link image:image callBack:callBack];
+    dto.meidaUrl = meidaUrl;
+    dto.toType = LDSDKShareTypeVideo;
+    return dto;
+}
+
++ (ShareDto *)createShareFile:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image file:(NSString *)filePath callBack:(LDSDKShareCallback)callBack {
+    ShareDto *dto = [ShareDto createShareNews:title desc:desc link:link image:image callBack:callBack];
+    dto.meidaUrl = filePath;
+    dto.toType = LDSDKShareTypeFile;
+    return dto;
+}
+
++ (ShareDto *)createShareMiniProgram:(NSString *)programKey miniProgramType:(LDSDKMiniProgramType)type link:(NSString *)link callBack:(LDSDKShareCallback)callBack {
+
+    return nil;
+}
+
++ (ShareDto *)createCommenShareURL:(NSString *)url title:(NSString *)title desc:(NSString *)desc image:(NSString *)image {
+    return nil;
+}
+
 
 + (NSString *)dynamicHost:(NSString *)url platform:(LDSDKPlatformType)platform module:(LDSDKShareToModule)module {
     NSURLComponents *components = [NSURLComponents componentsWithString:url];
