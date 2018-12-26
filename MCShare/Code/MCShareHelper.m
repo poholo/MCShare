@@ -6,6 +6,8 @@
 #import "MCShareHelper.h"
 
 #import <SDWebImage/SDWebImageManager.h>
+#import <LDSDKManager/LDSDKManager.h>
+#import <LDSDKManager/LDSDKShareService.h>
 
 #import "MCShareDto.h"
 
@@ -67,41 +69,4 @@
 //            }];
 //        }];
 }
-
-+ (BOOL)action2Telegram:(NSURL *)URL schema:(NSURL *)schema {
-    __block BOOL isOpen = NO;
-    __block BOOL isFinish = NO;
-    if ([UIDevice currentDevice].systemName.floatValue > 10) {
-        [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:^(BOOL success) {
-            isOpen = success;
-            isFinish = YES;
-            if (!isOpen) {
-                [MCShareHelper openGroup];
-            }
-        }];
-
-    } else {
-        isOpen = [[UIApplication sharedApplication] openURL:URL];
-        isFinish = YES;
-        if (!isOpen) {
-            [MCShareHelper openGroup];
-        }
-    }
-    while (!isFinish) {
-        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]];
-    }
-    return isOpen;
-}
-
-
-+ (void)openGroup {
-    NSURL *URL = [NSURL URLWithString:kTelegramGroup];
-    if ([UIDevice currentDevice].systemName.floatValue > 10) {
-        [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:NULL];
-
-    } else {
-        [[UIApplication sharedApplication] openURL:URL];
-    }
-}
-
 @end

@@ -54,16 +54,16 @@
 
 }
 
-- (RACSignal *)shareHost {
-    RACSignal *signal = [self apiGetShareHost:@"10"];
-
-    @weakify(self);
-    return [signal map:^id(id value) {
-        @strongify(self);
-        [MCShareConfig share].shareDynamicDto = [ShareDynamicDto createDto:value];
-        self.shareDto.title = self.shareDto.title ?: [MCShareConfig share].shareDynamicDto.title;
-        self.shareDto.desc = self.shareDto.desc ?: [MCShareConfig share].shareDynamicDto.desc;
-        return nil;
+- (void)shareHost:(void (^)(BOOL success))shareCallBack {
+    __weak typeof(self) weakSelf = self;
+    [self apiGetShareHost:@"" callBack:^(BOOL success, NSDictionary *dict) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [MCShareConfig share].shareDynamicDto = [ShareDynamicDto createDto:dict];
+        strongSelf.shareDto.title = strongSelf.shareDto.title ?: [MCShareConfig share].shareDynamicDto.title;
+        strongSelf.shareDto.desc = strongSelf.shareDto.desc ?: [MCShareConfig share].shareDynamicDto.desc;
+        if (shareCallBack) {
+            shareCallBack(success);
+        }
     }];
 }
 
@@ -78,15 +78,6 @@
     return _supportPlatforms;
 }
 
-
-- (BOOL)share2Telegram {
-    NSURL *schema = [NSURL URLWithString:@"tg://"];
-    NSString *text = self.shareDto.title;
-    NSString *url = [NSString stringWithFormat:@"tg://msg_url?text=%@&url=%@", [text urlEncode], [self.shareDto.shareUrl urlEncode]];
-
-    BOOL success = [MCShareHelper action2Telegram:[NSURL URLWithString:url] schema:schema];
-    return success;
-}
 
 #pragma mark - getter
 

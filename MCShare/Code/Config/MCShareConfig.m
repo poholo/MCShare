@@ -4,23 +4,12 @@
 //
 
 #import "MCShareConfig.h"
+
 #import "MCShareDto.h"
+#import "MMShareConfigDto.h"
 
-#pragma mark - ShareConfig
-NSString *const SinaRedirectUri = @"https://sns.whalecloud.com/sina2/callback";
-
-//TODO:: 各个账号id
-#pragma mark - warning 各个账号id
-NSString *const WXAppID = @"wxd6b4d4ada6beb442";
-NSString *const WXAppSecret = @"a2be3d08a304c26d1e538cd3f02e5362";
-NSString *const QQAppID = @"1106976672";
-NSString *const QQAppKey = @"D76uzXaBnfC4hxyO";
-NSString *const SinaAppID = @"4272693281";
-NSString *const SinaAppKey = @"3e6b76df2ff8b3aafb050c5defe7427f";
-NSString *const kTelegramGroup = @"https://0.plus/firebull";  ///< 你的telegram、币用群组
-NSString *const kShareAppName = @"MCShare";
-NSString *const DingTalkId = @"dingoak5hqhuvmpfhpnjvt";
-NSString *const DingTalkAppKey = @"ECV9fyHQhgraFwq3rn-7cOrII24stKBCB0NWb2pQHLKYOCM2HXOYZZtyR1A2p0Fb";
+NSString *const DATA_STATUS = @"success";
+NSString *const DATA_CONTENT = @"data";
 
 @implementation MCShareConfig
 

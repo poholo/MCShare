@@ -8,14 +8,22 @@
 
 #import "NSObject+ShareApi.h"
 
+#import <LDSDKManager/LDSDKConfig.h>
+
+#import "MCShareConfig.h"
 
 @implementation NSObject (ShareApi)
 
-- (RACSignal *)apiGetShareHost:(NSString *)type {
-//    ApiParam *param = [self MMbaseParam];
-//    [param setValue:type forName:@"type"];
-//    return [[HttpFilter share] getInPath:@"api/v1/app/shareInfo.json" apiParams:param];
-    return nil;
+- (void)apiGetShareHost:(NSString *)type callBack:(void (^)(BOOL success, NSDictionary *dict))callBack {
+    MCDynamicHostCallback dynamicHostCallback = [MCShareConfig share].dynamicHostCallback;
+    if (dynamicHostCallback) {
+        NSDictionary *dictionary = dynamicHostCallback(type);
+        if (callBack) {
+            callBack([dictionary[DATA_STATUS] boolValue], dictionary[DATA_CONTENT]);
+        }
+    } else {
+        LDLog(@"[MCShare][ShareApi] callback == nil")
+    }
 }
 
 @end

@@ -6,24 +6,21 @@
 #import <Foundation/Foundation.h>
 
 @class ShareDynamicDto;
+@class MMShareConfigDto;
 
-#pragma mark - ShareConfig
-extern NSString *const SinaRedirectUri;
-extern NSString *const WXAppID;
-extern NSString *const WXAppSecret;
-extern NSString *const QQAppID;
-extern NSString *const QQAppKey;
-extern NSString *const SinaAppID;
-extern NSString *const SinaAppKey;
-extern NSString *const DingTalkId;
-extern NSString *const DingTalkAppKey;
+typedef NSArray<MMShareConfigDto *> *(^MCShareConfigsCallBack)(void);
 
-extern NSString *const kTelegramGroup;
-extern NSString *const kShareAppName;
+typedef NSDictionary *(^MCDynamicHostCallback)(NSString *type);
+
+extern NSString *const DATA_STATUS;
+extern NSString *const DATA_CONTENT;
 
 @interface MCShareConfig : NSObject
 
 @property(nonatomic, strong) ShareDynamicDto *shareDynamicDto;
+
+@property(nonatomic, copy) MCShareConfigsCallBack shareConfigsCallBack;   ///< 注册各个平台账号回调
+@property(nonatomic, copy) MCDynamicHostCallback dynamicHostCallback;     ///< 动态域名
 
 + (instancetype)share;
 

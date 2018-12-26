@@ -8,31 +8,22 @@
 //
 
 #import "MCLoginHelper.h"
-#import "LDSDKAuthService.h"
 
-#import <LDSDKManager/LDSDKShareService.h>
+#import <LDSDKManager/MMShareConfigDto.h>
 #import <LDSDKManager/LDSDKManager.h>
-
+#import <LDSDKManager/LDSDKAuthService.h>
 
 @implementation MCLoginHelper
 
 + (void)resgister {
-    NSArray *regPlatformConfigList = @[
-            @{LDSDKConfigAppIdKey: WXAppID,
-                    LDSDKConfigAppSecretKey: WXAppSecret,
-                    LDSDKConfigAppDescriptionKey: [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"],
-                    LDSDKConfigAppPlatformTypeKey: @(LDSDKPlatformWeChat)},
-            @{LDSDKConfigAppIdKey: QQAppID,
-                    LDSDKConfigAppSecretKey: QQAppKey,
-                    LDSDKConfigAppPlatformTypeKey: @(LDSDKPlatformQQ)},
-            @{LDSDKConfigAppIdKey: SinaAppID,
-                    LDSDKConfigAppSecretKey: SinaAppKey,
-                    LDSDKShareRedirectURIKey: SinaRedirectUri,
-                    LDSDKConfigAppPlatformTypeKey: @(LDSDKPlatformWeibo)},
-            @{LDSDKConfigAppIdKey: DingTalkId,
-                    LDSDKConfigAppSecretKey: DingTalkAppKey,
-                    LDSDKConfigAppPlatformTypeKey: @(LDSDKPlatformDingTalk)}];
-    [[LDSDKManager share] registerWithPlatformConfigList:regPlatformConfigList];
+    MCShareConfigsCallBack  shareConfigsCallBack  = [MCShareConfig share].shareConfigsCallBack;
+    NSAssert(shareConfigsCallBack, @"[MCShare][MCShareConfig share].shareConfigsCallBack un implement.");
+    NSArray<MMShareConfigDto *> * configs = shareConfigsCallBack();
+    NSMutableArray<NSDictionary *> * dealConfigs = [NSMutableArray new];
+    for(MMShareConfigDto * configDto in configs) {
+        [dealConfigs addObject:configDto.dict];
+    }
+    [[LDSDKManager share] registerWithPlatformConfigList:dealConfigs];
 }
 
 + (void)loginType:(LDSDKPlatformType)socialPlatform callBack:(OauthResult)callBack {

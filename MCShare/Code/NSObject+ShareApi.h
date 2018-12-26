@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class RACSignal;
 
 @interface NSObject (ShareApi)
 
-- (RACSignal *)apiGetShareHost:(NSString *)type;
+- (void)apiGetShareHost:(NSString *)type callBack:(void (^)(BOOL success, NSDictionary *dict))callBack;
 
 @end

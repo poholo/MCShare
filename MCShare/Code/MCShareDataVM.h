@@ -9,7 +9,6 @@
 #import "LDSDKShareService.h"
 
 @class MCShareDto;
-@class RACSignal;
 
 @interface MCShareDataVM : NSObject
 @property(nonatomic, strong) NSMutableArray *dataList;
@@ -19,7 +18,6 @@
 
 @property(nonatomic, strong) MCShareDto *shareDto;
 
-- (RACSignal *)shareHost;
+- (void)shareHost:(void (^)(BOOL success))shareCallBack;
 
-- (BOOL)share2Telegram;
 @end

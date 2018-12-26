@@ -8,7 +8,10 @@
 
 #import "AppDelegate.h"
 
+#import <LDSDKManager/MMShareConfigDto.h>
+
 #import "MCSocialModule.h"
+#import "MCShareConfig.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +22,71 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    __weak typeof(self) weakSelf = self;
+    [MCShareConfig share].shareConfigsCallBack = ^NSArray<MMShareConfigDto *> *(void) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        return [strongSelf configs];
+    };
+
+    [MCShareConfig share].dynamicHostCallback = ^NSDictionary *(NSString *type) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"DynamicHost" ofType:@"json"];
+        NSError *error;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:NSJSONReadingMutableContainers error:&error];
+        NSMutableDictionary *result = [NSMutableDictionary new];
+        result[DATA_STATUS] = @( error ? NO : YES);
+        result[DATA_CONTENT] = dictionary;
+        return result;
+    };
+
     [self.socialModule application:application didFinishLaunchingWithOptions:launchOptions];
     return YES;
+}
+
+- (NSArray<MMShareConfigDto *> *)configs {
+    //    NSString *const kTelegramGroup = @"https://0.plus/firebull";  ///< 你的telegram、币用群组
+//    NSString *const kShareAppName = @"MCShare";
+
+    NSMutableArray<MMShareConfigDto *> *configs = [NSMutableArray new];
+    /*************配置账号Id 秘钥(非必须)****************/
+    {
+        MMShareConfigDto *configDto = [MMShareConfigDto new];
+        configDto.appId = @"1106976672";
+        configDto.appSecret = @"D76uzXaBnfC4hxyO";
+        configDto.appPlatformType = LDSDKPlatformQQ;
+        [configs addObject:configDto];
+    }
+
+    {
+        MMShareConfigDto *configDto = [MMShareConfigDto new];
+        configDto.appId = @"wxd6b4d4ada6beb442";
+        configDto.appSecret = @"a2be3d08a304c26d1e538cd3f02e5362";
+        configDto.appPlatformType = LDSDKPlatformWeChat;
+        [configs addObject:configDto];
+    }
+    {
+        MMShareConfigDto *configDto = [MMShareConfigDto new];
+        configDto.appId = @"4272693281";
+        configDto.appSecret = @"3e6b76df2ff8b3aafb050c5defe7427f";
+        configDto.redirectURI = @"https://sns.whalecloud.com/sina2/callback";
+        configDto.appPlatformType = LDSDKPlatformWeibo;
+        [configs addObject:configDto];
+    }
+    {
+        MMShareConfigDto *configDto = [MMShareConfigDto new];
+        configDto.appId = @"";
+        configDto.appSecret = @"";
+        configDto.appPlatformType = LDSDKPlatformTelegaram;
+        [configs addObject:configDto];
+    }
+    {
+        MMShareConfigDto *configDto = [MMShareConfigDto new];
+        configDto.appId = @"dingoak5hqhuvmpfhpnjvt";
+        configDto.appSecret = @"ECV9fyHQhgraFwq3rn-7cOrII24stKBCB0NWb2pQHLKYOCM2HXOYZZtyR1A2p0Fb";
+        configDto.appPlatformType = LDSDKPlatformDingTalk;
+        [configs addObject:configDto];
+    }
+    /*****************************/
+    return configs;
 }
 
 

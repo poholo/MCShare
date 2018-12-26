@@ -13,18 +13,19 @@
 		1A6661D83ECCD26474C05464 /* ShareListDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666A1EA188FAD2CA82C3F0 /* ShareListDataVM.m */; };
 		1A6662B7730A0463C4DDB09F /* ShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666F1BF842BED3CA90909A /* ShareItem.m */; };
 		1A6662DA808990AA33595377 /* MCShareDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666E92A03E2B117884FA3D /* MCShareDataVM.m */; };
-		1A66631E781C4AF92F98E6A9 /* SharePlatform.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A666027DFE98510D564C20E /* SharePlatform.json */; };
 		1A66632DA43D9694DB787EC8 /* MCShareDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66621BA0339C2415510E3F /* MCShareDto.m */; };
 		1A6663C9CE3CA86EC2DAEA20 /* MCSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666FA99D4B9C00269C319D /* MCSharePopView.m */; };
 		1A66640D48865CA066E05759 /* ShareListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666EC43AB55703156AAA31 /* ShareListController.m */; };
 		1A66652C32913377598232C0 /* MCSocialModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6663A43E5BD20AB1D84756 /* MCSocialModule.m */; };
 		1A666588D545D1A2C9996952 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6669FEAF4A8B34BD55E9B4 /* GCDTimer.m */; };
+		1A6665F2827623D7F61DED00 /* SharePlatform.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A666F5386C421FB71A8D8F4 /* SharePlatform.json */; };
 		1A666640484CF78636273A94 /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666A38DE7E89EB6031955E /* UIColor+Extend.m */; };
 		1A6666BACCE4053D2D1AE22A /* UIButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666157DF24EAF5AF2E1BEC /* UIButton+BackgroundColor.m */; };
 		1A66670219578F418427543F /* MCShareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66682B417CEFB3C94A7B23 /* MCShareHelper.m */; };
 		1A66680C2FE79FB37DD2650D /* NSString+URLEncoded.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666848C14516CB9755BC54 /* NSString+URLEncoded.m */; };
 		1A66686FC29194F00A42220C /* NSObject+ShareApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66681EAB9615C6AFF685EB /* NSObject+ShareApi.m */; };
 		1A666879AAE2185B202CF0ED /* MCDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666FD02D8DBC01CD145267 /* MCDto.m */; };
+		1A6668C3C2AF9A0D668687E7 /* DynamicHost.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A666FEC7B39D59FBFE525B9 /* DynamicHost.json */; };
 		1A66695C53F65FBE11C222CA /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6665EE583B64B197805255 /* GCDGroup.m */; };
 		1A666A135D1090D43330B960 /* MCSocialPlatformDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66604CA8B917A8CB6F04C8 /* MCSocialPlatformDto.m */; };
 		1A666ADA2F99B545C9C830AD /* MCShareConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6668F8E7F36877A99C9936 /* MCShareConfig.m */; };
@@ -47,7 +48,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A666027DFE98510D564C20E /* SharePlatform.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SharePlatform.json; sourceTree = "<group>"; };
 		1A66604CA8B917A8CB6F04C8 /* MCSocialPlatformDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSocialPlatformDto.m; sourceTree = "<group>"; };
 		1A66610A2722D127BE7DF92E /* NSString+URLEncoded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoded.h"; sourceTree = "<group>"; };
 		1A666157DF24EAF5AF2E1BEC /* UIButton+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BackgroundColor.m"; sourceTree = "<group>"; };
@@ -105,9 +105,11 @@
 		1A666E92A03E2B117884FA3D /* MCShareDataVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareDataVM.m; sourceTree = "<group>"; };
 		1A666EC43AB55703156AAA31 /* ShareListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareListController.m; sourceTree = "<group>"; };
 		1A666F1BF842BED3CA90909A /* ShareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareItem.m; sourceTree = "<group>"; };
+		1A666F5386C421FB71A8D8F4 /* SharePlatform.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SharePlatform.json; sourceTree = "<group>"; };
 		1A666F85FB3AC8F8A4A6E75C /* MCShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareCell.m; sourceTree = "<group>"; };
 		1A666FA99D4B9C00269C319D /* MCSharePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSharePopView.m; sourceTree = "<group>"; };
 		1A666FD02D8DBC01CD145267 /* MCDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDto.m; sourceTree = "<group>"; };
+		1A666FEC7B39D59FBFE525B9 /* DynamicHost.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DynamicHost.json; sourceTree = "<group>"; };
 		255F70A121C78E850059A14C /* media.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = media.mp4; sourceTree = "<group>"; };
 		255F70A221C78E850059A14C /* think.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = think.jpg; sourceTree = "<group>"; };
 		25AA033521A41CD10009A1D9 /* MCShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,14 +154,6 @@
 				1A666F85FB3AC8F8A4A6E75C /* MCShareCell.m */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		1A666491FE624C77BB19238D /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				1A666027DFE98510D564C20E /* SharePlatform.json */,
-			);
-			path = Source;
 			sourceTree = "<group>";
 		};
 		1A6665EF6F189D8901F78AF2 /* Demo */ = {
@@ -231,6 +225,7 @@
 				255F70A121C78E850059A14C /* media.mp4 */,
 				255F70A221C78E850059A14C /* think.jpg */,
 				1A66632C0E0A9C2D21A28F53 /* Assets.xcassets */,
+				1A666EE30BCC620B0E73B407 /* Datas */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -250,7 +245,6 @@
 				1A666FA99D4B9C00269C319D /* MCSharePopView.m */,
 				1A666A8E7B00B9B88EA778D0 /* Models */,
 				1A66625F29DABCFCE8E0CF95 /* Views */,
-				1A666491FE624C77BB19238D /* Source */,
 				1A66694ED1AE418080793E8A /* Utils */,
 				1A666A0BFD01972C5F96ED68 /* Vender */,
 				1A6668A366AD41376F721B69 /* MCSocialModule.h */,
@@ -278,6 +272,15 @@
 				1A666307DFED1C2142919469 /* GCDSemaphore.m */,
 			);
 			path = GCD;
+			sourceTree = "<group>";
+		};
+		1A666EE30BCC620B0E73B407 /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+				1A666F5386C421FB71A8D8F4 /* SharePlatform.json */,
+				1A666FEC7B39D59FBFE525B9 /* DynamicHost.json */,
+			);
+			path = Datas;
 			sourceTree = "<group>";
 		};
 		1A666F70A5B6A2071187FAA3 /* ScreenShot */ = {
@@ -403,9 +406,10 @@
 				25AA034521A41CD40009A1D9 /* LaunchScreen.storyboard in Resources */,
 				25AA034021A41CD10009A1D9 /* Main.storyboard in Resources */,
 				255F70A421C78E850059A14C /* think.jpg in Resources */,
-				1A66631E781C4AF92F98E6A9 /* SharePlatform.json in Resources */,
 				255F70A321C78E850059A14C /* media.mp4 in Resources */,
 				1A666C8B6BFC18FF24476776 /* Assets.xcassets in Resources */,
+				1A6665F2827623D7F61DED00 /* SharePlatform.json in Resources */,
+				1A6668C3C2AF9A0D668687E7 /* DynamicHost.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

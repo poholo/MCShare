@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "data": {
+    "qq": "https://github.com",
+    "wechat": "https://github.com",
+    "weibo": "https://github.com",
+    "alipay": "https://github.com",
+    "telegram": "https://github.com",
+    "dingtalk": "https://github.com",
+    "default": "https://github.com"
+  }
+}

@@ -6,9 +6,11 @@
 #import "MCShareDto.h"
 
 #import <UIKit/UIKit.h>
+#import <LDSDKManager/LDSDKConfig.h>
 
 #import "StringUtils.h"
 #import "MCSocialPlatformDto.h"
+#import "LDSDKShareService.h"
 
 @implementation MCShareDto
 
@@ -43,7 +45,7 @@
 }
 
 + (NSString *)sharePlatform:(LDSDKPlatformType)platformType type:(LDSDKShareToModule)module {
-    return [NSString stringWithFormat:@"appfrom=ios-%@-%zd-%zd", kShareAppName, platformType, module];
+    return [NSString stringWithFormat:@"appfrom=ios-%@-%zd-%zd", @"MCShare", platformType, module];
 }
 
 + (NSString *)shareCommenParams {

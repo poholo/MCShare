@@ -9,18 +9,12 @@
 #import "MCSharePopView.h"
 
 #import <Masonry.h>
-#import <ReactiveCocoa.h>
-#import <SDWebImage/SDWebImageManager.h>
 
 #import "MCShareDto.h"
 #import "MCShareCell.h"
 #import "MCSocialPlatformDto.h"
 #import "MCShareDataVM.h"
-#import "MCShareDto.h"
 #import "MCShareHelper.h"
-#import "ToastUtils.h"
-#import "StringUtils.h"
-#import "UIColor+Extend.h"
 #import "MCShareColor.h"
 #import "UIButton+BackgroundColor.h"
 #import "DeviceUtils.h"
@@ -59,13 +53,14 @@
 }
 
 - (void)updateHost {
-    RACSignal *signal = [self.dataVM shareHost];
-    @weakify(self);
-    [signal subscribeNext:^(id x) {
-        @strongify(self);
-        [self.dataVM.shareDto updateShareURL:LDSDKPlatformQQ];
-    }               error:^(NSError *error) {
-        NSLog(@"[Share]->Host.ERROR %@", error);
+
+    __weak typeof(self) weakSelf = self;
+    [self.dataVM shareHost:^(BOOL success) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf.dataVM.shareDto updateShareURL:LDSDKPlatformQQ];
+        if (!success) {
+            NSLog(@"[Share]->Host.ERROR ");
+        }
     }];
 }
 

@@ -8,16 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+#import <LDSDKManager/LDSDKConfig.h>
+
 #import "MCShareConfig.h"
-#import "LDSDKConfig.h"
 
 
-typedef void (^OauthResult)(NSDictionary * userInfo, NSError * error);
+typedef void (^OauthResult)(NSDictionary *userInfo, NSError *error);
 
 @interface MCLoginHelper : NSObject
 
 + (void)resgister;
 
-+ (void)loginType:(LDSDKPlatformType)socialPlatform callback:(OauthResult)callback;
++ (void)loginType:(LDSDKPlatformType)socialPlatform callBack:(OauthResult)callBack;
 
 @end

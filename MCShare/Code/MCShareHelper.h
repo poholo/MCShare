@@ -15,6 +15,4 @@
 
 + (void)shareCommenShareDto:(MCShareDto *)shareDto callBack:(void (^)(BOOL success, NSError *error))successBlock;
 
-+ (BOOL)action2Telegram:(NSURL *)URL schema:(NSURL *)schema;
-
 @end

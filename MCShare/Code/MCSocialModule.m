@@ -8,10 +8,11 @@
 
 #import "MCSocialModule.h"
 
-#import <AlipaySDK/AlipaySDK.h>
+#import <LDSDKManager/MMShareConfigDto.h>
+#import <LDSDKManager/LDSDKManager.h>
 
+#import "MCShareConfig.h"
 #import "MCLoginHelper.h"
-#import "LDSDKManager.h"
 
 @interface MCSocialModule ()
 
@@ -21,7 +22,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MCLoginHelper resgister];
-
     return YES;
 }
 
