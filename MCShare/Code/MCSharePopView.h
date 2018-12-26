@@ -9,13 +9,13 @@
 
 #import "MMPopupView.h"
 
-@class ShareDto;
+@class MCShareDto;
 
 @interface MCSharePopView : MMPopupView
 
 - (void)show NS_UNAVAILABLE;
 
-- (void)shareCommenShareDto:(ShareDto *)shareDto;
+- (void)shareCommenShareDto:(MCShareDto *)shareDto;
 
 
 @end

@@ -8,13 +8,11 @@
 //
 
 #import "MCLoginHelper.h"
+#import "LDSDKAuthService.h"
 
 #import <LDSDKManager/LDSDKShareService.h>
+#import <LDSDKManager/LDSDKManager.h>
 
-#import "LDSDKRegisterService.h"
-#import "LDSDKManager.h"
-#import "LDSDKAuthService.h"
-#import "GCD.h"
 
 @implementation MCLoginHelper
 
@@ -30,82 +28,28 @@
             @{LDSDKConfigAppIdKey: SinaAppID,
                     LDSDKConfigAppSecretKey: SinaAppKey,
                     LDSDKShareRedirectURIKey: SinaRedirectUri,
-                    LDSDKConfigAppPlatformTypeKey: @(LDSDKPlatformWeibo)}];
+                    LDSDKConfigAppPlatformTypeKey: @(LDSDKPlatformWeibo)},
+            @{LDSDKConfigAppIdKey: DingTalkId,
+                    LDSDKConfigAppSecretKey: DingTalkAppKey,
+                    LDSDKConfigAppPlatformTypeKey: @(LDSDKPlatformDingTalk)}];
     [[LDSDKManager share] registerWithPlatformConfigList:regPlatformConfigList];
 }
 
-+ (void)loginType:(LDSDKPlatformType)socialPlatform callback:(OauthResult)callback {
-    switch (socialPlatform) {
-        case LDSDKPlatformQQ:
-            [self loginQQCallback:callback];
-            break;
-        case LDSDKPlatformWeibo:
-            [self loginWeiBoCallback:callback];
-            break;
-        case LDSDKPlatformWeChat:
-            [self loginWeiChatCallback:callback];
-            break;
-        default:
-            break;
-    }
-}
-
-+ (void)loginQQCallback:(OauthResult)callback {
-    id <LDSDKAuthService> authService = [[LDSDKManager share] authService:LDSDKPlatformQQ];
++ (void)loginType:(LDSDKPlatformType)socialPlatform callBack:(OauthResult)callBack {
+    id <LDSDKAuthService> authService = [[LDSDKManager share] authService:socialPlatform];
     [authService authPlatformCallback:^(LDSDKLoginCode code, NSError *error, NSDictionary *oauthInfo, NSDictionary *userInfo) {
-        [[GCDQueue mainQueue] execute:^{
-            if (callback) {
-                NSLog(@"NSLocalizedDescription");
-                if (error) {
-                    callback(nil, error);
-                } else {
-                    if (userInfo) {
-                        NSDictionary *dic = @{@"thirdPartId": oauthInfo[@"openId"], @"picAddress": userInfo[@"figureurl_qq_2"], @"nickName": userInfo[@"nickname"], @"gender": userInfo[@"gender"]};
-                        callback(dic, nil);
-
-                    }
-                }
+        LDLog(@"[Login] %@ %@ %@", oauthInfo, userInfo, error);
+        if (!callBack) return;
+        if (code == LDSDKLoginSuccess) {
+            if (userInfo == nil && oauthInfo != nil) {
+                callBack(oauthInfo, nil);
+            } else {
+                callBack(userInfo, nil);
             }
-        }];
-
-    }];
-}
-
-+ (void)loginWeiChatCallback:(OauthResult)callback {
-    id <LDSDKAuthService> authService = [[LDSDKManager share] authService:LDSDKPlatformWeChat];
-    [authService authPlatformCallback:^(LDSDKLoginCode code, NSError *error, NSDictionary *oauthInfo, NSDictionary *userInfo) {
-        [[GCDQueue mainQueue] execute:^{
-            if (callback) {
-                if (error) {
-                    callback(nil, error);
-                } else {
-                    if (userInfo) {
-                        NSDictionary *dic = @{@"thirdPartId": userInfo[@"openid"], @"picAddress": userInfo[@"headimgurl"], @"nickName": userInfo[@"nickname"], @"unionid": userInfo[@"unionid"]};
-                        callback(dic, nil);
-                    }
-                }
-            }
-        }];
-    }];
-}
-
-+ (void)loginWeiBoCallback:(OauthResult)callback {
-    id <LDSDKAuthService> authService = [[LDSDKManager share] authService:LDSDKPlatformWeibo];
-    [authService authPlatformCallback:^(LDSDKLoginCode code, NSError *error, NSDictionary *oauthInfo, NSDictionary *userInfo) {
-        [[GCDQueue mainQueue] execute:^{
-            if (callback) {
-                if (error) {
-                    callback(nil, error);
-                } else {
-                    if (userInfo) {
-                        NSDictionary *dic = @{@"thirdPartId": userInfo[@"thirdId"], @"picAddress": userInfo[@"pic"], @"nickName": userInfo[@"name"], @"gender": userInfo[@"gender"]};
-                        callback(dic, nil);
-                    }
-                }
-            }
-        }];
-
-    }];
+        } else {
+            callBack(nil, error);
+        }
+    }                             ext:nil];
 }
 
 @end

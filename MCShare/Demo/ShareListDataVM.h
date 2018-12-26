@@ -8,7 +8,7 @@
 #import "LDSDKConfig.h"
 
 @class ShareItem;
-@class ShareDto;
+@class MCShareDto;
 
 
 @interface ShareListDataVM : NSObject
@@ -19,6 +19,6 @@
 
 - (void)refresh;
 
-- (ShareDto *)prepareShareDto:(LDSDKShareType)shareType shareCallBack:(LDSDKShareCallback)shareCallBack;
+- (MCShareDto *)prepareShareDto:(LDSDKShareType)shareType shareCallBack:(LDSDKShareCallback)shareCallBack;
 
 @end

@@ -5,7 +5,7 @@
 
 #import "ShareListDataVM.h"
 #import "ShareItem.h"
-#import "ShareDto.h"
+#import "MCShareDto.h"
 
 
 @implementation ShareListDataVM
@@ -78,39 +78,39 @@
 }
 
 
-- (ShareDto *)prepareShareDto:(LDSDKShareType)shareType shareCallBack:(LDSDKShareCallback)shareCallBack {
-    ShareDto *dto = nil;
+- (MCShareDto *)prepareShareDto:(LDSDKShareType)shareType shareCallBack:(LDSDKShareCallback)shareCallBack {
+    MCShareDto *dto = nil;
     switch (shareType) {
         case LDSDKShareTypeText: {
-            dto = [ShareDto createShareText:[self desc] callBack:shareCallBack];
+            dto = [MCShareDto createShareText:[self desc] callBack:shareCallBack];
         }
             break;
         case LDSDKShareTypeImage: {
-            dto = [ShareDto createShareImage:@"think.jpg" callBack:shareCallBack];
+            dto = [MCShareDto createShareImage:@"think.jpg" callBack:shareCallBack];
         }
             break;
         case LDSDKShareTypeNews: {
-            dto = [ShareDto createShareNews:[self title] desc:[self desc] link:self.link image:@"think.jpg" callBack:shareCallBack];
+            dto = [MCShareDto createShareNews:[self title] desc:[self desc] link:self.link image:@"think.jpg" callBack:shareCallBack];
         }
             break;
         case LDSDKShareTypeAudio: {
-            dto = [ShareDto createShareAudio:self.title desc:self.desc link:self.link image:@"think.jpg"
+            dto = [MCShareDto createShareAudio:self.title desc:self.desc link:self.link image:@"think.jpg"
                                        media:[[NSBundle mainBundle] pathForResource:@"media" ofType:@"mp4"] callBack:shareCallBack];
 
         }
             break;
         case LDSDKShareTypeVideo: {
-            dto = [ShareDto createShareVideo:self.title desc:self.desc link:self.link image:@"think.jpg"
+            dto = [MCShareDto createShareVideo:self.title desc:self.desc link:self.link image:@"think.jpg"
                                        media:[[NSBundle mainBundle] pathForResource:@"media" ofType:@"mp4"] callBack:shareCallBack];
         }
             break;
         case LDSDKShareTypeFile: {
-            dto = [ShareDto createShareFile:self.title desc:self.desc link:self.link image:@"think.jpg"
+            dto = [MCShareDto createShareFile:self.title desc:self.desc link:self.link image:@"think.jpg"
                                        file:[[NSBundle mainBundle] pathForResource:@"media" ofType:@"mp4"] callBack:shareCallBack];
         }
             break;
         case LDSDKShareTypeMiniProgram: {
-            dto = [ShareDto createShareMiniProgram:@"" miniProgramType:LDSDKMiniProgramTypePreview link:self.link callBack:shareCallBack];
+            dto = [MCShareDto createShareMiniProgram:@"" miniProgramType:LDSDKMiniProgramTypePreview link:self.link callBack:shareCallBack];
         }
             break;
     }

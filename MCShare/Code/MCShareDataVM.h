@@ -8,7 +8,7 @@
 #import "MCShareConfig.h"
 #import "LDSDKShareService.h"
 
-@class ShareDto;
+@class MCShareDto;
 @class RACSignal;
 
 @interface MCShareDataVM : NSObject
@@ -17,7 +17,7 @@
 
 - (void)refresh;
 
-@property(nonatomic, strong) ShareDto *shareDto;
+@property(nonatomic, strong) MCShareDto *shareDto;
 
 - (RACSignal *)shareHost;
 

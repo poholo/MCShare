@@ -8,12 +8,12 @@
 #import "LDSDKManager.h"
 #import "LDSDKShareService.h"
 
-@class ShareDto;
+@class MCShareDto;
 
 
 @interface MCShareHelper : NSObject
 
-+ (void)shareCommenShareDto:(ShareDto *)shareDto callBack:(void (^)(BOOL success, NSError *error))successBlock;
++ (void)shareCommenShareDto:(MCShareDto *)shareDto callBack:(void (^)(BOOL success, NSError *error))successBlock;
 
 + (BOOL)action2Telegram:(NSURL *)URL schema:(NSURL *)schema;
 

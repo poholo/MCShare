@@ -10,7 +10,7 @@
 
 #import <Masonry.h>
 
-#import "SocialPlatformDto.h"
+#import "MCSocialPlatformDto.h"
 #import "MCShareColor.h"
 
 
@@ -51,7 +51,7 @@
     return self;
 }
 
-- (void)loadData:(SocialPlatformDto *)dto {
+- (void)loadData:(MCSocialPlatformDto *)dto {
     self.iconImageView.image = [UIImage imageNamed:dto.image];
     self.titleLabel.text = dto.name;
 

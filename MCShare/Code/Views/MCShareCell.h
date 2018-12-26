@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class SocialPlatformDto;
+@class MCSocialPlatformDto;
 
 @interface MCShareCell : UICollectionViewCell
 
-- (void)loadData:(SocialPlatformDto *)dto;
+- (void)loadData:(MCSocialPlatformDto *)dto;
 
 + (NSString *)identifier;
 

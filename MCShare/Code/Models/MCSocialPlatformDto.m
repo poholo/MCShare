@@ -3,10 +3,10 @@
 // Copyright (c) 2018 poholo Inc. All rights reserved.
 //
 
-#import "SocialPlatformDto.h"
+#import "MCSocialPlatformDto.h"
 
 
-@implementation SocialPlatformDto
+@implementation MCSocialPlatformDto
 
 - (void)setValue:(nullable id)value forUndefinedKey:(NSString *)key {
     if ([key isEqualToString:@"id"]) {

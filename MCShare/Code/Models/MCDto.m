@@ -3,24 +3,24 @@
 // Copyright (c) 2015 poholo Inc. All rights reserved.
 //
 
-#import "Dto.h"
+#import "MCDto.h"
 
-@implementation Dto
+@implementation MCDto
 
-+ (__kindof Dto *)createDtoId {
-    Dto *dto = [self new];
++ (__kindof MCDto *)createDtoId {
+    MCDto *dto = [self new];
     dto.dtoId = [NSUUID new].UUIDString;
     return dto;
 }
 
 + (instancetype)createDto:(NSDictionary *)dict {
-    Dto *dto = [self new];
+    MCDto *dto = [self new];
     [dto setValuesForKeysWithDictionary:dict];
     return dto;
 }
 
 + (instancetype)createWithDict:(NSDictionary *)dict {
-    Dto *dto = [self new];
+    MCDto *dto = [self new];
     return dto;
 }
 
@@ -55,7 +55,7 @@
     return [self isEqualToDto:other];
 }
 
-- (BOOL)isEqualToDto:(Dto *)dto {
+- (BOOL)isEqualToDto:(MCDto *)dto {
     if (self == dto)
         return YES;
     if (dto == nil)

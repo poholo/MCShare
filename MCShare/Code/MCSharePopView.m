@@ -12,11 +12,11 @@
 #import <ReactiveCocoa.h>
 #import <SDWebImage/SDWebImageManager.h>
 
-#import "ShareDto.h"
+#import "MCShareDto.h"
 #import "MCShareCell.h"
-#import "SocialPlatformDto.h"
+#import "MCSocialPlatformDto.h"
 #import "MCShareDataVM.h"
-#import "ShareDto.h"
+#import "MCShareDto.h"
 #import "MCShareHelper.h"
 #import "ToastUtils.h"
 #import "StringUtils.h"
@@ -41,7 +41,7 @@
 
 #pragma mark  interface
 
-- (void)shareCommenShareDto:(ShareDto *)shareDto {
+- (void)shareCommenShareDto:(MCShareDto *)shareDto {
     self.dataVM.shareDto = shareDto;
 
     [self initilizer];
@@ -142,7 +142,7 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    SocialPlatformDto *platformDto = self.dataVM.dataList[indexPath.item];
+    MCSocialPlatformDto *platformDto = self.dataVM.dataList[indexPath.item];
     MCShareCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[MCShareCell identifier] forIndexPath:indexPath];
     [cell loadData:platformDto];
     return cell;
@@ -150,11 +150,11 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    SocialPlatformDto *platformDto = self.dataVM.dataList[indexPath.item];
+    MCSocialPlatformDto *platformDto = self.dataVM.dataList[indexPath.item];
 
     [self.dataVM.shareDto updateSocialPlatform:platformDto];
 
-    ShareDto *dto = self.dataVM.shareDto;
+    MCShareDto *dto = self.dataVM.shareDto;
     [MCShareHelper shareCommenShareDto:dto callBack:nil];
 
     [self hide];

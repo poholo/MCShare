@@ -8,16 +8,16 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <ReactiveCocoa.h>
 
-#import "ShareDto.h"
+#import "MCShareDto.h"
 #import "WXApi.h"
-#import "SocialPlatformDto.h"
+#import "MCSocialPlatformDto.h"
 #import "NSString+URLEncoded.h"
 #import "NSObject+ShareApi.h"
 #import "MCShareHelper.h"
 
 @interface MCShareDataVM ()
 
-@property(nonatomic, strong) NSMutableArray<SocialPlatformDto *> *supportPlatforms;
+@property(nonatomic, strong) NSMutableArray<MCSocialPlatformDto *> *supportPlatforms;
 
 @end
 
@@ -30,7 +30,7 @@
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     for (NSDictionary *item in dictionary[@"data"]) {
-        SocialPlatformDto *dto = [SocialPlatformDto createDto:item];
+        MCSocialPlatformDto *dto = [MCSocialPlatformDto createDto:item];
         [self.supportPlatforms addObject:dto];
     }
 }
@@ -39,7 +39,7 @@
     [self.dataList removeAllObjects];
     [self parseSupportPlatform];
 
-    for (SocialPlatformDto *platformDto in self.supportPlatforms) {
+    for (MCSocialPlatformDto *platformDto in self.supportPlatforms) {
         LDSDKPlatformType platform = platformDto.platform;
         if (platform == LDSDKPlatformWeChat) {
             if (!([WXApi isWXAppInstalled] && [WXApi isWXAppSupportApi])) continue;
@@ -67,11 +67,11 @@
     }];
 }
 
-- (BOOL)limitHide:(SocialPlatformDto *)dto {
+- (BOOL)limitHide:(MCSocialPlatformDto *)dto {
     return NO;
 }
 
-- (NSMutableArray<SocialPlatformDto *> *)supportPlatforms {
+- (NSMutableArray<MCSocialPlatformDto *> *)supportPlatforms {
     if (!_supportPlatforms) {
         _supportPlatforms = [NSMutableArray new];
     }

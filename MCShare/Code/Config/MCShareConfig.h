@@ -15,6 +15,8 @@ extern NSString *const QQAppID;
 extern NSString *const QQAppKey;
 extern NSString *const SinaAppID;
 extern NSString *const SinaAppKey;
+extern NSString *const DingTalkId;
+extern NSString *const DingTalkAppKey;
 
 extern NSString *const kTelegramGroup;
 extern NSString *const kShareAppName;

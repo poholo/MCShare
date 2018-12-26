@@ -3,14 +3,14 @@
 // Copyright (c) 2017 poholo Inc. All rights reserved.
 //
 
-#import "ShareDto.h"
+#import "MCShareDto.h"
 
 #import <UIKit/UIKit.h>
 
 #import "StringUtils.h"
-#import "SocialPlatformDto.h"
+#import "MCSocialPlatformDto.h"
 
-@implementation ShareDto
+@implementation MCShareDto
 
 - (NSDictionary *)shareDict {
     NSMutableDictionary *param = [NSMutableDictionary new];
@@ -23,7 +23,7 @@
     param[LDSDKShareTitleKey] = self.title;
     param[LDSDKShareDescKey] = self.desc;
     param[LDSDKShareImageKey] = self.image;
-    param[LDSDKShareUrlKey] = [NSString stringWithFormat:@"%@&%@", self.shareUrl, [ShareDto sharePlatform:self.toPlatform type:self.toModule]];
+    param[LDSDKShareUrlKey] = [NSString stringWithFormat:@"%@&%@", self.shareUrl, [MCShareDto sharePlatform:self.toPlatform type:self.toModule]];
     param[LDSDKShareMeidaUrlKey] = self.meidaUrl;
     param[LDSDKShareRedirectURIKey] = @"https://sns.whalecloud.com/sina2/callback";
 
@@ -33,11 +33,11 @@
 
 - (void)updateShareURL:(LDSDKPlatformType)platform {
     if ([self.shareUrl hasPrefix:@"http"]) {
-        self.shareUrl = [ShareDto dynamicHost:self.shareUrl platform:platform module:self.toModule];
+        self.shareUrl = [MCShareDto dynamicHost:self.shareUrl platform:platform module:self.toModule];
     }
 }
 
-- (void)updateSocialPlatform:(SocialPlatformDto *)platformDto {
+- (void)updateSocialPlatform:(MCSocialPlatformDto *)platformDto {
     self.toPlatform = platformDto.platform;
     self.toModule = platformDto.module;
 }
@@ -50,16 +50,16 @@
     return [NSString stringWithFormat:@"source=mobileclient&platform=ios&from=singlemessage&appVersion=%@&appName=AppName", [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"]];
 }
 
-+ (ShareDto *)createShareText:(NSString *)text callBack:(LDSDKShareCallback)callBack {
-    ShareDto *dto = [ShareDto new];
++ (MCShareDto *)createShareText:(NSString *)text callBack:(LDSDKShareCallback)callBack {
+    MCShareDto *dto = [MCShareDto new];
     dto.desc = text;
     dto.shareCallback = callBack;
     dto.toType = LDSDKShareTypeText;
     return dto;
 }
 
-+ (ShareDto *)createShareImage:(NSString *)image callBack:(LDSDKShareCallback)callBack {
-    ShareDto *dto = [ShareDto new];
++ (MCShareDto *)createShareImage:(NSString *)image callBack:(LDSDKShareCallback)callBack {
+    MCShareDto *dto = [MCShareDto new];
     if ([image hasPrefix:@"http"]) {
         dto.imgUrl = image;
     } else if ([image hasPrefix:@"file:"]) {
@@ -72,8 +72,8 @@
     return dto;
 }
 
-+ (ShareDto *)createShareNews:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image callBack:(LDSDKShareCallback)callBack {
-    ShareDto *dto = [ShareDto createShareImage:image callBack:callBack];
++ (MCShareDto *)createShareNews:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image callBack:(LDSDKShareCallback)callBack {
+    MCShareDto *dto = [MCShareDto createShareImage:image callBack:callBack];
     dto.title = title;
     dto.desc = desc;
     dto.shareUrl = link;
@@ -81,33 +81,33 @@
     return dto;
 }
 
-+ (ShareDto *)createShareAudio:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image media:(NSString *)meidaUrl callBack:(LDSDKShareCallback)callBack {
-    ShareDto *dto = [ShareDto createShareNews:title desc:desc link:link image:image callBack:callBack];
++ (MCShareDto *)createShareAudio:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image media:(NSString *)meidaUrl callBack:(LDSDKShareCallback)callBack {
+    MCShareDto *dto = [MCShareDto createShareNews:title desc:desc link:link image:image callBack:callBack];
     dto.meidaUrl = meidaUrl;
     dto.toType = LDSDKShareTypeAudio;
     return dto;
 }
 
-+ (ShareDto *)createShareVideo:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image media:(NSString *)meidaUrl callBack:(LDSDKShareCallback)callBack {
-    ShareDto *dto = [ShareDto createShareNews:title desc:desc link:link image:image callBack:callBack];
++ (MCShareDto *)createShareVideo:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image media:(NSString *)meidaUrl callBack:(LDSDKShareCallback)callBack {
+    MCShareDto *dto = [MCShareDto createShareNews:title desc:desc link:link image:image callBack:callBack];
     dto.meidaUrl = meidaUrl;
     dto.toType = LDSDKShareTypeVideo;
     return dto;
 }
 
-+ (ShareDto *)createShareFile:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image file:(NSString *)filePath callBack:(LDSDKShareCallback)callBack {
-    ShareDto *dto = [ShareDto createShareNews:title desc:desc link:link image:image callBack:callBack];
++ (MCShareDto *)createShareFile:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image file:(NSString *)filePath callBack:(LDSDKShareCallback)callBack {
+    MCShareDto *dto = [MCShareDto createShareNews:title desc:desc link:link image:image callBack:callBack];
     dto.meidaUrl = filePath;
     dto.toType = LDSDKShareTypeFile;
     return dto;
 }
 
-+ (ShareDto *)createShareMiniProgram:(NSString *)programKey miniProgramType:(LDSDKMiniProgramType)type link:(NSString *)link callBack:(LDSDKShareCallback)callBack {
++ (MCShareDto *)createShareMiniProgram:(NSString *)programKey miniProgramType:(LDSDKMiniProgramType)type link:(NSString *)link callBack:(LDSDKShareCallback)callBack {
 
     return nil;
 }
 
-+ (ShareDto *)createCommenShareURL:(NSString *)url title:(NSString *)title desc:(NSString *)desc image:(NSString *)image {
++ (MCShareDto *)createCommenShareURL:(NSString *)url title:(NSString *)title desc:(NSString *)desc image:(NSString *)image {
     return nil;
 }
 

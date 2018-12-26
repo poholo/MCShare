@@ -11,7 +11,7 @@
 #import "UIButton+BackgroundColor.h"
 #import "MCShareColor.h"
 #import "MCSharePopView.h"
-#import "ShareDto.h"
+#import "MCShareDto.h"
 #import "ShareListDataVM.h"
 #import "ShareItem.h"
 #import "DeviceUtils.h"
@@ -42,7 +42,7 @@
 - (void)shareButtonClick {
     ShareItem *item = self.dataVM.dataList[self.dataVM.selectIdx];
     __weak typeof(self) weakSelf = self;
-    ShareDto *dto = [self.dataVM prepareShareDto:item.type shareCallBack:^(LDSDKErrorCode code, NSError *error) {
+    MCShareDto *dto = [self.dataVM prepareShareDto:item.type shareCallBack:^(LDSDKErrorCode code, NSError *error) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
     }];
 

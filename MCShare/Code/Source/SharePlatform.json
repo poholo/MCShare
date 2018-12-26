@@ -40,10 +40,16 @@
       "id": "5",
       "name": "Telegram",
       "image": "ic_telegram",
-      "platform": 5
+      "platform": 4
     },
     {
       "id": "6",
+      "name": "钉钉",
+      "image": "ic_dingtalk",
+      "platform": 5
+    },
+    {
+      "id": "7",
       "name": "复制",
       "image": "ic_ link",
       "platform": 6

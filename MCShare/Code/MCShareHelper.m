@@ -7,12 +7,12 @@
 
 #import <SDWebImage/SDWebImageManager.h>
 
-#import "ShareDto.h"
+#import "MCShareDto.h"
 
 
 @implementation MCShareHelper
 
-+ (void)shareCommenShareDto:(ShareDto *)dto callBack:(void (^)(BOOL success, NSError *error))successBlock {
++ (void)shareCommenShareDto:(MCShareDto *)dto callBack:(void (^)(BOOL success, NSError *error))successBlock {
     [self shareCommentAfterGetImageWithShareDto:dto callBack:successBlock];
     return;
 
@@ -43,9 +43,9 @@
     }
 }
 
-+ (void)shareCommentAfterGetImageWithShareDto:(ShareDto *)shareDto callBack:(void (^)(BOOL success, NSError *error))successBlock {
++ (void)shareCommentAfterGetImageWithShareDto:(MCShareDto *)shareDto callBack:(void (^)(BOOL success, NSError *error))successBlock {
     [shareDto updateShareURL:shareDto.toPlatform];
-//    [shareDto logProcess:[@([ShareDto target:shareDto.toPlatform]) stringValue]];
+//    [shareDto logProcess:[@([MCShareDto target:shareDto.toPlatform]) stringValue]];
 
     NSDictionary *param = [shareDto shareDict];
 //        UIPasteboard *general = [UIPasteboard generalPasteboard];
@@ -58,7 +58,7 @@
 //        [shareService shareWithContent:param shareModule:[MCShareHelper shareType:socialPlatform] onComplete:^(BOOL success, NSError *error) {
 //            [GCDQueue executeInMainQueue:^{
 //                if (success) {
-//                    NSString *targat = [NSString stringWithFormat:@"%ld", (long) [ShareDto target:shareDto.platform]];
+//                    NSString *targat = [NSString stringWithFormat:@"%ld", (long) [MCShareDto target:shareDto.platform]];
 //                    [shareDto logResult:targat];
 //                }
 //                if (successBlock) {

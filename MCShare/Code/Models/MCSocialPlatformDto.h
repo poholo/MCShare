@@ -3,12 +3,12 @@
 // Copyright (c) 2018 poholo Inc. All rights reserved.
 //
 
-#import "Dto.h"
+#import "MCDto.h"
 
 #import "MCShareConfig.h"
 #import "LDSDKConfig.h"
 
-@interface SocialPlatformDto : Dto
+@interface MCSocialPlatformDto : MCDto
 
 @property(nonatomic, assign) LDSDKPlatformType platform;
 @property(nonatomic, assign) LDSDKShareToModule module;

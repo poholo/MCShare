@@ -5,14 +5,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Dto : NSObject
+@interface MCDto : NSObject
 
 @property(nonatomic, copy) NSString *dtoId;
 
 /**
  * 创建对象并且赋值一个随机主键值
  */
-+ (__kindof Dto *)createDtoId;
++ (__kindof MCDto *)createDtoId;
 
 /**
  * 通过NSDictionary的key,value直接转化为一个对象
@@ -30,7 +30,7 @@
 
 - (BOOL)isEqual:(id)other;
 
-- (BOOL)isEqualToDto:(Dto *)dto;
+- (BOOL)isEqualToDto:(MCDto *)dto;
 
 - (NSUInteger)hash;
 
