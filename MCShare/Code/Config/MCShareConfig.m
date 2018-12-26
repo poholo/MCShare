@@ -22,14 +22,37 @@ NSString *const DATA_CONTENT = @"data";
     return instance;
 }
 
-- (NSURL *)shareURLHost {
-    NSURL *URL = [NSURL URLWithString:self.shareDynamicDto.host];
-    return URL;
+- (NSString *)hostForPlatform:(LDSDKPlatformType)type {
+    NSString *host;
+    switch (type) {
+        case LDSDKPlatformQQ: {
+            host = self.shareDynamicDto.qqHost;
+        }
+            break;
+        case LDSDKPlatformWeChat: {
+            host = self.shareDynamicDto.wechatHost;
+        }
+            break;
+        case LDSDKPlatformWeibo: {
+            host = self.shareDynamicDto.sinaHost;
+
+        }
+            break;
+        case LDSDKPlatformTelegaram: {
+            host = self.shareDynamicDto.telegramHost;
+        }
+            break;
+        case LDSDKPlatformDingTalk: {
+            host = self.shareDynamicDto.dingTalkHost;
+        }
+            break;
+    }
+    return host;
 }
 
-- (ShareDynamicDto *)shareDynamicDto {
+- (MCShareDynamicDto *)shareDynamicDto {
     if (!_shareDynamicDto) {
-        _shareDynamicDto = [ShareDynamicDto defaultShareDto];
+        _shareDynamicDto = [MCShareDynamicDto new];
     }
     return _shareDynamicDto;
 }

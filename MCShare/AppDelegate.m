@@ -73,6 +73,13 @@
     }
     {
         MMShareConfigDto *configDto = [MMShareConfigDto new];
+        configDto.appId = @"2018121462531700";
+        configDto.appSecret = @"AivRsxOiPoiXklp5";
+        configDto.appPlatformType = LDSDKPlatformAliPay;
+        [configs addObject:configDto];
+    }
+    {
+        MMShareConfigDto *configDto = [MMShareConfigDto new];
         configDto.appId = @"";
         configDto.appSecret = @"";
         configDto.appPlatformType = LDSDKPlatformTelegaram;

@@ -1,6 +1,8 @@
 {
   "success": true,
   "data": {
+    "title": "",
+    "desc": "",
     "qq": "https://github.com",
     "wechat": "https://github.com",
     "weibo": "https://github.com",

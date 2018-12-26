@@ -8,8 +8,8 @@
 #import <LDSDKManager/LDSDKConfig.h>
 #import <LDSDKManager/LDSDKShareService.h>
 
-#import "MCShareConfig.h"
 #import "MCDto.h"
+#import "LDSDKConfig.h"
 
 @class UIImage;
 @class MCSocialPlatformDto;
@@ -56,20 +56,17 @@
 @end
 
 
-@interface ShareDynamicDto : MCDto
-
-@property(nonatomic, strong) NSString *host;
+@interface MCShareDynamicDto : MCDto
 
 @property(nonatomic, strong) NSString *title;
-@property(nonatomic, strong) NSString *videoDesc;
-
 @property(nonatomic, strong) NSString *desc;
 
-@property(nonatomic, strong) NSString *sinaHost;
 @property(nonatomic, strong) NSString *qqHost;
 @property(nonatomic, strong) NSString *wechatHost;
-
-+ (ShareDynamicDto *)defaultShareDto;
-
+@property(nonatomic, strong) NSString *sinaHost;
+@property(nonatomic, strong) NSString *alipayHost;
+@property(nonatomic, strong) NSString *telegramHost;
+@property(nonatomic, strong) NSString *dingTalkHost;
+@property(nonatomic, strong) NSString *defalutHost;
 
 @end

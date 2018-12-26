@@ -58,7 +58,7 @@
     __weak typeof(self) weakSelf = self;
     [self apiGetShareHost:@"" callBack:^(BOOL success, NSDictionary *dict) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        [MCShareConfig share].shareDynamicDto = [ShareDynamicDto createDto:dict];
+        [MCShareConfig share].shareDynamicDto = [MCShareDynamicDto createDto:dict];
         strongSelf.shareDto.title = strongSelf.shareDto.title ?: [MCShareConfig share].shareDynamicDto.title;
         strongSelf.shareDto.desc = strongSelf.shareDto.desc ?: [MCShareConfig share].shareDynamicDto.desc;
         if (shareCallBack) {

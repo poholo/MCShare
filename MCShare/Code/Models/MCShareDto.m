@@ -116,64 +116,77 @@
 
 + (NSString *)dynamicHost:(NSString *)url platform:(LDSDKPlatformType)platform module:(LDSDKShareToModule)module {
     NSURLComponents *components = [NSURLComponents componentsWithString:url];
-    NSURL *shareURLHost = [NSURL URLWithString:[MCShareConfig share].shareDynamicDto.wechatHost];
-//    if (platform == LDSDKShareToWeiboStory) {
-//        shareURLHost = [NSURL URLWithString:[MCShareConfig share].shareDynamicDto.sinaHost];
-//    } else if (platform == SocialPlatformQQ || platform == SocialPlatformQQZone) {
-//        shareURLHost = [NSURL URLWithString:[MCShareConfig share].shareDynamicDto.qqHost];
-//    }
-    //TODO:: 动态域名
+    NSURL *shareURLHost = [NSURL URLWithString:[[MCShareConfig share] hostForPlatform:platform]];
     components.host = shareURLHost.host;
     components.scheme = shareURLHost.scheme;
     return components.URL.absoluteString;
 }
 
-
 @end
 
 
-@implementation ShareDynamicDto
+@implementation MCShareDynamicDto
 
 - (void)setValue:(nullable id)value forUndefinedKey:(NSString *)key {
-    if ([key isEqualToString:@"commonShare"]) {
-        self.title = value[@"shareTitle"];
-        self.desc = value[@"shareDesc"];
-    }
+
 }
 
-+ (ShareDynamicDto *)defaultShareDto {
-    ShareDynamicDto *dto = [ShareDynamicDto new];
-    dto.host = @"https://www.baidu.com/";
++ (MCShareDynamicDto *)defaultShareDto {
+    MCShareDynamicDto *dto = [MCShareDynamicDto new];
+    dto.defalutHost = @"https://www.baidu.com/";
     return dto;
 }
 
 
-- (NSString *)sinaHost {
-    if (!_sinaHost) {
-        return self.host;
-    }
-    return _sinaHost;
-}
-
 - (NSString *)qqHost {
     if (!_qqHost) {
-        return self.host;
+        return self.defalutHost;
     }
     return _qqHost;
 }
 
 - (NSString *)wechatHost {
     if (!_wechatHost) {
-        return self.host;
+        return self.defalutHost;
     }
     return _wechatHost;
 }
 
-- (NSString *)host {
-    if (!_host) {
-        return @"https://www.baidu.com/";
+- (NSString *)sinaHost {
+    if (!_sinaHost) {
+        return self.defalutHost;
     }
-    return _host;
+    return _sinaHost;
+}
+
+- (NSString *)alipayHost {
+    if (!_alipayHost) {
+        return self.defalutHost;
+    }
+    return _alipayHost;
+}
+
+- (NSString *)telegramHost {
+    if (!_telegramHost) {
+        return self.defalutHost;
+    }
+    return _telegramHost;
+}
+
+- (NSString *)dingTalkHost {
+    if (!_dingTalkHost) {
+        return self.defalutHost;
+    }
+    return _dingTalkHost;
+}
+
+#pragma mark - getter
+
+- (NSString *)defalutHost {
+    if (!_defalutHost) {
+        _defalutHost = @"https://baidu.com";
+    }
+    return _defalutHost;
 }
 
 

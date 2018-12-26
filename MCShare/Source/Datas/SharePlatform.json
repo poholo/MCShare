@@ -38,15 +38,24 @@
     },
     {
       "id": "5",
+      "name": "Alipay",
+      "image": "ic_Alipay",
+      "platform": 2,
+      "module": 0
+    },
+    {
+      "id": "5",
       "name": "Telegram",
       "image": "ic_telegram",
-      "platform": 4
+      "platform": 4,
+      "module": 0
     },
     {
       "id": "6",
       "name": "钉钉",
       "image": "ic_dingtalk",
-      "platform": 5
+      "platform": 5,
+      "module": 0
     },
     {
       "id": "7",

@@ -64,6 +64,9 @@ App info.plist 中添加一下schemas
     <string>tencentapi.qq.reqContent</string>
     <string>tencentapi.qzone.reqContent</string>
     <string>tg</string>
+    <string>dingtalk</string>
+    <string>dingtalk-open</string>
+    <string>dingtalk-sso</string>
 </array>
 
 ```
@@ -112,6 +115,26 @@ App info.plist 中添加一下schemas
 			<string>sina.xxxxxxxx</string>
 		</array>
 	</dict>
+    <dict>
+    <key>CFBundleTypeRole</key>
+    <string>Editor</string>
+    <key>CFBundleURLName</key>
+    <string>alipayShare</string>
+    <key>CFBundleURLSchemes</key>
+    <array>
+    <string>ap2018121462531700</string>
+    </array>
+    </dict>
+    <dict>
+    <key>CFBundleTypeRole</key>
+    <string>Editor</string>
+    <key>CFBundleURLName</key>
+    <string>dingtalk</string>
+    <key>CFBundleURLSchemes</key>
+    <array>
+    <string>dingoak5hqhuvmpfhpnjvt</string>
+    </array>
+    </dict>
 </array>
 ```
 
