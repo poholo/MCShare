@@ -18,6 +18,7 @@
 #import "MCShareColor.h"
 #import "UIButton+BackgroundColor.h"
 #import "DeviceUtils.h"
+#import "ToastUtils.h"
 
 @interface MCSharePopView () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -146,12 +147,17 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
     MCSocialPlatformDto *platformDto = self.dataVM.dataList[indexPath.item];
-
     [self.dataVM.shareDto updateSocialPlatform:platformDto];
 
-    MCShareDto *dto = self.dataVM.shareDto;
-    [MCShareHelper shareCommenShareDto:dto callBack:nil];
+    if (platformDto.platform == 99) {
+        UIPasteboard *general = [UIPasteboard generalPasteboard];
+        [general setString:[self.dataVM.shareDto pasteText]];
+        [ToastUtils showOnTabTopTitle:@"复制成功"];
+    } else {
+        MCShareDto *dto = self.dataVM.shareDto;
+        [MCShareHelper shareCommenShareDto:dto callBack:nil];
 
+    }
     [self hide];
 }
 

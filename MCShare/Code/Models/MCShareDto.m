@@ -33,6 +33,12 @@
 }
 
 
+- (NSString *)pasteText {
+    NSString *paste = [NSString stringWithFormat:@"%@ %@ %@", self.title ?: @"", self.desc ?: @"", self.shareUrl ?: @""];
+    return paste;
+}
+
+
 - (void)updateShareURL:(LDSDKPlatformType)platform {
     if ([self.shareUrl hasPrefix:@"http"]) {
         self.shareUrl = [MCShareDto dynamicHost:self.shareUrl platform:platform module:self.toModule];

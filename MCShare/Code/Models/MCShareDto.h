@@ -33,6 +33,8 @@
 
 - (NSDictionary *)shareDict;
 
+- (NSString *)pasteText;
+
 - (void)updateShareURL:(LDSDKPlatformType)platform;
 
 - (void)updateSocialPlatform:(MCSocialPlatformDto *)platformDto;
