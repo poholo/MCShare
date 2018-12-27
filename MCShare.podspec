@@ -31,7 +31,6 @@ Pod::Spec.new do |s|
     s.dependency 'LDSDKManager'
     s.dependency 'MMPopupView'
     s.dependency 'SDWebImage'
-    s.dependency 'ReactiveCocoa', '2.5'
     s.dependency 'SDVersion'
 
 end
