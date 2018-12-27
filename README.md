@@ -1,16 +1,27 @@
+
+> 0.0.1 support cocoapods
+
 # MCShare
-第三方分享组件，依赖于LDSDKManager_IOS
+[MCShahre](https://github.com/poholo/MCShare)第三方分享组件，依赖于LDSDKManager_IOS.
 
 ## 功能
 MCShare是一个iOS分享组件，旨在减少分享模块的开发工作量，包含以下功能：
 1 完整的分享UI
 2 支持自定义的分享功能
+3 集成简单
+4 动态域名
 
 ## Screenshot
 
-<img src="./ScreenShot/ScreenShot.PNG" width="25%">UI截图</img>
+<img src="https://github.com/poholo/MCShare/raw/master/ScreenShot/ScreenShot.PNG" width="25%"/>
 
 ## 配置方法
+0. 接入
+```text
+直接copy SDK/ 目录代码，按照Example接入
+or
+pod 'MCShare' 按照Example_pod例子接入
+```
 1. 各平台账号秘钥配置
 打开Code/MCShareConfig.m 替换ID keys
 ```
@@ -183,7 +194,6 @@ MCSharePopView *sharePopView = [MCSharePopView new];
 pod 'LDSDKManager' # 由于网易团队不在更新LDSDKManager，LDSDKManager的pod版本已经fork的poholo下并长期维护
 pod 'MMPopupView'
 pod 'SDWebImage'
-pod 'ReactiveCocoa', '2.5'
 pod 'SDVersion', git: 'https://github.com/cguess/SDVersion'
 ```
 LDSDKManager是MCShare的分享能力，由于网易团队不在更新LDSDKManager，LDSDKManager的pod版本已经fork的poholo下并长期维护。
@@ -197,9 +207,3 @@ AlipayShare com.ldsdk.ldsdkmanager
 DingTalk com.laiwang.DTShareKit
 ```
 
-
-## TODO
-- 功能简化
-   提供功能性demo
-- 动态域名
-- 健壮性
