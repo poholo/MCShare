@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.requires_arc = true
 
 
-    s.source_files = 'SDK/Congig/*.{h,m,mm}' ,
+    s.source_files = 'SDK/Config/*.{h,m,mm}' ,
                      'SDK/Models/*.{h,m,mm}',
                      'SDK/Utils/*.{h,m,mm}',
                      'SDK/Vender/*.{h,m,mm}',
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
                      'SDK/Views/*.{h,m,mm}',
                      'SDK/*.{h,m,mm}'
 
-    s.public_header_files = 'SDK/Congig/*.h' ,
+    s.public_header_files = 'SDK/Config/*.h' ,
                      'SDK/Models/*.h',
                      'SDK/Utils/*.h',
                      'SDK/Vender/*.h',

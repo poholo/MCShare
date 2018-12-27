@@ -6,7 +6,6 @@
 #import "MCShareDataVM.h"
 
 #import <TencentOpenAPI/QQApiInterface.h>
-#import <ReactiveCocoa.h>
 
 #import "MCShareDto.h"
 #import "WXApi.h"

@@ -6,6 +6,5 @@ target 'MCShare' do
   pod 'LDSDKManager', git: 'https://github.com/poholo/LDSDKManager_IOS'
   pod 'MMPopupView'
   pod 'SDWebImage'
-  pod 'ReactiveCocoa', '2.5'
   pod 'SDVersion', git: 'https://github.com/cguess/SDVersion'
 end

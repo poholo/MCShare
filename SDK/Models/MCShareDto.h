@@ -7,9 +7,7 @@
 
 #import <LDSDKManager/LDSDKConfig.h>
 #import <LDSDKManager/LDSDKShareService.h>
-
-#import "MCDto.h"
-#import "LDSDKConfig.h"
+#import <LDSDKManager/MCDto.h>
 
 @class UIImage;
 @class MCSocialPlatformDto;
