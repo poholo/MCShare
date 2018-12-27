@@ -7,39 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A66600DE2C9B67202516CA2 /* GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66698ED0A631B1EBB7BC83 /* GCDQueue.m */; };
-		1A66608E25E063ED6120B4AB /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6667EB3DEAC1C2A5112199 /* DeviceUtils.m */; };
-		1A6661003CBB7615C91C89CB /* ToastUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66647FC63518DA2BE2EF02 /* ToastUtils.m */; };
 		1A6661D83ECCD26474C05464 /* ShareListDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666A1EA188FAD2CA82C3F0 /* ShareListDataVM.m */; };
 		1A6662B7730A0463C4DDB09F /* ShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666F1BF842BED3CA90909A /* ShareItem.m */; };
-		1A6662DA808990AA33595377 /* MCShareDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666E92A03E2B117884FA3D /* MCShareDataVM.m */; };
-		1A66632DA43D9694DB787EC8 /* MCShareDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66621BA0339C2415510E3F /* MCShareDto.m */; };
 		1A666343FA04BD8EEDE1C252 /* CateDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666727266DACE8603BB649 /* CateDto.m */; };
-		1A6663C9CE3CA86EC2DAEA20 /* MCSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666FA99D4B9C00269C319D /* MCSharePopView.m */; };
 		1A66640D48865CA066E05759 /* ShareListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666EC43AB55703156AAA31 /* ShareListController.m */; };
-		1A66652C32913377598232C0 /* MCSocialModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6663A43E5BD20AB1D84756 /* MCSocialModule.m */; };
-		1A666588D545D1A2C9996952 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6669FEAF4A8B34BD55E9B4 /* GCDTimer.m */; };
 		1A6665F2827623D7F61DED00 /* SharePlatform.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A666F5386C421FB71A8D8F4 /* SharePlatform.json */; };
-		1A666640484CF78636273A94 /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666A38DE7E89EB6031955E /* UIColor+Extend.m */; };
-		1A6666BACCE4053D2D1AE22A /* UIButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666157DF24EAF5AF2E1BEC /* UIButton+BackgroundColor.m */; };
-		1A66670219578F418427543F /* MCShareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66682B417CEFB3C94A7B23 /* MCShareHelper.m */; };
 		1A66677E1876008ED43A4E9C /* RootDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66641FA08AC29EC3488656 /* RootDataVM.m */; };
-		1A66680C2FE79FB37DD2650D /* NSString+URLEncoded.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666848C14516CB9755BC54 /* NSString+URLEncoded.m */; };
-		1A66686FC29194F00A42220C /* NSObject+ShareApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66681EAB9615C6AFF685EB /* NSObject+ShareApi.m */; };
 		1A6668C3C2AF9A0D668687E7 /* DynamicHost.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A666FEC7B39D59FBFE525B9 /* DynamicHost.json */; };
-		1A66695C53F65FBE11C222CA /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6665EE583B64B197805255 /* GCDGroup.m */; };
-		1A666A135D1090D43330B960 /* MCSocialPlatformDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66604CA8B917A8CB6F04C8 /* MCSocialPlatformDto.m */; };
-		1A666ADA2F99B545C9C830AD /* MCShareConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6668F8E7F36877A99C9936 /* MCShareConfig.m */; };
-		1A666B52DB27C21AC3EB7EBF /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66647B84BF9BE9F94EEBA7 /* UIView+Toast.m */; };
-		1A666B9F4F6183C9C13775E3 /* MCShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666F85FB3AC8F8A4A6E75C /* MCShareCell.m */; };
 		1A666C8B6BFC18FF24476776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A66632C0E0A9C2D21A28F53 /* Assets.xcassets */; };
-		1A666DEFB9ECC155E372A0DD /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666307DFED1C2142919469 /* GCDSemaphore.m */; };
-		1A666E8BE3D1FE3BADB0FCC9 /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666304CFA4AF73FC98AF18 /* StringUtils.m */; };
 		1A666EFFF8E19F6A401307C1 /* RootTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666613C0311CBF53ACEEAF /* RootTableController.m */; };
-		1A666F0864552B8F8CA86A21 /* GCDReTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666D386A6BB3C5E03C7323 /* GCDReTimer.m */; };
-		1A666F3C10E32A95D86F76F2 /* GCDUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666C4C33C80D4A533F0E37 /* GCDUtils.m */; };
-		1A666FC8AB4DD4945D003790 /* MCShareColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666B2823DA1E1EEC5F946F /* MCShareColor.m */; };
-		1A666FE6A022C59A2DDC6989 /* MCLoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666AE7E4C71511C819A8DF /* MCLoginHelper.m */; };
+		250CCD4521D488F500ECDF83 /* NSObject+ShareApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD0B21D488F500ECDF83 /* NSObject+ShareApi.m */; };
+		250CCD4621D488F500ECDF83 /* MCShareConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD0E21D488F500ECDF83 /* MCShareConfig.m */; };
+		250CCD4721D488F500ECDF83 /* MCShareDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1021D488F500ECDF83 /* MCShareDataVM.m */; };
+		250CCD4821D488F500ECDF83 /* MCSocialModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1221D488F500ECDF83 /* MCSocialModule.m */; };
+		250CCD4921D488F500ECDF83 /* UIButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1421D488F500ECDF83 /* UIButton+BackgroundColor.m */; };
+		250CCD4A21D488F500ECDF83 /* UIView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1521D488F500ECDF83 /* UIView+Extend.m */; };
+		250CCD4B21D488F500ECDF83 /* MCShareColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1721D488F500ECDF83 /* MCShareColor.m */; };
+		250CCD4C21D488F500ECDF83 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1921D488F500ECDF83 /* DeviceUtils.m */; };
+		250CCD4D21D488F500ECDF83 /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1A21D488F500ECDF83 /* UIColor+Extend.m */; };
+		250CCD4E21D488F500ECDF83 /* NSString+URLEncoded.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1E21D488F500ECDF83 /* NSString+URLEncoded.m */; };
+		250CCD4F21D488F500ECDF83 /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1F21D488F500ECDF83 /* StringUtils.m */; };
+		250CCD5021D488F500ECDF83 /* MCSocialPlatformDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD2521D488F500ECDF83 /* MCSocialPlatformDto.m */; };
+		250CCD5121D488F500ECDF83 /* MCShareDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD2621D488F500ECDF83 /* MCShareDto.m */; };
+		250CCD5221D488F500ECDF83 /* MCShareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD2721D488F500ECDF83 /* MCShareHelper.m */; };
+		250CCD5321D488F500ECDF83 /* MCLoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD2921D488F500ECDF83 /* MCLoginHelper.m */; };
+		250CCD5421D488F500ECDF83 /* MCShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD2C21D488F500ECDF83 /* MCShareCell.m */; };
+		250CCD5521D488F500ECDF83 /* ToastUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3421D488F500ECDF83 /* ToastUtils.m */; };
+		250CCD5621D488F500ECDF83 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3521D488F500ECDF83 /* UIView+Toast.m */; };
+		250CCD5721D488F500ECDF83 /* GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3821D488F500ECDF83 /* GCDQueue.m */; };
+		250CCD5821D488F500ECDF83 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3921D488F500ECDF83 /* GCDTimer.m */; };
+		250CCD5921D488F500ECDF83 /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3A21D488F500ECDF83 /* GCDGroup.m */; };
+		250CCD5A21D488F500ECDF83 /* GCDReTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3C21D488F500ECDF83 /* GCDReTimer.m */; };
+		250CCD5B21D488F500ECDF83 /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3E21D488F500ECDF83 /* GCDSemaphore.m */; };
+		250CCD5C21D488F500ECDF83 /* GCDUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD4021D488F500ECDF83 /* GCDUtils.m */; };
+		250CCD5D21D488F500ECDF83 /* MCSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD4421D488F500ECDF83 /* MCSharePopView.m */; };
+		250CCD5F21D4890500ECDF83 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 250CCD5E21D4890500ECDF83 /* README.md */; };
 		255F70A321C78E850059A14C /* media.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 255F70A121C78E850059A14C /* media.mp4 */; };
 		255F70A421C78E850059A14C /* think.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 255F70A221C78E850059A14C /* think.jpg */; };
 		25AA033A21A41CD10009A1D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AA033921A41CD10009A1D9 /* AppDelegate.m */; };
@@ -50,72 +52,73 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A66604CA8B917A8CB6F04C8 /* MCSocialPlatformDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSocialPlatformDto.m; sourceTree = "<group>"; };
-		1A66610A2722D127BE7DF92E /* NSString+URLEncoded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoded.h"; sourceTree = "<group>"; };
-		1A666157DF24EAF5AF2E1BEC /* UIButton+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BackgroundColor.m"; sourceTree = "<group>"; };
-		1A6661D18DCCE25273E2A61A /* GCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
-		1A66621BA0339C2415510E3F /* MCShareDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareDto.m; sourceTree = "<group>"; };
-		1A66622B6255DAB4766904D8 /* MCShareColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareColor.h; sourceTree = "<group>"; };
-		1A666304CFA4AF73FC98AF18 /* StringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtils.m; sourceTree = "<group>"; };
-		1A666307DFED1C2142919469 /* GCDSemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDSemaphore.m; sourceTree = "<group>"; };
 		1A66632C0E0A9C2D21A28F53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1A66637F0B70DD4B22E0796D /* GCDSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDSemaphore.h; sourceTree = "<group>"; };
-		1A66638D702E2A35173F310D /* MCSharePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSharePopView.h; sourceTree = "<group>"; };
-		1A6663A43E5BD20AB1D84756 /* MCSocialModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSocialModule.m; sourceTree = "<group>"; };
-		1A6663DC9DEDAAA45291E529 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
 		1A6663FA932EAF2AF8840A16 /* CateDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CateDto.h; sourceTree = "<group>"; };
-		1A66640DA0EF6BC1E20F716A /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		1A66641FA08AC29EC3488656 /* RootDataVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootDataVM.m; sourceTree = "<group>"; };
-		1A66647B84BF9BE9F94EEBA7 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
-		1A66647FC63518DA2BE2EF02 /* ToastUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastUtils.m; sourceTree = "<group>"; };
-		1A6665B94E07620999CD99A8 /* MCShareDataVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareDataVM.h; sourceTree = "<group>"; };
-		1A6665EE583B64B197805255 /* GCDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDGroup.m; sourceTree = "<group>"; };
 		1A666613C0311CBF53ACEEAF /* RootTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableController.m; sourceTree = "<group>"; };
-		1A6666431EF6D9CE65885BE0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		1A6666800238FA320196EBE6 /* GCDReTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDReTimer.h; sourceTree = "<group>"; };
 		1A666727266DACE8603BB649 /* CateDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CateDto.m; sourceTree = "<group>"; };
-		1A66678C97248E92491601F3 /* UIColor+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
 		1A66679FCB040E280016AE37 /* RootDataVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootDataVM.h; sourceTree = "<group>"; };
-		1A6667BBCAB4C5E326CB5565 /* ScreenShot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ScreenShot.jpg; sourceTree = "<group>"; };
-		1A6667EB3DEAC1C2A5112199 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
-		1A6667F32246406535F7AC84 /* MCShareConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareConfig.h; sourceTree = "<group>"; };
 		1A66680BC066EC3EAB51A833 /* ShareListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareListController.h; sourceTree = "<group>"; };
-		1A666810B8F9ACF4EFDD81F0 /* UIButton+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BackgroundColor.h"; sourceTree = "<group>"; };
-		1A66681EAB9615C6AFF685EB /* NSObject+ShareApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ShareApi.m"; sourceTree = "<group>"; };
-		1A66682B417CEFB3C94A7B23 /* MCShareHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareHelper.m; sourceTree = "<group>"; };
-		1A666848C14516CB9755BC54 /* NSString+URLEncoded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoded.m"; sourceTree = "<group>"; };
-		1A6668A366AD41376F721B69 /* MCSocialModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSocialModule.h; sourceTree = "<group>"; };
-		1A6668F8E7F36877A99C9936 /* MCShareConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareConfig.m; sourceTree = "<group>"; };
 		1A666938E66E5BF33C33BF48 /* ShareListDataVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareListDataVM.h; sourceTree = "<group>"; };
-		1A66697072B45AF5ED3378A3 /* MCShareDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareDto.h; sourceTree = "<group>"; };
-		1A66698ED0A631B1EBB7BC83 /* GCDQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDQueue.m; sourceTree = "<group>"; };
-		1A6669FEAF4A8B34BD55E9B4 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
 		1A666A1EA188FAD2CA82C3F0 /* ShareListDataVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareListDataVM.m; sourceTree = "<group>"; };
-		1A666A38DE7E89EB6031955E /* UIColor+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extend.m"; sourceTree = "<group>"; };
-		1A666AE747E02B1EB627D330 /* MCShareHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareHelper.h; sourceTree = "<group>"; };
-		1A666AE7E4C71511C819A8DF /* MCLoginHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLoginHelper.m; sourceTree = "<group>"; };
-		1A666B2823DA1E1EEC5F946F /* MCShareColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareColor.m; sourceTree = "<group>"; };
-		1A666BEBC6A52622CC5C0991 /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtils.h; sourceTree = "<group>"; };
-		1A666C01BE9D0C1BB7F62362 /* MCLoginHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLoginHelper.h; sourceTree = "<group>"; };
-		1A666C4C33C80D4A533F0E37 /* GCDUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDUtils.m; sourceTree = "<group>"; };
-		1A666C7747921628E3E9D184 /* MCShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareCell.h; sourceTree = "<group>"; };
 		1A666C9524ED5ABE5B412D62 /* RootTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableController.h; sourceTree = "<group>"; };
-		1A666CDA1487F62D03B60569 /* GCDUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDUtils.h; sourceTree = "<group>"; };
-		1A666D386A6BB3C5E03C7323 /* GCDReTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDReTimer.m; sourceTree = "<group>"; };
 		1A666D8E83051D1B40FC29E7 /* ShareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareItem.h; sourceTree = "<group>"; };
-		1A666DE9EF8315755663030E /* ToastUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToastUtils.h; sourceTree = "<group>"; };
-		1A666DEA8AA2226939A3E8AC /* GCDQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDQueue.h; sourceTree = "<group>"; };
-		1A666E0608792E3770B98B35 /* NSObject+ShareApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ShareApi.h"; sourceTree = "<group>"; };
-		1A666E0FA1E9D13C885AD848 /* GCDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDGroup.h; sourceTree = "<group>"; };
-		1A666E2979EA524700147582 /* MCSocialPlatformDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSocialPlatformDto.h; sourceTree = "<group>"; };
-		1A666E3A878D428A6DC0F326 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
-		1A666E92A03E2B117884FA3D /* MCShareDataVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareDataVM.m; sourceTree = "<group>"; };
 		1A666EC43AB55703156AAA31 /* ShareListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareListController.m; sourceTree = "<group>"; };
 		1A666F1BF842BED3CA90909A /* ShareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareItem.m; sourceTree = "<group>"; };
 		1A666F5386C421FB71A8D8F4 /* SharePlatform.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SharePlatform.json; sourceTree = "<group>"; };
-		1A666F85FB3AC8F8A4A6E75C /* MCShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareCell.m; sourceTree = "<group>"; };
-		1A666FA99D4B9C00269C319D /* MCSharePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSharePopView.m; sourceTree = "<group>"; };
 		1A666FEC7B39D59FBFE525B9 /* DynamicHost.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DynamicHost.json; sourceTree = "<group>"; };
+		250CCD0B21D488F500ECDF83 /* NSObject+ShareApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ShareApi.m"; sourceTree = "<group>"; };
+		250CCD0C21D488F500ECDF83 /* MCLoginHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLoginHelper.h; sourceTree = "<group>"; };
+		250CCD0E21D488F500ECDF83 /* MCShareConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareConfig.m; sourceTree = "<group>"; };
+		250CCD0F21D488F500ECDF83 /* MCShareConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareConfig.h; sourceTree = "<group>"; };
+		250CCD1021D488F500ECDF83 /* MCShareDataVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareDataVM.m; sourceTree = "<group>"; };
+		250CCD1121D488F500ECDF83 /* MCSharePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSharePopView.h; sourceTree = "<group>"; };
+		250CCD1221D488F500ECDF83 /* MCSocialModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSocialModule.m; sourceTree = "<group>"; };
+		250CCD1421D488F500ECDF83 /* UIButton+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BackgroundColor.m"; sourceTree = "<group>"; };
+		250CCD1521D488F500ECDF83 /* UIView+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extend.m"; sourceTree = "<group>"; };
+		250CCD1621D488F500ECDF83 /* NSString+URLEncoded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoded.h"; sourceTree = "<group>"; };
+		250CCD1721D488F500ECDF83 /* MCShareColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareColor.m; sourceTree = "<group>"; };
+		250CCD1821D488F500ECDF83 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
+		250CCD1921D488F500ECDF83 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
+		250CCD1A21D488F500ECDF83 /* UIColor+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extend.m"; sourceTree = "<group>"; };
+		250CCD1B21D488F500ECDF83 /* UIView+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extend.h"; sourceTree = "<group>"; };
+		250CCD1C21D488F500ECDF83 /* UIButton+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BackgroundColor.h"; sourceTree = "<group>"; };
+		250CCD1D21D488F500ECDF83 /* MCShareColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareColor.h; sourceTree = "<group>"; };
+		250CCD1E21D488F500ECDF83 /* NSString+URLEncoded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoded.m"; sourceTree = "<group>"; };
+		250CCD1F21D488F500ECDF83 /* StringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtils.m; sourceTree = "<group>"; };
+		250CCD2021D488F500ECDF83 /* UIColor+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
+		250CCD2121D488F500ECDF83 /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtils.h; sourceTree = "<group>"; };
+		250CCD2321D488F500ECDF83 /* MCSocialPlatformDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSocialPlatformDto.h; sourceTree = "<group>"; };
+		250CCD2421D488F500ECDF83 /* MCShareDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareDto.h; sourceTree = "<group>"; };
+		250CCD2521D488F500ECDF83 /* MCSocialPlatformDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSocialPlatformDto.m; sourceTree = "<group>"; };
+		250CCD2621D488F500ECDF83 /* MCShareDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareDto.m; sourceTree = "<group>"; };
+		250CCD2721D488F500ECDF83 /* MCShareHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareHelper.m; sourceTree = "<group>"; };
+		250CCD2821D488F500ECDF83 /* NSObject+ShareApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ShareApi.h"; sourceTree = "<group>"; };
+		250CCD2921D488F500ECDF83 /* MCLoginHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLoginHelper.m; sourceTree = "<group>"; };
+		250CCD2A21D488F500ECDF83 /* MCShareDataVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareDataVM.h; sourceTree = "<group>"; };
+		250CCD2C21D488F500ECDF83 /* MCShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareCell.m; sourceTree = "<group>"; };
+		250CCD2D21D488F500ECDF83 /* MCShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareCell.h; sourceTree = "<group>"; };
+		250CCD2E21D488F500ECDF83 /* MCShareHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareHelper.h; sourceTree = "<group>"; };
+		250CCD2F21D488F500ECDF83 /* MCSocialModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSocialModule.h; sourceTree = "<group>"; };
+		250CCD3221D488F500ECDF83 /* ToastUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToastUtils.h; sourceTree = "<group>"; };
+		250CCD3321D488F500ECDF83 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		250CCD3421D488F500ECDF83 /* ToastUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastUtils.m; sourceTree = "<group>"; };
+		250CCD3521D488F500ECDF83 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		250CCD3721D488F500ECDF83 /* GCDSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDSemaphore.h; sourceTree = "<group>"; };
+		250CCD3821D488F500ECDF83 /* GCDQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDQueue.m; sourceTree = "<group>"; };
+		250CCD3921D488F500ECDF83 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
+		250CCD3A21D488F500ECDF83 /* GCDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDGroup.m; sourceTree = "<group>"; };
+		250CCD3B21D488F500ECDF83 /* GCDUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDUtils.h; sourceTree = "<group>"; };
+		250CCD3C21D488F500ECDF83 /* GCDReTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDReTimer.m; sourceTree = "<group>"; };
+		250CCD3D21D488F500ECDF83 /* GCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
+		250CCD3E21D488F500ECDF83 /* GCDSemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDSemaphore.m; sourceTree = "<group>"; };
+		250CCD3F21D488F500ECDF83 /* GCDQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDQueue.h; sourceTree = "<group>"; };
+		250CCD4021D488F500ECDF83 /* GCDUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDUtils.m; sourceTree = "<group>"; };
+		250CCD4121D488F500ECDF83 /* GCDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDGroup.h; sourceTree = "<group>"; };
+		250CCD4221D488F500ECDF83 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
+		250CCD4321D488F500ECDF83 /* GCDReTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDReTimer.h; sourceTree = "<group>"; };
+		250CCD4421D488F500ECDF83 /* MCSharePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSharePopView.m; sourceTree = "<group>"; };
+		250CCD5E21D4890500ECDF83 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		255F70A121C78E850059A14C /* media.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = media.mp4; sourceTree = "<group>"; };
 		255F70A221C78E850059A14C /* think.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = think.jpg; sourceTree = "<group>"; };
 		25AA033521A41CD10009A1D9 /* MCShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,26 +145,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A66611141498544A5059D0A /* Toast */ = {
-			isa = PBXGroup;
-			children = (
-				1A666DE9EF8315755663030E /* ToastUtils.h */,
-				1A66647FC63518DA2BE2EF02 /* ToastUtils.m */,
-				1A66640DA0EF6BC1E20F716A /* UIView+Toast.h */,
-				1A66647B84BF9BE9F94EEBA7 /* UIView+Toast.m */,
-			);
-			path = Toast;
-			sourceTree = "<group>";
-		};
-		1A66625F29DABCFCE8E0CF95 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1A666C7747921628E3E9D184 /* MCShareCell.h */,
-				1A666F85FB3AC8F8A4A6E75C /* MCShareCell.m */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		1A6665EF6F189D8901F78AF2 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,54 +157,6 @@
 				1A666DF9EB8F747A07F36416 /* Root */,
 			);
 			path = Demo;
-			sourceTree = "<group>";
-		};
-		1A666703AE4C0AC7A90D3036 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				1A6667F32246406535F7AC84 /* MCShareConfig.h */,
-				1A6668F8E7F36877A99C9936 /* MCShareConfig.m */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		1A66694ED1AE418080793E8A /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				1A666B2823DA1E1EEC5F946F /* MCShareColor.m */,
-				1A66622B6255DAB4766904D8 /* MCShareColor.h */,
-				1A66610A2722D127BE7DF92E /* NSString+URLEncoded.h */,
-				1A666848C14516CB9755BC54 /* NSString+URLEncoded.m */,
-				1A66678C97248E92491601F3 /* UIColor+Extend.h */,
-				1A666A38DE7E89EB6031955E /* UIColor+Extend.m */,
-				1A666E3A878D428A6DC0F326 /* StringUtils.h */,
-				1A666304CFA4AF73FC98AF18 /* StringUtils.m */,
-				1A666810B8F9ACF4EFDD81F0 /* UIButton+BackgroundColor.h */,
-				1A666157DF24EAF5AF2E1BEC /* UIButton+BackgroundColor.m */,
-				1A666BEBC6A52622CC5C0991 /* DeviceUtils.h */,
-				1A6667EB3DEAC1C2A5112199 /* DeviceUtils.m */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		1A666A0BFD01972C5F96ED68 /* Vender */ = {
-			isa = PBXGroup;
-			children = (
-				1A666ED430C224B71D9B8AE7 /* GCD */,
-				1A66611141498544A5059D0A /* Toast */,
-			);
-			path = Vender;
-			sourceTree = "<group>";
-		};
-		1A666A8E7B00B9B88EA778D0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				1A66621BA0339C2415510E3F /* MCShareDto.m */,
-				1A66697072B45AF5ED3378A3 /* MCShareDto.h */,
-				1A666E2979EA524700147582 /* MCSocialPlatformDto.h */,
-				1A66604CA8B917A8CB6F04C8 /* MCSocialPlatformDto.m */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		1A666D354F7846FAA82C300A /* Source */ = {
@@ -248,50 +183,6 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
-		1A666E8D9CAAE985549EB353 /* Code */ = {
-			isa = PBXGroup;
-			children = (
-				1A666E0608792E3770B98B35 /* NSObject+ShareApi.h */,
-				1A66681EAB9615C6AFF685EB /* NSObject+ShareApi.m */,
-				1A666C01BE9D0C1BB7F62362 /* MCLoginHelper.h */,
-				1A666AE7E4C71511C819A8DF /* MCLoginHelper.m */,
-				1A6665B94E07620999CD99A8 /* MCShareDataVM.h */,
-				1A666E92A03E2B117884FA3D /* MCShareDataVM.m */,
-				1A666AE747E02B1EB627D330 /* MCShareHelper.h */,
-				1A66682B417CEFB3C94A7B23 /* MCShareHelper.m */,
-				1A66638D702E2A35173F310D /* MCSharePopView.h */,
-				1A666FA99D4B9C00269C319D /* MCSharePopView.m */,
-				1A666A8E7B00B9B88EA778D0 /* Models */,
-				1A66625F29DABCFCE8E0CF95 /* Views */,
-				1A66694ED1AE418080793E8A /* Utils */,
-				1A666A0BFD01972C5F96ED68 /* Vender */,
-				1A6668A366AD41376F721B69 /* MCSocialModule.h */,
-				1A6663A43E5BD20AB1D84756 /* MCSocialModule.m */,
-				1A666703AE4C0AC7A90D3036 /* Config */,
-			);
-			path = Code;
-			sourceTree = "<group>";
-		};
-		1A666ED430C224B71D9B8AE7 /* GCD */ = {
-			isa = PBXGroup;
-			children = (
-				1A6661D18DCCE25273E2A61A /* GCD.h */,
-				1A666E0FA1E9D13C885AD848 /* GCDGroup.h */,
-				1A6665EE583B64B197805255 /* GCDGroup.m */,
-				1A666DEA8AA2226939A3E8AC /* GCDQueue.h */,
-				1A66698ED0A631B1EBB7BC83 /* GCDQueue.m */,
-				1A6663DC9DEDAAA45291E529 /* GCDTimer.h */,
-				1A6669FEAF4A8B34BD55E9B4 /* GCDTimer.m */,
-				1A666CDA1487F62D03B60569 /* GCDUtils.h */,
-				1A666C4C33C80D4A533F0E37 /* GCDUtils.m */,
-				1A6666800238FA320196EBE6 /* GCDReTimer.h */,
-				1A666D386A6BB3C5E03C7323 /* GCDReTimer.m */,
-				1A66637F0B70DD4B22E0796D /* GCDSemaphore.h */,
-				1A666307DFED1C2142919469 /* GCDSemaphore.m */,
-			);
-			path = GCD;
-			sourceTree = "<group>";
-		};
 		1A666EE30BCC620B0E73B407 /* Datas */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,23 +192,130 @@
 			path = Datas;
 			sourceTree = "<group>";
 		};
-		1A666F70A5B6A2071187FAA3 /* ScreenShot */ = {
+		250CCD0A21D488F500ECDF83 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
-				1A6667BBCAB4C5E326CB5565 /* ScreenShot.jpg */,
+				250CCD0B21D488F500ECDF83 /* NSObject+ShareApi.m */,
+				250CCD0C21D488F500ECDF83 /* MCLoginHelper.h */,
+				250CCD0D21D488F500ECDF83 /* Config */,
+				250CCD1021D488F500ECDF83 /* MCShareDataVM.m */,
+				250CCD1121D488F500ECDF83 /* MCSharePopView.h */,
+				250CCD1221D488F500ECDF83 /* MCSocialModule.m */,
+				250CCD1321D488F500ECDF83 /* Utils */,
+				250CCD2221D488F500ECDF83 /* Models */,
+				250CCD2721D488F500ECDF83 /* MCShareHelper.m */,
+				250CCD2821D488F500ECDF83 /* NSObject+ShareApi.h */,
+				250CCD2921D488F500ECDF83 /* MCLoginHelper.m */,
+				250CCD2A21D488F500ECDF83 /* MCShareDataVM.h */,
+				250CCD2B21D488F500ECDF83 /* Views */,
+				250CCD2E21D488F500ECDF83 /* MCShareHelper.h */,
+				250CCD2F21D488F500ECDF83 /* MCSocialModule.h */,
+				250CCD3021D488F500ECDF83 /* Vender */,
+				250CCD4421D488F500ECDF83 /* MCSharePopView.m */,
 			);
-			path = ScreenShot;
+			name = SDK;
+			path = ../SDK;
+			sourceTree = "<group>";
+		};
+		250CCD0D21D488F500ECDF83 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				250CCD0E21D488F500ECDF83 /* MCShareConfig.m */,
+				250CCD0F21D488F500ECDF83 /* MCShareConfig.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		250CCD1321D488F500ECDF83 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				250CCD1421D488F500ECDF83 /* UIButton+BackgroundColor.m */,
+				250CCD1521D488F500ECDF83 /* UIView+Extend.m */,
+				250CCD1621D488F500ECDF83 /* NSString+URLEncoded.h */,
+				250CCD1721D488F500ECDF83 /* MCShareColor.m */,
+				250CCD1821D488F500ECDF83 /* StringUtils.h */,
+				250CCD1921D488F500ECDF83 /* DeviceUtils.m */,
+				250CCD1A21D488F500ECDF83 /* UIColor+Extend.m */,
+				250CCD1B21D488F500ECDF83 /* UIView+Extend.h */,
+				250CCD1C21D488F500ECDF83 /* UIButton+BackgroundColor.h */,
+				250CCD1D21D488F500ECDF83 /* MCShareColor.h */,
+				250CCD1E21D488F500ECDF83 /* NSString+URLEncoded.m */,
+				250CCD1F21D488F500ECDF83 /* StringUtils.m */,
+				250CCD2021D488F500ECDF83 /* UIColor+Extend.h */,
+				250CCD2121D488F500ECDF83 /* DeviceUtils.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		250CCD2221D488F500ECDF83 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				250CCD2321D488F500ECDF83 /* MCSocialPlatformDto.h */,
+				250CCD2421D488F500ECDF83 /* MCShareDto.h */,
+				250CCD2521D488F500ECDF83 /* MCSocialPlatformDto.m */,
+				250CCD2621D488F500ECDF83 /* MCShareDto.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		250CCD2B21D488F500ECDF83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				250CCD2C21D488F500ECDF83 /* MCShareCell.m */,
+				250CCD2D21D488F500ECDF83 /* MCShareCell.h */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		250CCD3021D488F500ECDF83 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				250CCD3121D488F500ECDF83 /* Toast */,
+				250CCD3621D488F500ECDF83 /* GCD */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		250CCD3121D488F500ECDF83 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				250CCD3221D488F500ECDF83 /* ToastUtils.h */,
+				250CCD3321D488F500ECDF83 /* UIView+Toast.h */,
+				250CCD3421D488F500ECDF83 /* ToastUtils.m */,
+				250CCD3521D488F500ECDF83 /* UIView+Toast.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		250CCD3621D488F500ECDF83 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				250CCD3721D488F500ECDF83 /* GCDSemaphore.h */,
+				250CCD3821D488F500ECDF83 /* GCDQueue.m */,
+				250CCD3921D488F500ECDF83 /* GCDTimer.m */,
+				250CCD3A21D488F500ECDF83 /* GCDGroup.m */,
+				250CCD3B21D488F500ECDF83 /* GCDUtils.h */,
+				250CCD3C21D488F500ECDF83 /* GCDReTimer.m */,
+				250CCD3D21D488F500ECDF83 /* GCD.h */,
+				250CCD3E21D488F500ECDF83 /* GCDSemaphore.m */,
+				250CCD3F21D488F500ECDF83 /* GCDQueue.h */,
+				250CCD4021D488F500ECDF83 /* GCDUtils.m */,
+				250CCD4121D488F500ECDF83 /* GCDGroup.h */,
+				250CCD4221D488F500ECDF83 /* GCDTimer.h */,
+				250CCD4321D488F500ECDF83 /* GCDReTimer.h */,
+			);
+			path = GCD;
 			sourceTree = "<group>";
 		};
 		25AA032C21A41CD10009A1D9 = {
 			isa = PBXGroup;
 			children = (
+				250CCD5E21D4890500ECDF83 /* README.md */,
+				250CCD0A21D488F500ECDF83 /* SDK */,
 				25AA033721A41CD10009A1D9 /* MCShare */,
 				25AA033621A41CD10009A1D9 /* Products */,
 				94C7CC65AA4AE4266966B51C /* Pods */,
 				487283DFD7C182D97719891E /* Frameworks */,
-				1A6666431EF6D9CE65885BE0 /* README.md */,
-				1A666F70A5B6A2071187FAA3 /* ScreenShot */,
 			);
 			sourceTree = "<group>";
 		};
@@ -338,7 +336,6 @@
 				25AA034321A41CD40009A1D9 /* LaunchScreen.storyboard */,
 				25AA034621A41CD40009A1D9 /* Info.plist */,
 				25AA034721A41CD40009A1D9 /* main.m */,
-				1A666E8D9CAAE985549EB353 /* Code */,
 				1A6665EF6F189D8901F78AF2 /* Demo */,
 				1A666D354F7846FAA82C300A /* Source */,
 			);
@@ -427,6 +424,7 @@
 				255F70A321C78E850059A14C /* media.mp4 in Resources */,
 				1A666C8B6BFC18FF24476776 /* Assets.xcassets in Resources */,
 				1A6665F2827623D7F61DED00 /* SharePlatform.json in Resources */,
+				250CCD5F21D4890500ECDF83 /* README.md in Resources */,
 				1A6668C3C2AF9A0D668687E7 /* DynamicHost.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,38 +477,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250CCD4F21D488F500ECDF83 /* StringUtils.m in Sources */,
+				250CCD4E21D488F500ECDF83 /* NSString+URLEncoded.m in Sources */,
 				25AA034821A41CD40009A1D9 /* main.m in Sources */,
+				250CCD5421D488F500ECDF83 /* MCShareCell.m in Sources */,
+				250CCD5C21D488F500ECDF83 /* GCDUtils.m in Sources */,
+				250CCD5821D488F500ECDF83 /* GCDTimer.m in Sources */,
+				250CCD5021D488F500ECDF83 /* MCSocialPlatformDto.m in Sources */,
+				250CCD4621D488F500ECDF83 /* MCShareConfig.m in Sources */,
+				250CCD4921D488F500ECDF83 /* UIButton+BackgroundColor.m in Sources */,
+				250CCD5921D488F500ECDF83 /* GCDGroup.m in Sources */,
+				250CCD4B21D488F500ECDF83 /* MCShareColor.m in Sources */,
+				250CCD5621D488F500ECDF83 /* UIView+Toast.m in Sources */,
 				25AA033A21A41CD10009A1D9 /* AppDelegate.m in Sources */,
-				1A66686FC29194F00A42220C /* NSObject+ShareApi.m in Sources */,
-				1A666FE6A022C59A2DDC6989 /* MCLoginHelper.m in Sources */,
-				1A6662DA808990AA33595377 /* MCShareDataVM.m in Sources */,
-				1A66670219578F418427543F /* MCShareHelper.m in Sources */,
-				1A6663C9CE3CA86EC2DAEA20 /* MCSharePopView.m in Sources */,
-				1A66632DA43D9694DB787EC8 /* MCShareDto.m in Sources */,
-				1A666A135D1090D43330B960 /* MCSocialPlatformDto.m in Sources */,
-				1A666B9F4F6183C9C13775E3 /* MCShareCell.m in Sources */,
-				1A666FC8AB4DD4945D003790 /* MCShareColor.m in Sources */,
-				1A66680C2FE79FB37DD2650D /* NSString+URLEncoded.m in Sources */,
-				1A666640484CF78636273A94 /* UIColor+Extend.m in Sources */,
-				1A66695C53F65FBE11C222CA /* GCDGroup.m in Sources */,
-				1A66600DE2C9B67202516CA2 /* GCDQueue.m in Sources */,
-				1A666588D545D1A2C9996952 /* GCDTimer.m in Sources */,
-				1A666F3C10E32A95D86F76F2 /* GCDUtils.m in Sources */,
-				1A666F0864552B8F8CA86A21 /* GCDReTimer.m in Sources */,
-				1A666DEFB9ECC155E372A0DD /* GCDSemaphore.m in Sources */,
-				1A6661003CBB7615C91C89CB /* ToastUtils.m in Sources */,
-				1A666B52DB27C21AC3EB7EBF /* UIView+Toast.m in Sources */,
-				1A666E8BE3D1FE3BADB0FCC9 /* StringUtils.m in Sources */,
-				1A6666BACCE4053D2D1AE22A /* UIButton+BackgroundColor.m in Sources */,
-				1A66608E25E063ED6120B4AB /* DeviceUtils.m in Sources */,
-				1A66652C32913377598232C0 /* MCSocialModule.m in Sources */,
 				1A66640D48865CA066E05759 /* ShareListController.m in Sources */,
+				250CCD5D21D488F500ECDF83 /* MCSharePopView.m in Sources */,
+				250CCD4821D488F500ECDF83 /* MCSocialModule.m in Sources */,
 				1A6661D83ECCD26474C05464 /* ShareListDataVM.m in Sources */,
+				250CCD5121D488F500ECDF83 /* MCShareDto.m in Sources */,
+				250CCD5B21D488F500ECDF83 /* GCDSemaphore.m in Sources */,
 				1A6662B7730A0463C4DDB09F /* ShareItem.m in Sources */,
-				1A666ADA2F99B545C9C830AD /* MCShareConfig.m in Sources */,
+				250CCD4C21D488F500ECDF83 /* DeviceUtils.m in Sources */,
 				1A666EFFF8E19F6A401307C1 /* RootTableController.m in Sources */,
+				250CCD5321D488F500ECDF83 /* MCLoginHelper.m in Sources */,
 				1A666343FA04BD8EEDE1C252 /* CateDto.m in Sources */,
+				250CCD4A21D488F500ECDF83 /* UIView+Extend.m in Sources */,
 				1A66677E1876008ED43A4E9C /* RootDataVM.m in Sources */,
+				250CCD5521D488F500ECDF83 /* ToastUtils.m in Sources */,
+				250CCD4D21D488F500ECDF83 /* UIColor+Extend.m in Sources */,
+				250CCD4521D488F500ECDF83 /* NSObject+ShareApi.m in Sources */,
+				250CCD4721D488F500ECDF83 /* MCShareDataVM.m in Sources */,
+				250CCD5A21D488F500ECDF83 /* GCDReTimer.m in Sources */,
+				250CCD5721D488F500ECDF83 /* GCDQueue.m in Sources */,
+				250CCD5221D488F500ECDF83 /* MCShareHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
