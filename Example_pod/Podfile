@@ -2,6 +2,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '8.0'
 
-target 'MCShare' do
+target 'MCShare_pod' do
   pod 'MCShare', git: 'https://github.com/poholo/MCShare'
 end

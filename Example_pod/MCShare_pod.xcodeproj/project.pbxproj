@@ -22,6 +22,7 @@
 		250CCDA821D489E200ECDF83 /* SharePlatform.json in Resources */ = {isa = PBXBuildFile; fileRef = 250CCD9721D489E200ECDF83 /* SharePlatform.json */; };
 		250CCDA921D489E200ECDF83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 250CCD9921D489E200ECDF83 /* LaunchScreen.storyboard */; };
 		250CCDAA21D489E200ECDF83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 250CCD9B21D489E200ECDF83 /* Main.storyboard */; };
+		6DEA5E3CEEE15A969677EF69 /* libPods-MCShare_pod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D5045E28FE2B372D25C259 /* libPods-MCShare_pod.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,9 @@
 		250CCD9721D489E200ECDF83 /* SharePlatform.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SharePlatform.json; sourceTree = "<group>"; };
 		250CCD9A21D489E200ECDF83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		250CCD9C21D489E200ECDF83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		45D5045E28FE2B372D25C259 /* libPods-MCShare_pod.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MCShare_pod.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CBFC7FFCF880D6335C70496 /* Pods-MCShare_pod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCShare_pod.release.xcconfig"; path = "Target Support Files/Pods-MCShare_pod/Pods-MCShare_pod.release.xcconfig"; sourceTree = "<group>"; };
+		8BC36FF3C5E39DCBD0DCBD85 /* Pods-MCShare_pod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCShare_pod.debug.xcconfig"; path = "Target Support Files/Pods-MCShare_pod/Pods-MCShare_pod.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,17 +60,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DEA5E3CEEE15A969677EF69 /* libPods-MCShare_pod.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18D89224E2802C076B73F03F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8BC36FF3C5E39DCBD0DCBD85 /* Pods-MCShare_pod.debug.xcconfig */,
+				4CBFC7FFCF880D6335C70496 /* Pods-MCShare_pod.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		250CCD6021D4894900ECDF83 = {
 			isa = PBXGroup;
 			children = (
 				250CCD6B21D4894900ECDF83 /* MCShare_pod */,
 				250CCD6A21D4894900ECDF83 /* Products */,
+				18D89224E2802C076B73F03F /* Pods */,
+				5DB6991AEF48976B173C0FCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +160,14 @@
 			path = ../../Example/MCShare/Base.lproj;
 			sourceTree = "<group>";
 		};
+		5DB6991AEF48976B173C0FCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45D5045E28FE2B372D25C259 /* libPods-MCShare_pod.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 250CCD7F21D4894A00ECDF83 /* Build configuration list for PBXNativeTarget "MCShare_pod" */;
 			buildPhases = (
+				FECB9FDEB4965FA29FA91C4B /* [CP] Check Pods Manifest.lock */,
 				250CCD6521D4894900ECDF83 /* Sources */,
 				250CCD6621D4894900ECDF83 /* Frameworks */,
 				250CCD6721D4894900ECDF83 /* Resources */,
+				FC99ADD7D23FFE2B9297CE02 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,6 +238,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FC99ADD7D23FFE2B9297CE02 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MCShare_pod/Pods-MCShare_pod-resources.sh",
+				"${PODS_ROOT}/AlipaySDK-iOS/AlipaySDK.bundle",
+				"${PODS_ROOT}/Weibo_SDK/libWeiboSDK/WeiboSDK.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AlipaySDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MCShare_pod/Pods-MCShare_pod-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FECB9FDEB4965FA29FA91C4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MCShare_pod-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		250CCD6521D4894900ECDF83 /* Sources */ = {
@@ -364,6 +440,7 @@
 		};
 		250CCD8021D4894A00ECDF83 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BC36FF3C5E39DCBD0DCBD85 /* Pods-MCShare_pod.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -381,6 +458,7 @@
 		};
 		250CCD8121D4894A00ECDF83 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CBFC7FFCF880D6335C70496 /* Pods-MCShare_pod.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
