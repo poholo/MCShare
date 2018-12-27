@@ -8,9 +8,9 @@
 #import <LDSDKManager/LDSDKConfig.h>
 
 @class MCShareDynamicDto;
-@class MMShareConfigDto;
+@class MCShareConfigDto;
 
-typedef NSArray<MMShareConfigDto *> *(^MCShareConfigsCallBack)(void);
+typedef NSArray<MCShareConfigDto *> *(^MCShareConfigsCallBack)(void);
 
 typedef NSDictionary *(^MCDynamicHostCallback)(NSString *type);
 

@@ -8,7 +8,7 @@
 
 #import "MCSocialModule.h"
 
-#import <LDSDKManager/MMShareConfigDto.h>
+#import <LDSDKManager/MCShareConfigDto.h>
 #import <LDSDKManager/LDSDKManager.h>
 
 #import "MCShareConfig.h"

@@ -14,6 +14,7 @@
 		1A6662B7730A0463C4DDB09F /* ShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666F1BF842BED3CA90909A /* ShareItem.m */; };
 		1A6662DA808990AA33595377 /* MCShareDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666E92A03E2B117884FA3D /* MCShareDataVM.m */; };
 		1A66632DA43D9694DB787EC8 /* MCShareDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66621BA0339C2415510E3F /* MCShareDto.m */; };
+		1A666343FA04BD8EEDE1C252 /* CateDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666727266DACE8603BB649 /* CateDto.m */; };
 		1A6663C9CE3CA86EC2DAEA20 /* MCSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666FA99D4B9C00269C319D /* MCSharePopView.m */; };
 		1A66640D48865CA066E05759 /* ShareListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666EC43AB55703156AAA31 /* ShareListController.m */; };
 		1A66652C32913377598232C0 /* MCSocialModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6663A43E5BD20AB1D84756 /* MCSocialModule.m */; };
@@ -22,9 +23,9 @@
 		1A666640484CF78636273A94 /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666A38DE7E89EB6031955E /* UIColor+Extend.m */; };
 		1A6666BACCE4053D2D1AE22A /* UIButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666157DF24EAF5AF2E1BEC /* UIButton+BackgroundColor.m */; };
 		1A66670219578F418427543F /* MCShareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66682B417CEFB3C94A7B23 /* MCShareHelper.m */; };
+		1A66677E1876008ED43A4E9C /* RootDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66641FA08AC29EC3488656 /* RootDataVM.m */; };
 		1A66680C2FE79FB37DD2650D /* NSString+URLEncoded.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666848C14516CB9755BC54 /* NSString+URLEncoded.m */; };
 		1A66686FC29194F00A42220C /* NSObject+ShareApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66681EAB9615C6AFF685EB /* NSObject+ShareApi.m */; };
-		1A666879AAE2185B202CF0ED /* MCDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666FD02D8DBC01CD145267 /* MCDto.m */; };
 		1A6668C3C2AF9A0D668687E7 /* DynamicHost.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A666FEC7B39D59FBFE525B9 /* DynamicHost.json */; };
 		1A66695C53F65FBE11C222CA /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6665EE583B64B197805255 /* GCDGroup.m */; };
 		1A666A135D1090D43330B960 /* MCSocialPlatformDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66604CA8B917A8CB6F04C8 /* MCSocialPlatformDto.m */; };
@@ -34,6 +35,7 @@
 		1A666C8B6BFC18FF24476776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A66632C0E0A9C2D21A28F53 /* Assets.xcassets */; };
 		1A666DEFB9ECC155E372A0DD /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666307DFED1C2142919469 /* GCDSemaphore.m */; };
 		1A666E8BE3D1FE3BADB0FCC9 /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666304CFA4AF73FC98AF18 /* StringUtils.m */; };
+		1A666EFFF8E19F6A401307C1 /* RootTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666613C0311CBF53ACEEAF /* RootTableController.m */; };
 		1A666F0864552B8F8CA86A21 /* GCDReTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666D386A6BB3C5E03C7323 /* GCDReTimer.m */; };
 		1A666F3C10E32A95D86F76F2 /* GCDUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666C4C33C80D4A533F0E37 /* GCDUtils.m */; };
 		1A666FC8AB4DD4945D003790 /* MCShareColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666B2823DA1E1EEC5F946F /* MCShareColor.m */; };
@@ -51,7 +53,6 @@
 		1A66604CA8B917A8CB6F04C8 /* MCSocialPlatformDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSocialPlatformDto.m; sourceTree = "<group>"; };
 		1A66610A2722D127BE7DF92E /* NSString+URLEncoded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoded.h"; sourceTree = "<group>"; };
 		1A666157DF24EAF5AF2E1BEC /* UIButton+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BackgroundColor.m"; sourceTree = "<group>"; };
-		1A6661674ADE4ABB146C4F90 /* MCDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDto.h; sourceTree = "<group>"; };
 		1A6661D18DCCE25273E2A61A /* GCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
 		1A66621BA0339C2415510E3F /* MCShareDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareDto.m; sourceTree = "<group>"; };
 		1A66622B6255DAB4766904D8 /* MCShareColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareColor.h; sourceTree = "<group>"; };
@@ -62,14 +63,19 @@
 		1A66638D702E2A35173F310D /* MCSharePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSharePopView.h; sourceTree = "<group>"; };
 		1A6663A43E5BD20AB1D84756 /* MCSocialModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSocialModule.m; sourceTree = "<group>"; };
 		1A6663DC9DEDAAA45291E529 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
+		1A6663FA932EAF2AF8840A16 /* CateDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CateDto.h; sourceTree = "<group>"; };
 		1A66640DA0EF6BC1E20F716A /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		1A66641FA08AC29EC3488656 /* RootDataVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootDataVM.m; sourceTree = "<group>"; };
 		1A66647B84BF9BE9F94EEBA7 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		1A66647FC63518DA2BE2EF02 /* ToastUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastUtils.m; sourceTree = "<group>"; };
 		1A6665B94E07620999CD99A8 /* MCShareDataVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareDataVM.h; sourceTree = "<group>"; };
 		1A6665EE583B64B197805255 /* GCDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDGroup.m; sourceTree = "<group>"; };
+		1A666613C0311CBF53ACEEAF /* RootTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableController.m; sourceTree = "<group>"; };
 		1A6666431EF6D9CE65885BE0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1A6666800238FA320196EBE6 /* GCDReTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDReTimer.h; sourceTree = "<group>"; };
+		1A666727266DACE8603BB649 /* CateDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CateDto.m; sourceTree = "<group>"; };
 		1A66678C97248E92491601F3 /* UIColor+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
+		1A66679FCB040E280016AE37 /* RootDataVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootDataVM.h; sourceTree = "<group>"; };
 		1A6667BBCAB4C5E326CB5565 /* ScreenShot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ScreenShot.jpg; sourceTree = "<group>"; };
 		1A6667EB3DEAC1C2A5112199 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
 		1A6667F32246406535F7AC84 /* MCShareConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareConfig.h; sourceTree = "<group>"; };
@@ -93,6 +99,7 @@
 		1A666C01BE9D0C1BB7F62362 /* MCLoginHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLoginHelper.h; sourceTree = "<group>"; };
 		1A666C4C33C80D4A533F0E37 /* GCDUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDUtils.m; sourceTree = "<group>"; };
 		1A666C7747921628E3E9D184 /* MCShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareCell.h; sourceTree = "<group>"; };
+		1A666C9524ED5ABE5B412D62 /* RootTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableController.h; sourceTree = "<group>"; };
 		1A666CDA1487F62D03B60569 /* GCDUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDUtils.h; sourceTree = "<group>"; };
 		1A666D386A6BB3C5E03C7323 /* GCDReTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDReTimer.m; sourceTree = "<group>"; };
 		1A666D8E83051D1B40FC29E7 /* ShareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareItem.h; sourceTree = "<group>"; };
@@ -108,7 +115,6 @@
 		1A666F5386C421FB71A8D8F4 /* SharePlatform.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SharePlatform.json; sourceTree = "<group>"; };
 		1A666F85FB3AC8F8A4A6E75C /* MCShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareCell.m; sourceTree = "<group>"; };
 		1A666FA99D4B9C00269C319D /* MCSharePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSharePopView.m; sourceTree = "<group>"; };
-		1A666FD02D8DBC01CD145267 /* MCDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDto.m; sourceTree = "<group>"; };
 		1A666FEC7B39D59FBFE525B9 /* DynamicHost.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DynamicHost.json; sourceTree = "<group>"; };
 		255F70A121C78E850059A14C /* media.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = media.mp4; sourceTree = "<group>"; };
 		255F70A221C78E850059A14C /* think.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = think.jpg; sourceTree = "<group>"; };
@@ -165,6 +171,7 @@
 				1A666938E66E5BF33C33BF48 /* ShareListDataVM.h */,
 				1A666F1BF842BED3CA90909A /* ShareItem.m */,
 				1A666D8E83051D1B40FC29E7 /* ShareItem.h */,
+				1A666DF9EB8F747A07F36416 /* Root */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -213,8 +220,6 @@
 				1A66697072B45AF5ED3378A3 /* MCShareDto.h */,
 				1A666E2979EA524700147582 /* MCSocialPlatformDto.h */,
 				1A66604CA8B917A8CB6F04C8 /* MCSocialPlatformDto.m */,
-				1A6661674ADE4ABB146C4F90 /* MCDto.h */,
-				1A666FD02D8DBC01CD145267 /* MCDto.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -228,6 +233,19 @@
 				1A666EE30BCC620B0E73B407 /* Datas */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		1A666DF9EB8F747A07F36416 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				1A666613C0311CBF53ACEEAF /* RootTableController.m */,
+				1A666C9524ED5ABE5B412D62 /* RootTableController.h */,
+				1A666727266DACE8603BB649 /* CateDto.m */,
+				1A6663FA932EAF2AF8840A16 /* CateDto.h */,
+				1A66641FA08AC29EC3488656 /* RootDataVM.m */,
+				1A66679FCB040E280016AE37 /* RootDataVM.h */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		1A666E8D9CAAE985549EB353 /* Code */ = {
@@ -482,7 +500,6 @@
 				1A666DEFB9ECC155E372A0DD /* GCDSemaphore.m in Sources */,
 				1A6661003CBB7615C91C89CB /* ToastUtils.m in Sources */,
 				1A666B52DB27C21AC3EB7EBF /* UIView+Toast.m in Sources */,
-				1A666879AAE2185B202CF0ED /* MCDto.m in Sources */,
 				1A666E8BE3D1FE3BADB0FCC9 /* StringUtils.m in Sources */,
 				1A6666BACCE4053D2D1AE22A /* UIButton+BackgroundColor.m in Sources */,
 				1A66608E25E063ED6120B4AB /* DeviceUtils.m in Sources */,
@@ -491,6 +508,9 @@
 				1A6661D83ECCD26474C05464 /* ShareListDataVM.m in Sources */,
 				1A6662B7730A0463C4DDB09F /* ShareItem.m in Sources */,
 				1A666ADA2F99B545C9C830AD /* MCShareConfig.m in Sources */,
+				1A666EFFF8E19F6A401307C1 /* RootTableController.m in Sources */,
+				1A666343FA04BD8EEDE1C252 /* CateDto.m in Sources */,
+				1A66677E1876008ED43A4E9C /* RootDataVM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,7 +663,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ldsdk.ldsdkmanager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laiwang.DTShareKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "*";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -666,7 +686,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ldsdk.ldsdkmanager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laiwang.DTShareKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -9,7 +9,7 @@
 
 #import "MCLoginHelper.h"
 
-#import <LDSDKManager/MMShareConfigDto.h>
+#import <LDSDKManager/MCShareConfigDto.h>
 #import <LDSDKManager/LDSDKManager.h>
 #import <LDSDKManager/LDSDKAuthService.h>
 
@@ -18,9 +18,9 @@
 + (void)resgister {
     MCShareConfigsCallBack  shareConfigsCallBack  = [MCShareConfig share].shareConfigsCallBack;
     NSAssert(shareConfigsCallBack, @"[MCShare][MCShareConfig share].shareConfigsCallBack un implement.");
-    NSArray<MMShareConfigDto *> * configs = shareConfigsCallBack();
+    NSArray<MCShareConfigDto *> * configs = shareConfigsCallBack();
     NSMutableArray<NSDictionary *> * dealConfigs = [NSMutableArray new];
-    for(MMShareConfigDto * configDto in configs) {
+    for(MCShareConfigDto * configDto in configs) {
         [dealConfigs addObject:configDto.dict];
     }
     [[LDSDKManager share] registerWithPlatformConfigList:dealConfigs];

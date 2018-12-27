@@ -165,9 +165,9 @@ self.socialModule = [MCSocialModule new];
 ```
 
 ```objectivec
-ShareDto *shareDto = [ShareDto createShareURL:@"http://news.cctv.com/2018/11/21/ARTIg1vM5MUC0ImOi4x18MOh181121.shtml"
-                                   title:@"大妈公交坐过站抢夺司机方向盘 被处以拘留10天处罚"
-                                    desc:@"，接到公交公司报警后，涪城分局城北派出所迅速开展调查工作并依法将违法嫌疑人张某某(女，53岁，雅安市名山区人)传唤至派出所，张某某如实交代了自己因急于下车一时冲动而抢夺方向盘的违法事实，同时表示后悔和自责，希望得到公众谅解。"
+ShareDto *shareDto = [ShareDto createShareURL:@"https://github.com/poholo/MCShare"
+                                   title:@"LDSDKManager_MCShare"
+                                    desc:@"集成的第三方SDK（目前包括QQ,微信,易信,支付宝）进行集中管理，按照功能（目前包括第三方登录,分享,支付）开放给各个产品使用。通过接口的方式进行产品集成，方便对第三方SDK进行升级维护。"
                                    image:@"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1903202034,3702680589&fm=55&app=22&f=JPEG?w=121&h=81&s=AD336397508303F1059CBC0D0300E042"
                                pasteText:@""];
 MCSharePopView *sharePopView = [MCSharePopView new];
@@ -188,6 +188,14 @@ pod 'SDVersion', git: 'https://github.com/cguess/SDVersion'
 ```
 LDSDKManager是MCShare的分享能力，由于网易团队不在更新LDSDKManager，LDSDKManager的pod版本已经fork的poholo下并长期维护。
 MMPopupView提供弹出pop组件，
+
+
+## 测试Demo注意事项
+```text
+手动修改bundleid
+AlipayShare com.ldsdk.ldsdkmanager
+DingTalk com.laiwang.DTShareKit
+```
 
 
 ## TODO

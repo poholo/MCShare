@@ -6,7 +6,7 @@
 #import "MCShareConfig.h"
 
 #import "MCShareDto.h"
-#import "MMShareConfigDto.h"
+#import "MCShareConfigDto.h"
 
 NSString *const DATA_STATUS = @"success";
 NSString *const DATA_CONTENT = @"data";

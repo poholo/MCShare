@@ -128,12 +128,25 @@
 @implementation MCShareDynamicDto
 
 - (void)setValue:(nullable id)value forUndefinedKey:(NSString *)key {
-
+    if ([key isEqualToString:@"qq"]) {
+        self.qqHost = value;
+    } else if ([key isEqualToString:@"wechat"]) {
+        self.wechatHost = value;
+    } else if ([key isEqualToString:@""]) {
+        self.sinaHost = value;
+    } else if ([key isEqualToString:@"alipay"]) {
+        self.alipayHost = value;
+    } else if ([key isEqualToString:@"telegaram"]) {
+        self.telegramHost = value;
+    } else if ([key isEqualToString:@"dingtalk"]) {
+        self.dingTalkHost = value;
+    } else if ([key isEqualToString:@"default"]) {
+        self.defalutHost = value;
+    }
 }
 
 + (MCShareDynamicDto *)defaultShareDto {
     MCShareDynamicDto *dto = [MCShareDynamicDto new];
-    dto.defalutHost = @"https://www.baidu.com/";
     return dto;
 }
 
