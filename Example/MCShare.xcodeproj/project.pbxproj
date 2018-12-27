@@ -34,12 +34,6 @@
 		250CCD5421D488F500ECDF83 /* MCShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD2C21D488F500ECDF83 /* MCShareCell.m */; };
 		250CCD5521D488F500ECDF83 /* ToastUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3421D488F500ECDF83 /* ToastUtils.m */; };
 		250CCD5621D488F500ECDF83 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3521D488F500ECDF83 /* UIView+Toast.m */; };
-		250CCD5721D488F500ECDF83 /* GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3821D488F500ECDF83 /* GCDQueue.m */; };
-		250CCD5821D488F500ECDF83 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3921D488F500ECDF83 /* GCDTimer.m */; };
-		250CCD5921D488F500ECDF83 /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3A21D488F500ECDF83 /* GCDGroup.m */; };
-		250CCD5A21D488F500ECDF83 /* GCDReTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3C21D488F500ECDF83 /* GCDReTimer.m */; };
-		250CCD5B21D488F500ECDF83 /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3E21D488F500ECDF83 /* GCDSemaphore.m */; };
-		250CCD5C21D488F500ECDF83 /* GCDUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD4021D488F500ECDF83 /* GCDUtils.m */; };
 		250CCD5D21D488F500ECDF83 /* MCSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD4421D488F500ECDF83 /* MCSharePopView.m */; };
 		250CCD5F21D4890500ECDF83 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 250CCD5E21D4890500ECDF83 /* README.md */; };
 		255F70A321C78E850059A14C /* media.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 255F70A121C78E850059A14C /* media.mp4 */; };
@@ -104,19 +98,6 @@
 		250CCD3321D488F500ECDF83 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		250CCD3421D488F500ECDF83 /* ToastUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastUtils.m; sourceTree = "<group>"; };
 		250CCD3521D488F500ECDF83 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
-		250CCD3721D488F500ECDF83 /* GCDSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDSemaphore.h; sourceTree = "<group>"; };
-		250CCD3821D488F500ECDF83 /* GCDQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDQueue.m; sourceTree = "<group>"; };
-		250CCD3921D488F500ECDF83 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
-		250CCD3A21D488F500ECDF83 /* GCDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDGroup.m; sourceTree = "<group>"; };
-		250CCD3B21D488F500ECDF83 /* GCDUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDUtils.h; sourceTree = "<group>"; };
-		250CCD3C21D488F500ECDF83 /* GCDReTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDReTimer.m; sourceTree = "<group>"; };
-		250CCD3D21D488F500ECDF83 /* GCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
-		250CCD3E21D488F500ECDF83 /* GCDSemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDSemaphore.m; sourceTree = "<group>"; };
-		250CCD3F21D488F500ECDF83 /* GCDQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDQueue.h; sourceTree = "<group>"; };
-		250CCD4021D488F500ECDF83 /* GCDUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDUtils.m; sourceTree = "<group>"; };
-		250CCD4121D488F500ECDF83 /* GCDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDGroup.h; sourceTree = "<group>"; };
-		250CCD4221D488F500ECDF83 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
-		250CCD4321D488F500ECDF83 /* GCDReTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDReTimer.h; sourceTree = "<group>"; };
 		250CCD4421D488F500ECDF83 /* MCSharePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSharePopView.m; sourceTree = "<group>"; };
 		250CCD5E21D4890500ECDF83 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		255F70A121C78E850059A14C /* media.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = media.mp4; sourceTree = "<group>"; };
@@ -271,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				250CCD3121D488F500ECDF83 /* Toast */,
-				250CCD3621D488F500ECDF83 /* GCD */,
 			);
 			path = Vender;
 			sourceTree = "<group>";
@@ -285,26 +265,6 @@
 				250CCD3521D488F500ECDF83 /* UIView+Toast.m */,
 			);
 			path = Toast;
-			sourceTree = "<group>";
-		};
-		250CCD3621D488F500ECDF83 /* GCD */ = {
-			isa = PBXGroup;
-			children = (
-				250CCD3721D488F500ECDF83 /* GCDSemaphore.h */,
-				250CCD3821D488F500ECDF83 /* GCDQueue.m */,
-				250CCD3921D488F500ECDF83 /* GCDTimer.m */,
-				250CCD3A21D488F500ECDF83 /* GCDGroup.m */,
-				250CCD3B21D488F500ECDF83 /* GCDUtils.h */,
-				250CCD3C21D488F500ECDF83 /* GCDReTimer.m */,
-				250CCD3D21D488F500ECDF83 /* GCD.h */,
-				250CCD3E21D488F500ECDF83 /* GCDSemaphore.m */,
-				250CCD3F21D488F500ECDF83 /* GCDQueue.h */,
-				250CCD4021D488F500ECDF83 /* GCDUtils.m */,
-				250CCD4121D488F500ECDF83 /* GCDGroup.h */,
-				250CCD4221D488F500ECDF83 /* GCDTimer.h */,
-				250CCD4321D488F500ECDF83 /* GCDReTimer.h */,
-			);
-			path = GCD;
 			sourceTree = "<group>";
 		};
 		25AA032C21A41CD10009A1D9 = {
@@ -481,12 +441,9 @@
 				250CCD4E21D488F500ECDF83 /* NSString+URLEncoded.m in Sources */,
 				25AA034821A41CD40009A1D9 /* main.m in Sources */,
 				250CCD5421D488F500ECDF83 /* MCShareCell.m in Sources */,
-				250CCD5C21D488F500ECDF83 /* GCDUtils.m in Sources */,
-				250CCD5821D488F500ECDF83 /* GCDTimer.m in Sources */,
 				250CCD5021D488F500ECDF83 /* MCSocialPlatformDto.m in Sources */,
 				250CCD4621D488F500ECDF83 /* MCShareConfig.m in Sources */,
 				250CCD4921D488F500ECDF83 /* UIButton+BackgroundColor.m in Sources */,
-				250CCD5921D488F500ECDF83 /* GCDGroup.m in Sources */,
 				250CCD4B21D488F500ECDF83 /* MCShareColor.m in Sources */,
 				250CCD5621D488F500ECDF83 /* UIView+Toast.m in Sources */,
 				25AA033A21A41CD10009A1D9 /* AppDelegate.m in Sources */,
@@ -495,7 +452,6 @@
 				250CCD4821D488F500ECDF83 /* MCSocialModule.m in Sources */,
 				1A6661D83ECCD26474C05464 /* ShareListDataVM.m in Sources */,
 				250CCD5121D488F500ECDF83 /* MCShareDto.m in Sources */,
-				250CCD5B21D488F500ECDF83 /* GCDSemaphore.m in Sources */,
 				1A6662B7730A0463C4DDB09F /* ShareItem.m in Sources */,
 				250CCD4C21D488F500ECDF83 /* DeviceUtils.m in Sources */,
 				1A666EFFF8E19F6A401307C1 /* RootTableController.m in Sources */,
@@ -507,8 +463,6 @@
 				250CCD4D21D488F500ECDF83 /* UIColor+Extend.m in Sources */,
 				250CCD4521D488F500ECDF83 /* NSObject+ShareApi.m in Sources */,
 				250CCD4721D488F500ECDF83 /* MCShareDataVM.m in Sources */,
-				250CCD5A21D488F500ECDF83 /* GCDReTimer.m in Sources */,
-				250CCD5721D488F500ECDF83 /* GCDQueue.m in Sources */,
 				250CCD5221D488F500ECDF83 /* MCShareHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

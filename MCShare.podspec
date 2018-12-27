@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.source_files = 'SDK/Config/*.{h,m,mm}' ,
                      'SDK/Models/*.{h,m,mm}',
                      'SDK/Utils/*.{h,m,mm}',
-                     'SDK/Vender/*.{h,m,mm}',
+                     'SDK/Vender/Toast/*.{h,m,mm}',
                      'SDK/Utils/*.{h,m,mm}',
                      'SDK/Views/*.{h,m,mm}',
                      'SDK/*.{h,m,mm}'
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
     s.public_header_files = 'SDK/Config/*.h' ,
                      'SDK/Models/*.h',
                      'SDK/Utils/*.h',
-                     'SDK/Vender/*.h',
+                     'SDK/Vender/Toast/*.h',
                      'SDK/Utils/*.h',
                      'SDK/Views/*.h',
                      'SDK/*.h'
