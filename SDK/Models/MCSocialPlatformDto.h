@@ -3,9 +3,11 @@
 // Copyright (c) 2018 poholo Inc. All rights reserved.
 //
 
-#import "MCDto.h"
 
 #import "MCShareConfig.h"
+
+#import <MCBase/MCDto.h>
+
 #import "LDSDKConfig.h"
 
 @interface MCSocialPlatformDto : MCDto

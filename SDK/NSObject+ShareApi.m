@@ -9,6 +9,7 @@
 #import "NSObject+ShareApi.h"
 
 #import <LDSDKManager/LDSDKConfig.h>
+#import <MCBase/MCLog.h>
 
 #import "MCShareConfig.h"
 
@@ -22,7 +23,7 @@
             callBack([dictionary[DATA_STATUS] boolValue], dictionary[DATA_CONTENT]);
         }
     } else {
-        LDLog(@"[MCShare][ShareApi] callback == nil")
+        MCLog(@"[MCShare][ShareApi] callback == nil")
     }
 }
 

@@ -6,23 +6,26 @@
 
 ## 功能
 MCShare是一个iOS分享组件，旨在减少分享模块的开发工作量，包含以下功能：
+```text
 1 完整的分享UI
 2 支持自定义的分享功能
 3 集成简单
 4 动态域名
+5 自定义样式
+```
 
 ## Screenshot
 
 <img src="https://github.com/poholo/MCShare/raw/master/ScreenShot/ScreenShot.PNG" width="25%"/>
 
 ## 配置方法
-0. 接入
+### 0. 接入
 ```text
 直接copy SDK/ 目录代码，按照Example接入
 or
 pod 'MCShare' 按照Example_pod例子接入
 ```
-1. 各平台账号秘钥配置
+### 1. 各平台账号秘钥配置
 打开Code/MCShareConfig.m 替换ID keys
 ```
 //TODO:: 各个账号id
@@ -35,7 +38,7 @@ NSString *const SinaAppID = @"SinaAppID";
 NSString *const SinaAppKey = @"SinaAppKey";
 ```
 
-2.Info配置
+### 2.Info配置
 App info.plist 中添加一下schemas
 ```xml
 <key>LSApplicationQueriesSchemes</key>
@@ -82,7 +85,7 @@ App info.plist 中添加一下schemas
 
 ```
 
-3.info.plist 增加URL types
+### 3.info.plist 增加URL types
 ```xml
 <key>CFBundleURLTypes</key>
 <array>

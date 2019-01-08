@@ -12,6 +12,7 @@
 #import <LDSDKManager/MCShareConfigDto.h>
 #import <LDSDKManager/LDSDKManager.h>
 #import <LDSDKManager/LDSDKAuthService.h>
+#import <MCBase/MCLog.h>
 
 @implementation MCLoginHelper
 
@@ -29,7 +30,7 @@
 + (void)loginType:(LDSDKPlatformType)socialPlatform callBack:(OauthResult)callBack {
     id <LDSDKAuthService> authService = [[LDSDKManager share] authService:socialPlatform];
     [authService authPlatformCallback:^(LDSDKLoginCode code, NSError *error, NSDictionary *oauthInfo, NSDictionary *userInfo) {
-        LDLog(@"[Login] %@ %@ %@", oauthInfo, userInfo, error);
+        MCLog(@"[Login] %@ %@ %@", oauthInfo, userInfo, error);
         if (!callBack) return;
         if (code == LDSDKLoginSuccess) {
             if (userInfo == nil && oauthInfo != nil) {
