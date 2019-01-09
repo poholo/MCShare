@@ -21,10 +21,17 @@ MCShare是一个iOS分享组件，旨在减少分享模块的开发工作量，�
 ## MCStyle Support
 ```text
 用MCStyle提供自定义样式，具体参照MCStyle使用规范
+配置自定义颜色
+[MCStyleManager share].colorStyleDataCallback = ^NSDictionary *(void) {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"CustomColor" ofType:@"json"];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:NSJSONReadingMutableContainers error:nil];
+    return dict[@"data"];
+};
+[[MCStyleManager share] loadData];
 ```
 配色如下
 
-<img src="https://github.com/poholo/MCShare/raw/master/ScreenShot/ScreenShot_MCStyle.PNG" width="25%"/>
+<img src="https://github.com/poholo/MCShare/raw/master/ScreenShot/ScreenShot_MCStyle.png" width="25%"/>
 
 ## 配置方法
 ### 0. 接入
