@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import <LDSDKManager/MCShareConfigDto.h>
+#import <MCStyle/MCStyleManager.h>
 
 #import "MCSocialModule.h"
 #import "MCShareConfig.h"
@@ -22,12 +23,14 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    /***账号配置 分享 & 授权***/
     __weak typeof(self) weakSelf = self;
-    [MCShareConfig share].shareConfigsCallBack = ^NSArray<MCShareConfigDto *> *(void) {
+    [MCShareConfig share].socialConfigsCallBack = ^NSArray<MCShareConfigDto *> *(void) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         return [strongSelf configs];
     };
 
+    /*** 动态域名*/
     [MCShareConfig share].dynamicHostCallback = ^NSDictionary *(NSString *type) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"DynamicHost" ofType:@"json"];
         NSError *error;
@@ -37,6 +40,37 @@
         result[DATA_CONTENT] = dictionary;
         return result;
     };
+
+    /** 分享展示项***/
+    [MCShareConfig share].shareItemsCallBack = ^NSDictionary *(void) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"SharePlatform" ofType:@"json"];
+        NSError *error;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:NSJSONReadingMutableContainers error:&error];
+        NSMutableDictionary *result = [NSMutableDictionary new];
+        result[DATA_STATUS] = @( error ? NO : YES);
+        result[DATA_CONTENT] = dictionary;
+        return result;
+    };
+
+    /** 授权展示项目 ***/
+    [MCShareConfig share].socialAuthItemsCallBack = ^NSDictionary *(void) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"SocialAuth" ofType:@"json"];
+        NSError *error;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:NSJSONReadingMutableContainers error:&error];
+        NSMutableDictionary *result = [NSMutableDictionary new];
+        result[DATA_STATUS] = @( error ? NO : YES);
+        result[DATA_CONTENT] = dictionary;
+        return result;
+    };
+
+
+    // 配置自定义颜色
+    [MCStyleManager share].colorStyleDataCallback = ^NSDictionary *(void) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"CustomColor" ofType:@"json"];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:NSJSONReadingMutableContainers error:nil];
+        return dict[@"data"];
+    };
+    [[MCStyleManager share] loadData];
 
     [self.socialModule application:application didFinishLaunchingWithOptions:launchOptions];
     return YES;

@@ -10,9 +10,7 @@
 #import "MCShareDto.h"
 #import "WXApi.h"
 #import "MCSocialPlatformDto.h"
-#import "NSString+URLEncoded.h"
 #import "NSObject+ShareApi.h"
-#import "MCShareHelper.h"
 
 @interface MCShareDataVM ()
 
@@ -25,12 +23,14 @@
 - (void)parseSupportPlatform {
     if (self.supportPlatforms.count > 0)
         return;
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"SharePlatform" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    for (NSDictionary *item in dictionary[@"data"]) {
-        MCSocialPlatformDto *dto = [MCSocialPlatformDto createDto:item];
-        [self.supportPlatforms addObject:dto];
+    MCShareItemsCallBack callBack = [MCShareConfig share].shareItemsCallBack;
+    if (callBack) {
+        NSDictionary *dictionary = callBack();
+        NSArray *datas = dictionary[DATA_CONTENT][@"data"];
+        for (NSDictionary *item in datas) {
+            MCSocialPlatformDto *dto = [MCSocialPlatformDto createDto:item];
+            [self.supportPlatforms addObject:dto];
+        }
     }
 }
 

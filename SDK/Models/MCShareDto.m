@@ -8,7 +8,6 @@
 #import <UIKit/UIKit.h>
 #import <LDSDKManager/LDSDKConfig.h>
 
-#import "StringUtils.h"
 #import "MCSocialPlatformDto.h"
 #import "LDSDKShareService.h"
 

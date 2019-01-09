@@ -11,6 +11,8 @@
 		1A6662B7730A0463C4DDB09F /* ShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666F1BF842BED3CA90909A /* ShareItem.m */; };
 		1A666343FA04BD8EEDE1C252 /* CateDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666727266DACE8603BB649 /* CateDto.m */; };
 		1A66640D48865CA066E05759 /* ShareListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666EC43AB55703156AAA31 /* ShareListController.m */; };
+		1A666467687D893362F2F566 /* MCShareConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6665B87DC1274BAD80D255 /* MCShareConfig.m */; };
+		1A66648156F6BE47B5CB9375 /* SocialAuth.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A66693BAB0A23A16F0052E3 /* SocialAuth.json */; };
 		1A6665F2827623D7F61DED00 /* SharePlatform.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A666F5386C421FB71A8D8F4 /* SharePlatform.json */; };
 		1A66677E1876008ED43A4E9C /* RootDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66641FA08AC29EC3488656 /* RootDataVM.m */; };
 		1A6667B4BEF4C4ACCA2E61F5 /* CustomColor.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A66606F69B55B486CF1E51E /* CustomColor.json */; };
@@ -18,15 +20,10 @@
 		1A666C8B6BFC18FF24476776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A66632C0E0A9C2D21A28F53 /* Assets.xcassets */; };
 		1A666EFFF8E19F6A401307C1 /* RootTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666613C0311CBF53ACEEAF /* RootTableController.m */; };
 		250CCD4521D488F500ECDF83 /* NSObject+ShareApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD0B21D488F500ECDF83 /* NSObject+ShareApi.m */; };
-		250CCD4621D488F500ECDF83 /* MCShareConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD0E21D488F500ECDF83 /* MCShareConfig.m */; };
 		250CCD4721D488F500ECDF83 /* MCShareDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1021D488F500ECDF83 /* MCShareDataVM.m */; };
 		250CCD4821D488F500ECDF83 /* MCSocialModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1221D488F500ECDF83 /* MCSocialModule.m */; };
 		250CCD4921D488F500ECDF83 /* UIButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1421D488F500ECDF83 /* UIButton+BackgroundColor.m */; };
-		250CCD4A21D488F500ECDF83 /* UIView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1521D488F500ECDF83 /* UIView+Extend.m */; };
 		250CCD4C21D488F500ECDF83 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1921D488F500ECDF83 /* DeviceUtils.m */; };
-		250CCD4D21D488F500ECDF83 /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1A21D488F500ECDF83 /* UIColor+Extend.m */; };
-		250CCD4E21D488F500ECDF83 /* NSString+URLEncoded.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1E21D488F500ECDF83 /* NSString+URLEncoded.m */; };
-		250CCD4F21D488F500ECDF83 /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1F21D488F500ECDF83 /* StringUtils.m */; };
 		250CCD5021D488F500ECDF83 /* MCSocialPlatformDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD2521D488F500ECDF83 /* MCSocialPlatformDto.m */; };
 		250CCD5121D488F500ECDF83 /* MCShareDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD2621D488F500ECDF83 /* MCShareDto.m */; };
 		250CCD5221D488F500ECDF83 /* MCShareHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD2721D488F500ECDF83 /* MCShareHelper.m */; };
@@ -50,11 +47,14 @@
 		1A66632C0E0A9C2D21A28F53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A6663FA932EAF2AF8840A16 /* CateDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CateDto.h; sourceTree = "<group>"; };
 		1A66641FA08AC29EC3488656 /* RootDataVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootDataVM.m; sourceTree = "<group>"; };
+		1A6665B87DC1274BAD80D255 /* MCShareConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareConfig.m; sourceTree = "<group>"; };
 		1A666613C0311CBF53ACEEAF /* RootTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableController.m; sourceTree = "<group>"; };
 		1A666727266DACE8603BB649 /* CateDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CateDto.m; sourceTree = "<group>"; };
 		1A66679FCB040E280016AE37 /* RootDataVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootDataVM.h; sourceTree = "<group>"; };
 		1A66680BC066EC3EAB51A833 /* ShareListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareListController.h; sourceTree = "<group>"; };
 		1A666938E66E5BF33C33BF48 /* ShareListDataVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareListDataVM.h; sourceTree = "<group>"; };
+		1A66693BAB0A23A16F0052E3 /* SocialAuth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SocialAuth.json; sourceTree = "<group>"; };
+		1A66696ECCCDCBC9674F439C /* MCShareConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareConfig.h; sourceTree = "<group>"; };
 		1A666A1EA188FAD2CA82C3F0 /* ShareListDataVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareListDataVM.m; sourceTree = "<group>"; };
 		1A666C9524ED5ABE5B412D62 /* RootTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableController.h; sourceTree = "<group>"; };
 		1A666D8E83051D1B40FC29E7 /* ShareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareItem.h; sourceTree = "<group>"; };
@@ -65,22 +65,12 @@
 		1A666FEC7B39D59FBFE525B9 /* DynamicHost.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DynamicHost.json; sourceTree = "<group>"; };
 		250CCD0B21D488F500ECDF83 /* NSObject+ShareApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ShareApi.m"; sourceTree = "<group>"; };
 		250CCD0C21D488F500ECDF83 /* MCLoginHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLoginHelper.h; sourceTree = "<group>"; };
-		250CCD0E21D488F500ECDF83 /* MCShareConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareConfig.m; sourceTree = "<group>"; };
-		250CCD0F21D488F500ECDF83 /* MCShareConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareConfig.h; sourceTree = "<group>"; };
 		250CCD1021D488F500ECDF83 /* MCShareDataVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareDataVM.m; sourceTree = "<group>"; };
 		250CCD1121D488F500ECDF83 /* MCSharePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSharePopView.h; sourceTree = "<group>"; };
 		250CCD1221D488F500ECDF83 /* MCSocialModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSocialModule.m; sourceTree = "<group>"; };
 		250CCD1421D488F500ECDF83 /* UIButton+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BackgroundColor.m"; sourceTree = "<group>"; };
-		250CCD1521D488F500ECDF83 /* UIView+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extend.m"; sourceTree = "<group>"; };
-		250CCD1621D488F500ECDF83 /* NSString+URLEncoded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoded.h"; sourceTree = "<group>"; };
-		250CCD1821D488F500ECDF83 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
 		250CCD1921D488F500ECDF83 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
-		250CCD1A21D488F500ECDF83 /* UIColor+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extend.m"; sourceTree = "<group>"; };
-		250CCD1B21D488F500ECDF83 /* UIView+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extend.h"; sourceTree = "<group>"; };
 		250CCD1C21D488F500ECDF83 /* UIButton+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BackgroundColor.h"; sourceTree = "<group>"; };
-		250CCD1E21D488F500ECDF83 /* NSString+URLEncoded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoded.m"; sourceTree = "<group>"; };
-		250CCD1F21D488F500ECDF83 /* StringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtils.m; sourceTree = "<group>"; };
-		250CCD2021D488F500ECDF83 /* UIColor+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
 		250CCD2121D488F500ECDF83 /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtils.h; sourceTree = "<group>"; };
 		250CCD2321D488F500ECDF83 /* MCSocialPlatformDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSocialPlatformDto.h; sourceTree = "<group>"; };
 		250CCD2421D488F500ECDF83 /* MCShareDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareDto.h; sourceTree = "<group>"; };
@@ -178,6 +168,7 @@
 			children = (
 				1A666F5386C421FB71A8D8F4 /* SharePlatform.json */,
 				1A666FEC7B39D59FBFE525B9 /* DynamicHost.json */,
+				1A66693BAB0A23A16F0052E3 /* SocialAuth.json */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -187,7 +178,6 @@
 			children = (
 				250CCD0B21D488F500ECDF83 /* NSObject+ShareApi.m */,
 				250CCD0C21D488F500ECDF83 /* MCLoginHelper.h */,
-				250CCD0D21D488F500ECDF83 /* Config */,
 				250CCD1021D488F500ECDF83 /* MCShareDataVM.m */,
 				250CCD1121D488F500ECDF83 /* MCSharePopView.h */,
 				250CCD1221D488F500ECDF83 /* MCSocialModule.m */,
@@ -202,34 +192,19 @@
 				250CCD2F21D488F500ECDF83 /* MCSocialModule.h */,
 				250CCD3021D488F500ECDF83 /* Vender */,
 				250CCD4421D488F500ECDF83 /* MCSharePopView.m */,
+				1A66696ECCCDCBC9674F439C /* MCShareConfig.h */,
+				1A6665B87DC1274BAD80D255 /* MCShareConfig.m */,
 			);
 			name = SDK;
 			path = ../SDK;
-			sourceTree = "<group>";
-		};
-		250CCD0D21D488F500ECDF83 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				250CCD0E21D488F500ECDF83 /* MCShareConfig.m */,
-				250CCD0F21D488F500ECDF83 /* MCShareConfig.h */,
-			);
-			path = Config;
 			sourceTree = "<group>";
 		};
 		250CCD1321D488F500ECDF83 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				250CCD1421D488F500ECDF83 /* UIButton+BackgroundColor.m */,
-				250CCD1521D488F500ECDF83 /* UIView+Extend.m */,
-				250CCD1621D488F500ECDF83 /* NSString+URLEncoded.h */,
-				250CCD1821D488F500ECDF83 /* StringUtils.h */,
 				250CCD1921D488F500ECDF83 /* DeviceUtils.m */,
-				250CCD1A21D488F500ECDF83 /* UIColor+Extend.m */,
-				250CCD1B21D488F500ECDF83 /* UIView+Extend.h */,
 				250CCD1C21D488F500ECDF83 /* UIButton+BackgroundColor.h */,
-				250CCD1E21D488F500ECDF83 /* NSString+URLEncoded.m */,
-				250CCD1F21D488F500ECDF83 /* StringUtils.m */,
-				250CCD2021D488F500ECDF83 /* UIColor+Extend.h */,
 				250CCD2121D488F500ECDF83 /* DeviceUtils.h */,
 			);
 			path = Utils;
@@ -395,6 +370,7 @@
 				250CCD5F21D4890500ECDF83 /* README.md in Resources */,
 				1A6668C3C2AF9A0D668687E7 /* DynamicHost.json in Resources */,
 				1A6667B4BEF4C4ACCA2E61F5 /* CustomColor.json in Resources */,
+				1A66648156F6BE47B5CB9375 /* SocialAuth.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,12 +422,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				250CCD4F21D488F500ECDF83 /* StringUtils.m in Sources */,
-				250CCD4E21D488F500ECDF83 /* NSString+URLEncoded.m in Sources */,
 				25AA034821A41CD40009A1D9 /* main.m in Sources */,
 				250CCD5421D488F500ECDF83 /* MCShareCell.m in Sources */,
 				250CCD5021D488F500ECDF83 /* MCSocialPlatformDto.m in Sources */,
-				250CCD4621D488F500ECDF83 /* MCShareConfig.m in Sources */,
 				250CCD4921D488F500ECDF83 /* UIButton+BackgroundColor.m in Sources */,
 				250CCD5621D488F500ECDF83 /* UIView+Toast.m in Sources */,
 				25AA033A21A41CD10009A1D9 /* AppDelegate.m in Sources */,
@@ -465,13 +438,12 @@
 				1A666EFFF8E19F6A401307C1 /* RootTableController.m in Sources */,
 				250CCD5321D488F500ECDF83 /* MCLoginHelper.m in Sources */,
 				1A666343FA04BD8EEDE1C252 /* CateDto.m in Sources */,
-				250CCD4A21D488F500ECDF83 /* UIView+Extend.m in Sources */,
 				1A66677E1876008ED43A4E9C /* RootDataVM.m in Sources */,
 				250CCD5521D488F500ECDF83 /* ToastUtils.m in Sources */,
-				250CCD4D21D488F500ECDF83 /* UIColor+Extend.m in Sources */,
 				250CCD4521D488F500ECDF83 /* NSObject+ShareApi.m in Sources */,
 				250CCD4721D488F500ECDF83 /* MCShareDataVM.m in Sources */,
 				250CCD5221D488F500ECDF83 /* MCShareHelper.m in Sources */,
+				1A666467687D893362F2F566 /* MCShareConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

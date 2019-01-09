@@ -17,8 +17,8 @@
 @implementation MCLoginHelper
 
 + (void)resgister {
-    MCShareConfigsCallBack  shareConfigsCallBack  = [MCShareConfig share].shareConfigsCallBack;
-    NSAssert(shareConfigsCallBack, @"[MCShare][MCShareConfig share].shareConfigsCallBack un implement.");
+    MCSocialConfigsCallBack  shareConfigsCallBack  = [MCShareConfig share].socialConfigsCallBack;
+    NSAssert(shareConfigsCallBack, @"[MCShare][MCShareConfig share].socialConfigsCallBack un implement.");
     NSArray<MCShareConfigDto *> * configs = shareConfigsCallBack();
     NSMutableArray<NSDictionary *> * dealConfigs = [NSMutableArray new];
     for(MCShareConfigDto * configDto in configs) {

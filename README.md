@@ -11,7 +11,10 @@ MCShare是一个iOS分享组件，旨在减少分享模块的开发工作量，�
 2 支持自定义的分享功能
 3 集成简单
 4 动态域名
-5 自定义样式
+5 自定义授权项目(联合登录)
+6 自定义分享项目
+5 自定义样式(MCStyle)
+6 support 2018 devices
 ```
 
 ## Screenshot
@@ -21,13 +24,6 @@ MCShare是一个iOS分享组件，旨在减少分享模块的开发工作量，�
 ## MCStyle Support
 ```text
 用MCStyle提供自定义样式，具体参照MCStyle使用规范
-配置自定义颜色
-[MCStyleManager share].colorStyleDataCallback = ^NSDictionary *(void) {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"CustomColor" ofType:@"json"];
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:NSJSONReadingMutableContainers error:nil];
-    return dict[@"data"];
-};
-[[MCStyleManager share] loadData];
 ```
 配色如下
 
@@ -41,16 +37,14 @@ or
 pod 'MCShare' 按照Example_pod例子接入
 ```
 ### 1. 各平台账号秘钥配置
-打开Code/MCShareConfig.m 替换ID keys
-```
-//TODO:: 各个账号id
-#pragma mark - warning 各个账号id
-NSString *const WXAppID = @"WXAppID";
-NSString *const WXAppSecret = @"WXAppSecret";
-NSString *const QQAppID = @"QQAppID";
-NSString *const QQAppKey = @"QQAppKey";
-NSString *const SinaAppID = @"SinaAppID";
-NSString *const SinaAppKey = @"SinaAppKey";
+```objectivec
+/***账号配置 分享 & 授权***/
+    __weak typeof(self) weakSelf = self;
+    [MCShareConfig share].socialConfigsCallBack = ^NSArray<MCShareConfigDto *> *(void) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        return [strongSelf configs];
+    };
+    详细见Appdelegate配置
 ```
 
 ### 2.Info配置
@@ -167,6 +161,60 @@ App info.plist 中添加一下schemas
 </array>
 ```
 
+
+### 4.配置
+```objectivec
+    /***账号配置 分享 & 授权***/
+    __weak typeof(self) weakSelf = self;
+    [MCShareConfig share].socialConfigsCallBack = ^NSArray<MCShareConfigDto *> *(void) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        return [strongSelf configs];
+    };
+
+    /*** 动态域名*/
+    [MCShareConfig share].dynamicHostCallback = ^NSDictionary *(NSString *type) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"DynamicHost" ofType:@"json"];
+        NSError *error;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:NSJSONReadingMutableContainers error:&error];
+        NSMutableDictionary *result = [NSMutableDictionary new];
+        result[DATA_STATUS] = @( error ? NO : YES);
+        result[DATA_CONTENT] = dictionary;
+        return result;
+    };
+
+    /** 分享展示项***/
+    [MCShareConfig share].shareItemsCallBack = ^NSDictionary *(void) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"SharePlatform" ofType:@"json"];
+        NSError *error;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:NSJSONReadingMutableContainers error:&error];
+        NSMutableDictionary *result = [NSMutableDictionary new];
+        result[DATA_STATUS] = @( error ? NO : YES);
+        result[DATA_CONTENT] = dictionary;
+        return result;
+    };
+
+    /** 授权展示项目 ***/
+    [MCShareConfig share].socialAuthItemsCallBack = ^NSDictionary *(void) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"SocialAuth" ofType:@"json"];
+        NSError *error;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:NSJSONReadingMutableContainers error:&error];
+        NSMutableDictionary *result = [NSMutableDictionary new];
+        result[DATA_STATUS] = @( error ? NO : YES);
+        result[DATA_CONTENT] = dictionary;
+        return result;
+    };
+
+
+    // 配置自定义颜色
+    [MCStyleManager share].colorStyleDataCallback = ^NSDictionary *(void) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"CustomColor" ofType:@"json"];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:NSJSONReadingMutableContainers error:nil];
+        return dict[@"data"];
+    };
+    [[MCStyleManager share] loadData];
+
+```
+
 ## 使用手册
 AppDelegate中分享能力注册、回调实现
 ```objectivec
@@ -213,6 +261,7 @@ pod 'LDSDKManager' # 由于网易团队不在更新LDSDKManager，LDSDKManager�
 pod 'MMPopupView'
 pod 'SDWebImage'
 pod 'SDVersion', git: 'https://github.com/cguess/SDVersion'
+pod 'MCStyle', '0.0.6'
 ```
 LDSDKManager是MCShare的分享能力，由于网易团队不在更新LDSDKManager，LDSDKManager的pod版本已经fork的poholo下并长期维护。
 MMPopupView提供弹出pop组件，
@@ -225,3 +274,5 @@ AlipayShare com.ldsdk.ldsdkmanager
 DingTalk com.laiwang.DTShareKit
 ```
 
+## License
+MCShare under MIT license.

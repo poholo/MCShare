@@ -38,13 +38,6 @@
 }
 
 - (void)refresh {
-    // 配置自定义颜色
-    [MCStyleManager share].colorStyleDataCallback = ^NSDictionary *(void) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"CustomColor" ofType:@"json"];
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:NSJSONReadingMutableContainers error:nil];
-        return dict[@"data"];
-    };
-    [[MCStyleManager share] loadData];
 
     [self.dataVM refresh];
     [self.tableView reloadData];
