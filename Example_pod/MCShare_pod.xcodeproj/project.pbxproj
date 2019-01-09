@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A66660546BB5B2FCEB67FFA /* CustomColor.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A66673113CC3A9830B0E69D /* CustomColor.json */; };
+		1A6668E7A11929D177674BB2 /* SocialAuth.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A6669DC6EF04FD86C2BBBA1 /* SocialAuth.json */; };
 		250CCD7C21D4894A00ECDF83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD7B21D4894A00ECDF83 /* main.m */; };
 		250CCD9D21D489E200ECDF83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD8221D489E200ECDF83 /* AppDelegate.m */; };
 		250CCD9E21D489E200ECDF83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 250CCD8321D489E200ECDF83 /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A66673113CC3A9830B0E69D /* CustomColor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CustomColor.json; sourceTree = "<group>"; };
+		1A6669DC6EF04FD86C2BBBA1 /* SocialAuth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SocialAuth.json; sourceTree = "<group>"; };
 		250CCD6921D4894900ECDF83 /* MCShare_pod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCShare_pod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		250CCD7A21D4894A00ECDF83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		250CCD7B21D4894A00ECDF83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,6 +81,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		1A66643A7B393DFE9B513C2E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1A66673113CC3A9830B0E69D /* CustomColor.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		250CCD6021D4894900ECDF83 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +134,7 @@
 				250CCD8C21D489E200ECDF83 /* ShareItem.h */,
 				250CCD8D21D489E200ECDF83 /* Root */,
 				250CCD9421D489E200ECDF83 /* ShareListController.h */,
+				1A66643A7B393DFE9B513C2E /* Data */,
 			);
 			name = Demo;
 			path = ../../Example/MCShare/Demo;
@@ -145,6 +158,7 @@
 			children = (
 				250CCD9621D489E200ECDF83 /* DynamicHost.json */,
 				250CCD9721D489E200ECDF83 /* SharePlatform.json */,
+				1A6669DC6EF04FD86C2BBBA1 /* SocialAuth.json */,
 			);
 			name = Datas;
 			path = ../../Example/MCShare/Source/Datas;
@@ -234,6 +248,8 @@
 				250CCDA921D489E200ECDF83 /* LaunchScreen.storyboard in Resources */,
 				250CCDA021D489E200ECDF83 /* think.jpg in Resources */,
 				250CCDA721D489E200ECDF83 /* DynamicHost.json in Resources */,
+				1A6668E7A11929D177674BB2 /* SocialAuth.json in Resources */,
+				1A66660546BB5B2FCEB67FFA /* CustomColor.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
