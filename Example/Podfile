@@ -7,5 +7,6 @@ target 'MCShare' do
   pod 'MMPopupView'
   pod 'SDWebImage'
   pod 'SDVersion', git: 'https://github.com/cguess/SDVersion'
-  pod 'MCStyle'
+  pod 'MCStyle', '0.0.6'
+  pod 'Reveal-iOS-SDK', :configurations => ['Debug']
 end

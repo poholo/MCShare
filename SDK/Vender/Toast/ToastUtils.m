@@ -6,9 +6,10 @@
 
 #import "ToastUtils.h"
 
+#import <MCStyle/MCColor.h>
+
 #import "UIView+Toast.h"
 #import "MMPopupWindow.h"
-#import "MCShareColor.h"
 
 @implementation ToastUtils
 
@@ -50,12 +51,12 @@
 
 + (void)showGrayTop:(NSString *)title {
     UIView *toastView = [[self keyWindowView] makeToast:title duration:2.0 position:CSToastPositionTop];
-    toastView.backgroundColor = [MCShareColor colorII];
+    toastView.backgroundColor = [MCColor colorII];
 }
 
 + (void)showGrayCenter:(NSString *)title {
     UIView *toastView = [[self keyWindowView] makeToast:title duration:2.0 position:CSToastPositionCenter];
-    toastView.backgroundColor = [MCShareColor colorII];
+    toastView.backgroundColor = [MCColor colorII];
 }
 
 @end

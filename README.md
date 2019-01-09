@@ -18,6 +18,14 @@ MCShare是一个iOS分享组件，旨在减少分享模块的开发工作量，�
 
 <img src="https://github.com/poholo/MCShare/raw/master/ScreenShot/ScreenShot.PNG" width="25%"/>
 
+## MCStyle Support
+```text
+用MCStyle提供自定义样式，具体参照MCStyle使用规范
+```
+配色如下
+
+<img src="https://github.com/poholo/MCShare/raw/master/ScreenShot/ScreenShot_MCStyle.PNG" width="25%"/>
+
 ## 配置方法
 ### 0. 接入
 ```text

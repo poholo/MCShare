@@ -1,6 +1,6 @@
 //
 //  MCShareCell.m
-//  WaQuVideo
+//  MCShare
 //
 //  Created by majiancheng on 16/11/30.
 //  Copyright © 2016年 poholo inc. All rights reserved.
@@ -8,10 +8,10 @@
 
 #import "MCShareCell.h"
 
+#import <MCStyle/MCColor.h>
 #import <Masonry.h>
 
 #import "MCSocialPlatformDto.h"
-#import "MCShareColor.h"
 
 
 @interface MCShareCell ()
@@ -45,7 +45,7 @@
         }];
 
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
-        self.titleLabel.textColor = [MCShareColor colorII];
+        self.titleLabel.textColor = [MCColor colorII];
         self.titleLabel.font = [UIFont systemFontOfSize:12];
     }
     return self;

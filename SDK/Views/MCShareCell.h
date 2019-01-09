@@ -1,6 +1,6 @@
 //
 //  MCShareCell.h
-//  WaQuVideo
+//  MCShare
 //
 //  Created by majiancheng on 16/11/30.
 //  Copyright © 2016年 poholo inc. All rights reserved.

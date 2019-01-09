@@ -1,6 +1,6 @@
 //
 //  MCSharePopView.m
-//  WaQuVideo
+//  MCShare
 //
 //  Created by majiancheng on 16/11/30.
 //  Copyright © 2016年 poholo inc. All rights reserved.
@@ -9,20 +9,19 @@
 #import "MCSharePopView.h"
 
 #import <Masonry.h>
+#import <MCStyle/MCColor.h>
 
 #import "MCShareDto.h"
 #import "MCShareCell.h"
 #import "MCSocialPlatformDto.h"
 #import "MCShareDataVM.h"
 #import "MCShareHelper.h"
-#import "MCShareColor.h"
 #import "UIButton+BackgroundColor.h"
 #import "DeviceUtils.h"
 #import "ToastUtils.h"
 
 @interface MCSharePopView () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
-@property(nonatomic, strong) UIView *backgroundView;
 @property(nonatomic, strong) UIView *contentView;
 @property(nonatomic, strong) CAShapeLayer *contentShapeLayer;
 @property(nonatomic, strong) UICollectionView *collectionView;
@@ -38,11 +37,10 @@
 
 - (void)shareCommenShareDto:(MCShareDto *)shareDto {
     self.dataVM.shareDto = shareDto;
+    [MMPopupWindow sharedWindow].touchWildToHide = YES;
 
     [self initilizer];
-
     self.type = MMPopupTypeSheet;
-
     [super show];
 }
 
@@ -66,20 +64,14 @@
 }
 
 - (void)createUI {
-    [self addSubview:self.backgroundView];
     [self addSubview:self.contentView];
     [self.contentView addSubview:self.cancelBtn];
     [self.contentView addSubview:self.collectionView];
 }
 
 - (void)addLayout {
-    [self mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(UIScreen.mainScreen.bounds.size);
-    }];
 
-    [self.backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self);
-    }];
+
     CGSize size = [self collectionCellSize];
     UIEdgeInsets insets = [self collectionView:self.collectionView layout:self.collectionView.collectionViewLayout insetForSectionAtIndex:0];
     CGFloat verticalMargin = [self collectionView:self.collectionView layout:self.collectionView.collectionViewLayout minimumLineSpacingForSectionAtIndex:0];
@@ -88,9 +80,12 @@
 
     CGFloat height = size.height * row + verticalMargin * (row - 1) + insets.top + insets.bottom + 49 + [DeviceUtils xBottom];
 
+    [self mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), height));
+    }];
+
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.bottom.equalTo(self);
-        make.height.mas_equalTo(height);
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
 
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -164,14 +159,6 @@
 
 #pragma mark  getter
 
-- (UIView *)backgroundView {
-    if (!_backgroundView) {
-        _backgroundView = [UIView new];
-        [_backgroundView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hide)]];
-    }
-    return _backgroundView;
-}
-
 - (UIView *)contentView {
     if (!_contentView) {
         _contentView = [UIView new];
@@ -196,7 +183,7 @@
         [path addLineToPoint:CGPointMake(0, scrrenHeight - r)];
         [path addLineToPoint:CGPointMake(0, r)];
         [path closePath];
-        _contentShapeLayer.fillColor = [MCShareColor whiteColor].CGColor;
+        _contentShapeLayer.fillColor = [MCColor colorV].CGColor;
         _contentShapeLayer.path = path.CGPath;
     }
     return _contentShapeLayer;
@@ -224,8 +211,8 @@
         _cancelBtn = [UIButton new];
         [_cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
         [_cancelBtn addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchUpInside];
-        [_cancelBtn setBackgroundColor:[MCShareColor colorVI] forState:UIControlStateNormal];
-        [_cancelBtn setTitleColor:[MCShareColor colorI] forState:UIControlStateNormal];
+        [_cancelBtn setBackgroundColor:[MCColor colorIX] forState:UIControlStateNormal];
+        [_cancelBtn setTitleColor:[MCColor colorI] forState:UIControlStateNormal];
         _cancelBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     }
     return _cancelBtn;

@@ -8,13 +8,16 @@
 
 #import "ShareListController.h"
 
+#import <MCStyle/MCColor.h>
+
 #import "UIButton+BackgroundColor.h"
-#import "MCShareColor.h"
 #import "MCSharePopView.h"
 #import "MCShareDto.h"
 #import "ShareListDataVM.h"
 #import "ShareItem.h"
 #import "DeviceUtils.h"
+#import "MCStyle.h"
+#import "MCStyleManager.h"
 
 @interface ShareListController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -35,6 +38,14 @@
 }
 
 - (void)refresh {
+    // 配置自定义颜色
+    [MCStyleManager share].colorStyleDataCallback = ^NSDictionary *(void) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"CustomColor" ofType:@"json"];
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:NSJSONReadingMutableContainers error:nil];
+        return dict[@"data"];
+    };
+    [[MCStyleManager share] loadData];
+
     [self.dataVM refresh];
     [self.tableView reloadData];
 }
@@ -87,7 +98,7 @@
     if (!_shareButton) {
         _shareButton = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame) - 40 - [DeviceUtils xBottom], CGRectGetWidth(self.view.frame), 40)];
         [_shareButton setTitle:@"分享" forState:UIControlStateNormal];
-        [_shareButton setBackgroundColor:[MCShareColor colorV] forState:UIControlStateNormal];
+        [_shareButton setBackgroundColor:[UIColor grayColor] forState:UIControlStateNormal];
         [_shareButton addTarget:self action:@selector(shareButtonClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _shareButton;

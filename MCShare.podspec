@@ -32,5 +32,6 @@ Pod::Spec.new do |s|
     s.dependency 'MMPopupView'
     s.dependency 'SDWebImage'
     s.dependency 'SDVersion'
+    s.dependency 'MCStyle', '0.0.6'
 
 end
