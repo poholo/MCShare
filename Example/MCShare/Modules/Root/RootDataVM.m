@@ -6,6 +6,7 @@
 #import "RootDataVM.h"
 #import "CateDto.h"
 #import "ShareListController.h"
+#import "MCAuthDemoController.h"
 
 
 @implementation RootDataVM
@@ -24,7 +25,14 @@
         cateDto.targetClass = [ShareListController class];
         [self.dataList addObject:cateDto];
     }
+    {
+        CateDto *cateDto = [CateDto new];
+        cateDto.name = @"授权Auth";
+        cateDto.targetClass = [MCAuthDemoController class];
+        [self.dataList addObject:cateDto];
+    }
 }
+
 
 #pragma mark -
 

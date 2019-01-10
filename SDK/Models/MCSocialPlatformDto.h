@@ -4,7 +4,7 @@
 //
 
 
-#import "MCShareConfig.h"
+#import "MCSocialManager.h"
 
 #import <MCBase/MCDto.h>
 

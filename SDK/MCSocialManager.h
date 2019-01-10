@@ -21,7 +21,7 @@ typedef NSDictionary *(^MCSocialAuthItemsCallBack)(void);
 extern NSString *const DATA_STATUS;
 extern NSString *const DATA_CONTENT;
 
-@interface MCShareConfig : NSObject
+@interface MCSocialManager : NSObject
 
 @property(nonatomic, strong) MCShareDynamicDto *shareDynamicDto;
 
@@ -31,6 +31,8 @@ extern NSString *const DATA_CONTENT;
 @property(nonatomic, copy) MCSocialAuthItemsCallBack socialAuthItemsCallBack; ///< 授权项目回调
 
 + (instancetype)share;
+
+- (void)registerPlatform;
 
 - (NSString *)hostForPlatform:(LDSDKPlatformType)type;
 

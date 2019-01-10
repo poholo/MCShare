@@ -5,7 +5,7 @@
 
 #import "LDSDKManager.h"
 
-#import "MCShareConfig.h"
+#import "MCSocialManager.h"
 #import "LDSDKShareService.h"
 
 @class MCShareDto;

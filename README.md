@@ -1,5 +1,9 @@
 
-> 0.0.1 support cocoapods
+```text
+0.0.1 support cocoapods
+0.0.2 support CustomStyle
+0.0.3 support Auth & config
+```
 
 # MCShare
 [MCShahre](https://github.com/poholo/MCShare)第三方分享组件，依赖于LDSDKManager_IOS.
@@ -15,6 +19,7 @@ MCShare是一个iOS分享组件，旨在减少分享模块的开发工作量，�
 6 自定义分享项目
 5 自定义样式(MCStyle)
 6 support 2018 devices
+7 support auth & configs
 ```
 
 ## Screenshot
@@ -216,6 +221,8 @@ App info.plist 中添加一下schemas
 ```
 
 ## 使用手册
+
+### 1. 实现回调
 AppDelegate中分享能力注册、回调实现
 ```objectivec
 self.socialModule = [MCSocialModule new];
@@ -241,6 +248,7 @@ self.socialModule = [MCSocialModule new];
 }
 ```
 
+### 2. 分享能力
 ```objectivec
 ShareDto *shareDto = [ShareDto createShareURL:@"https://github.com/poholo/MCShare"
                                    title:@"LDSDKManager_MCShare"
@@ -252,6 +260,9 @@ MCSharePopView *sharePopView = [MCSharePopView new];
 
 }];
 ```
+
+### 3.授权能力
+
 
 
 ## 依赖

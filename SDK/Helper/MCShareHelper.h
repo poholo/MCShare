@@ -4,7 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MCShareConfig.h"
+#import "MCSocialManager.h"
 #import "LDSDKManager.h"
 #import "LDSDKShareService.h"
 

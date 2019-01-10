@@ -3,7 +3,9 @@
 // Copyright (c) 2018 poholo Inc. All rights reserved.
 //
 
-#import "MCShareConfig.h"
+#import "MCSocialManager.h"
+
+#import <LDSDKManager/LDSDKManager.h>
 
 #import "MCShareDto.h"
 #import "MCShareConfigDto.h"
@@ -11,13 +13,13 @@
 NSString *const DATA_STATUS = @"success";
 NSString *const DATA_CONTENT = @"data";
 
-@implementation MCShareConfig
+@implementation MCSocialManager
 
 + (instancetype)share {
     static dispatch_once_t predicate;
-    static MCShareConfig *instance;
+    static MCSocialManager *instance;
     dispatch_once(&predicate, ^{
-        instance = [MCShareConfig new];
+        instance = [MCSocialManager new];
     });
     return instance;
 }
@@ -49,6 +51,18 @@ NSString *const DATA_CONTENT = @"data";
     }
     return host;
 }
+
+- (void)registerPlatform {
+    MCSocialConfigsCallBack shareConfigsCallBack = self.socialConfigsCallBack;
+    NSAssert(shareConfigsCallBack, @"[MCShare][MCSocialManager share].socialConfigsCallBack un implement.");
+    NSArray<MCShareConfigDto *> *configs = shareConfigsCallBack();
+    NSMutableArray<NSDictionary *> *dealConfigs = [NSMutableArray new];
+    for (MCShareConfigDto *configDto in configs) {
+        [dealConfigs addObject:configDto.dict];
+    }
+    [[LDSDKManager share] registerWithPlatformConfigList:dealConfigs];
+}
+
 
 - (MCShareDynamicDto *)shareDynamicDto {
     if (!_shareDynamicDto) {

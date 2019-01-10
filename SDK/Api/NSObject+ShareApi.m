@@ -11,12 +11,12 @@
 #import <LDSDKManager/LDSDKConfig.h>
 #import <MCBase/MCLog.h>
 
-#import "MCShareConfig.h"
+#import "MCSocialManager.h"
 
 @implementation NSObject (ShareApi)
 
 - (void)apiGetShareHost:(NSString *)type callBack:(void (^)(BOOL success, NSDictionary *dict))callBack {
-    MCDynamicHostCallback dynamicHostCallback = [MCShareConfig share].dynamicHostCallback;
+    MCDynamicHostCallback dynamicHostCallback = [MCSocialManager share].dynamicHostCallback;
     if (dynamicHostCallback) {
         NSDictionary *dictionary = dynamicHostCallback(type);
         if (callBack) {

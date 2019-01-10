@@ -121,7 +121,7 @@
 
 + (NSString *)dynamicHost:(NSString *)url platform:(LDSDKPlatformType)platform module:(LDSDKShareToModule)module {
     NSURLComponents *components = [NSURLComponents componentsWithString:url];
-    NSURL *shareURLHost = [NSURL URLWithString:[[MCShareConfig share] hostForPlatform:platform]];
+    NSURL *shareURLHost = [NSURL URLWithString:[[MCSocialManager share] hostForPlatform:platform]];
     components.host = shareURLHost.host;
     components.scheme = shareURLHost.scheme;
     return components.URL.absoluteString;

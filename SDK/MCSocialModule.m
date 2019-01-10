@@ -8,11 +8,9 @@
 
 #import "MCSocialModule.h"
 
-#import <LDSDKManager/MCShareConfigDto.h>
 #import <LDSDKManager/LDSDKManager.h>
 
-#import "MCShareConfig.h"
-#import "MCLoginHelper.h"
+#import "MCSocialManager.h"
 
 @interface MCSocialModule ()
 
@@ -21,7 +19,7 @@
 @implementation MCSocialModule
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [MCLoginHelper resgister];
+    [[MCSocialManager share] registerPlatform];
     return YES;
 }
 

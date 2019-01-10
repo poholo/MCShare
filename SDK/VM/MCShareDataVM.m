@@ -23,7 +23,7 @@
 - (void)parseSupportPlatform {
     if (self.supportPlatforms.count > 0)
         return;
-    MCShareItemsCallBack callBack = [MCShareConfig share].shareItemsCallBack;
+    MCShareItemsCallBack callBack = [MCSocialManager share].shareItemsCallBack;
     if (callBack) {
         NSDictionary *dictionary = callBack();
         NSArray *datas = dictionary[DATA_CONTENT][@"data"];
@@ -58,9 +58,9 @@
     [self apiGetShareHost:@"" callBack:^(BOOL success, NSDictionary *dict) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         NSDictionary *dataDict = dict[@"data"];
-        [MCShareConfig share].shareDynamicDto = [MCShareDynamicDto createDto:dataDict];
-        strongSelf.shareDto.title = strongSelf.shareDto.title ?: [MCShareConfig share].shareDynamicDto.title;
-        strongSelf.shareDto.desc = strongSelf.shareDto.desc ?: [MCShareConfig share].shareDynamicDto.desc;
+        [MCSocialManager share].shareDynamicDto = [MCShareDynamicDto createDto:dataDict];
+        strongSelf.shareDto.title = strongSelf.shareDto.title ?: [MCSocialManager share].shareDynamicDto.title;
+        strongSelf.shareDto.desc = strongSelf.shareDto.desc ?: [MCSocialManager share].shareDynamicDto.desc;
         if (shareCallBack) {
             shareCallBack(success);
         }
