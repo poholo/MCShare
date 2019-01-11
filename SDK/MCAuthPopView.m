@@ -54,6 +54,7 @@
     CGSize size = [self collectionCellSize];
     UIEdgeInsets insets = [self collectionView:self.collectionView layout:self.collectionView.collectionViewLayout insetForSectionAtIndex:0];
     CGFloat verticalMargin = [self collectionView:self.collectionView layout:self.collectionView.collectionViewLayout minimumLineSpacingForSectionAtIndex:0];
+    CGFloat margin = [self collectionView:self.collectionView layout:self.collectionView.collectionViewLayout minimumInteritemSpacingForSectionAtIndex:0];
     CGFloat row = self.dataVM.dataList.count / 3 + (self.dataVM.dataList.count % 3 > 0 ? 1 : 0);
 
 
@@ -63,9 +64,17 @@
         make.size.mas_equalTo(CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds) * .7 + 20, height + 20));
     }];
 
+    UIEdgeInsets edgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+    if (self.dataVM.dataList.count == 1) {
+        edgeInsets.left += (size.width + margin);
+        edgeInsets.right += (size.width + margin);
+    } else if (self.dataVM.dataList.count == 2) {
+        edgeInsets.left += (size.width / 2.0f + margin);
+        edgeInsets.right += (size.width / 2.0f + margin);
+    }
 
     [self.collectionView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(10, 10, 10, 10));
+        make.edges.mas_equalTo(edgeInsets);
     }];
 }
 
