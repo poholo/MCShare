@@ -35,7 +35,7 @@ MCShare是一个iOS分享组件，旨在减少分享模块的开发工作量，�
 <img src="https://github.com/poholo/MCShare/raw/master/ScreenShot/ScreenShot_MCStyle.png" width="25%"/>
 
 ### 2. Auth_Screenshot
-[Auth](https://github.com/poholo/MCShare/raw/master/ScreenShot/MCAuth.png)
+![Auth](https://github.com/poholo/MCShare/raw/master/ScreenShot/MCAuth.png)
 
 ## 配置方法
 ### 0. 接入
