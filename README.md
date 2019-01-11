@@ -23,16 +23,19 @@ MCShare是一个iOS分享组件，旨在减少分享模块的开发工作量，�
 ```
 
 ## Screenshot
-
+### 1. Share_Screenshot
 <img src="https://github.com/poholo/MCShare/raw/master/ScreenShot/ScreenShot.PNG" width="25%"/>
 
-## MCStyle Support
+#### 1.1 MCStyle Support
 ```text
 用MCStyle提供自定义样式，具体参照MCStyle使用规范
 ```
 配色如下
 
 <img src="https://github.com/poholo/MCShare/raw/master/ScreenShot/ScreenShot_MCStyle.png" width="25%"/>
+
+### 2. Auth_Screenshot
+[Auth](https://github.com/poholo/MCShare/raw/master/ScreenShot/MCAuth.png)
 
 ## 配置方法
 ### 0. 接入
@@ -262,7 +265,12 @@ MCSharePopView *sharePopView = [MCSharePopView new];
 ```
 
 ### 3.授权能力
-
+```objectivec
+MCAuthPopView *authPopView = [MCAuthPopView new];
+[authPopView showWithCallBack:^(LDSDKLoginCode code, NSError *error, NSDictionary *oauthInfo, NSDictionary *userInfo) {
+    MCLog(@"code %zd error %@ auth %@ user %@", code, error, oauthInfo, userInfo);
+}];
+```
 
 
 ## 依赖
