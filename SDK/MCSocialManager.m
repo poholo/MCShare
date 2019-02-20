@@ -25,7 +25,7 @@ NSString *const DATA_CONTENT = @"data";
 }
 
 - (NSString *)hostForPlatform:(LDSDKPlatformType)type {
-    NSString *host;
+    NSString *host = self.shareDynamicDto.defalutHost;
     switch (type) {
         case LDSDKPlatformQQ: {
             host = self.shareDynamicDto.qqHost;

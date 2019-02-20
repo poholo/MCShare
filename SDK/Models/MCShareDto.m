@@ -137,7 +137,7 @@
         self.qqHost = value;
     } else if ([key isEqualToString:@"wechat"]) {
         self.wechatHost = value;
-    } else if ([key isEqualToString:@""]) {
+    } else if ([key isEqualToString:@"sina"]) {
         self.sinaHost = value;
     } else if ([key isEqualToString:@"alipay"]) {
         self.alipayHost = value;

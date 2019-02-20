@@ -144,13 +144,16 @@
     MCSocialPlatformDto *platformDto = self.dataVM.dataList[indexPath.item];
     [self.dataVM.shareDto updateSocialPlatform:platformDto];
 
-    if (platformDto.platform == 99) {
+    if (platformDto.platform == kShareAction2Copy) {
         UIPasteboard *general = [UIPasteboard generalPasteboard];
         [general setString:[self.dataVM.shareDto pasteText]];
         [ToastUtils showOnTabTopTitle:@"复制成功"];
+    } else if (platformDto.platform == kShareAction2System) {
+        [self.dataVM.shareDto updateShareURL:self.dataVM.shareDto.toPlatform];
+        UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[self.dataVM.shareDto.desc ?: @"", self.dataVM.shareDto.image ?: @"", self.dataVM.shareDto.shareUrl ?: @""] applicationActivities:NULL];
+        [[UIApplication sharedApplication].windows.firstObject.rootViewController presentViewController:activityViewController animated:YES completion:NULL];
     } else {
-        MCShareDto *dto = self.dataVM.shareDto;
-        [MCShareHelper shareCommenShareDto:dto callBack:nil];
+        [MCShareHelper shareCommenShareDto:self.dataVM.shareDto callBack:nil];
 
     }
     [self hide];

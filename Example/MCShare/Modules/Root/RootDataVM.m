@@ -7,6 +7,7 @@
 #import "CateDto.h"
 #import "ShareListController.h"
 #import "MCAuthDemoController.h"
+#import "SysSocialController.h"
 
 
 @implementation RootDataVM
@@ -23,6 +24,13 @@
         CateDto *cateDto = [CateDto new];
         cateDto.name = @"文章固定样式";
         cateDto.targetClass = [ShareListController class];
+        [self.dataList addObject:cateDto];
+    }
+
+    {
+        CateDto *cateDto = [CateDto new];
+        cateDto.name = @"系统默认样式";
+        cateDto.targetClass = [SysSocialController class];
         [self.dataList addObject:cateDto];
     }
     {

@@ -58,6 +58,12 @@
       "module": 0
     },
     {
+      "id": "98",
+      "name": "系统",
+      "image": "ic_ link",
+      "platform": 98
+    },
+    {
       "id": "99",
       "name": "复制",
       "image": "ic_ link",

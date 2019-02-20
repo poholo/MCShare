@@ -24,6 +24,7 @@
 		1A666904D2B3A65166071FD4 /* MCShareDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666B3CC69EBFFDE188F8B4 /* MCShareDataVM.m */; };
 		1A666C8B6BFC18FF24476776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A66632C0E0A9C2D21A28F53 /* Assets.xcassets */; };
 		1A666CD82F2BAF3F5924A7B8 /* ShareListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666FDCAC471D8D4D14A477 /* ShareListController.m */; };
+		1A666D7CEA41F861224C8470 /* SysSocialController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666419D64786A893572BF8 /* SysSocialController.m */; };
 		1A666DBD9A8CCB823C2886C0 /* MCAuthDemoDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666C04E39F2319AD186DC7 /* MCAuthDemoDataVM.m */; };
 		1A666DD463B27B3862FE063A /* MCAuthDataVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66607E3D2854F06E247F0A /* MCAuthDataVM.m */; };
 		1A666DFD0E2FD76DFA6AC4C0 /* ShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66680A109683D68862A1B5 /* ShareItem.m */; };
@@ -55,8 +56,10 @@
 		1A6662F8F93D2FCFAC94E2DC /* MCShareHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareHelper.h; sourceTree = "<group>"; };
 		1A66632C0E0A9C2D21A28F53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A6663FA932EAF2AF8840A16 /* CateDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CateDto.h; sourceTree = "<group>"; };
+		1A666419D64786A893572BF8 /* SysSocialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SysSocialController.m; sourceTree = "<group>"; };
 		1A66641FA08AC29EC3488656 /* RootDataVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootDataVM.m; sourceTree = "<group>"; };
 		1A666420C5ED303A318ABED7 /* MCAuthHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCAuthHelper.h; sourceTree = "<group>"; };
+		1A6664B8B68246FA94F334D1 /* SysSocialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SysSocialController.h; sourceTree = "<group>"; };
 		1A6665B87DC1274BAD80D255 /* MCSocialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSocialManager.m; sourceTree = "<group>"; };
 		1A666613C0311CBF53ACEEAF /* RootTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableController.m; sourceTree = "<group>"; };
 		1A666662A51AA2B03465EC04 /* MCShareHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareHelper.m; sourceTree = "<group>"; };
@@ -169,6 +172,7 @@
 				1A666DF9EB8F747A07F36416 /* Root */,
 				1A666682DDFDC62C1B8B254A /* Share */,
 				1A6662497488A9EE27F124A0 /* Auth */,
+				1A666C1E8E9AFE12B56A17FC /* SysSocial */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -184,6 +188,15 @@
 				1A6667F5090BF34BD67C6363 /* ShareListDataVM.h */,
 			);
 			path = Share;
+			sourceTree = "<group>";
+		};
+		1A666C1E8E9AFE12B56A17FC /* SysSocial */ = {
+			isa = PBXGroup;
+			children = (
+				1A666419D64786A893572BF8 /* SysSocialController.m */,
+				1A6664B8B68246FA94F334D1 /* SysSocialController.h */,
+			);
+			path = SysSocial;
 			sourceTree = "<group>";
 		};
 		1A666D354F7846FAA82C300A /* Source */ = {
@@ -508,6 +521,7 @@
 				1A666DBD9A8CCB823C2886C0 /* MCAuthDemoDataVM.m in Sources */,
 				1A666DD463B27B3862FE063A /* MCAuthDataVM.m in Sources */,
 				1A6664E01F8BAF62CB42A3E7 /* MCAuthCell.m in Sources */,
+				1A666D7CEA41F861224C8470 /* SysSocialController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

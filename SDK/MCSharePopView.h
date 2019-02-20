@@ -11,6 +11,9 @@
 
 @class MCShareDto;
 
+#define kShareAction2Copy 99
+#define kShareAction2System 98
+
 @interface MCSharePopView : MMPopupView
 
 - (void)show NS_UNAVAILABLE;
