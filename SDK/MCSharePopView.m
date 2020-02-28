@@ -150,7 +150,8 @@
         [MCToastUtils showOnTabTopTitle:@"复制成功"];
     } else if(platformDto.platform == kShareActionUnknow) {
         if(self.dataVM.shareDto.shareCallback) {
-            self.dataVM.shareDto.shareCallback(kShareActionUnknow, nil);
+            NSError *error = [NSError errorWithDomain:@"unknow" code:kShareActionUnknow userInfo:@{kShareErrorObj: self.dataVM.shareDto}];
+            self.dataVM.shareDto.shareCallback(kShareActionUnknow, error);
         }
     } else if (platformDto.platform == kShareAction2System) {
         [self.dataVM.shareDto updateShareURL:self.dataVM.shareDto.toPlatform];
