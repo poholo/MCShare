@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,13 +30,9 @@
 		1A666DFD0E2FD76DFA6AC4C0 /* ShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A66680A109683D68862A1B5 /* ShareItem.m */; };
 		1A666EFFF8E19F6A401307C1 /* RootTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A666613C0311CBF53ACEEAF /* RootTableController.m */; };
 		250CCD4821D488F500ECDF83 /* MCSocialModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1221D488F500ECDF83 /* MCSocialModule.m */; };
-		250CCD4921D488F500ECDF83 /* UIButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1421D488F500ECDF83 /* UIButton+BackgroundColor.m */; };
-		250CCD4C21D488F500ECDF83 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD1921D488F500ECDF83 /* DeviceUtils.m */; };
 		250CCD5021D488F500ECDF83 /* MCSocialPlatformDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD2521D488F500ECDF83 /* MCSocialPlatformDto.m */; };
 		250CCD5121D488F500ECDF83 /* MCShareDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD2621D488F500ECDF83 /* MCShareDto.m */; };
 		250CCD5421D488F500ECDF83 /* MCShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD2C21D488F500ECDF83 /* MCShareCell.m */; };
-		250CCD5521D488F500ECDF83 /* ToastUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3421D488F500ECDF83 /* ToastUtils.m */; };
-		250CCD5621D488F500ECDF83 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD3521D488F500ECDF83 /* UIView+Toast.m */; };
 		250CCD5D21D488F500ECDF83 /* MCSharePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 250CCD4421D488F500ECDF83 /* MCSharePopView.m */; };
 		250CCD5F21D4890500ECDF83 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 250CCD5E21D4890500ECDF83 /* README.md */; };
 		255F70A321C78E850059A14C /* media.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 255F70A121C78E850059A14C /* media.mp4 */; };
@@ -92,10 +88,6 @@
 		1A666FEC7B39D59FBFE525B9 /* DynamicHost.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DynamicHost.json; sourceTree = "<group>"; };
 		250CCD1121D488F500ECDF83 /* MCSharePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSharePopView.h; sourceTree = "<group>"; };
 		250CCD1221D488F500ECDF83 /* MCSocialModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSocialModule.m; sourceTree = "<group>"; };
-		250CCD1421D488F500ECDF83 /* UIButton+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BackgroundColor.m"; sourceTree = "<group>"; };
-		250CCD1921D488F500ECDF83 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
-		250CCD1C21D488F500ECDF83 /* UIButton+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BackgroundColor.h"; sourceTree = "<group>"; };
-		250CCD2121D488F500ECDF83 /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtils.h; sourceTree = "<group>"; };
 		250CCD2321D488F500ECDF83 /* MCSocialPlatformDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSocialPlatformDto.h; sourceTree = "<group>"; };
 		250CCD2421D488F500ECDF83 /* MCShareDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareDto.h; sourceTree = "<group>"; };
 		250CCD2521D488F500ECDF83 /* MCSocialPlatformDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSocialPlatformDto.m; sourceTree = "<group>"; };
@@ -103,10 +95,6 @@
 		250CCD2C21D488F500ECDF83 /* MCShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCShareCell.m; sourceTree = "<group>"; };
 		250CCD2D21D488F500ECDF83 /* MCShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCShareCell.h; sourceTree = "<group>"; };
 		250CCD2F21D488F500ECDF83 /* MCSocialModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSocialModule.h; sourceTree = "<group>"; };
-		250CCD3221D488F500ECDF83 /* ToastUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToastUtils.h; sourceTree = "<group>"; };
-		250CCD3321D488F500ECDF83 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
-		250CCD3421D488F500ECDF83 /* ToastUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastUtils.m; sourceTree = "<group>"; };
-		250CCD3521D488F500ECDF83 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		250CCD4421D488F500ECDF83 /* MCSharePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSharePopView.m; sourceTree = "<group>"; };
 		250CCD5E21D4890500ECDF83 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		255F70A121C78E850059A14C /* media.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = media.mp4; sourceTree = "<group>"; };
@@ -250,11 +238,9 @@
 			children = (
 				250CCD1121D488F500ECDF83 /* MCSharePopView.h */,
 				250CCD1221D488F500ECDF83 /* MCSocialModule.m */,
-				250CCD1321D488F500ECDF83 /* Utils */,
 				250CCD2221D488F500ECDF83 /* Models */,
 				250CCD2B21D488F500ECDF83 /* Views */,
 				250CCD2F21D488F500ECDF83 /* MCSocialModule.h */,
-				250CCD3021D488F500ECDF83 /* Vender */,
 				250CCD4421D488F500ECDF83 /* MCSharePopView.m */,
 				1A66696ECCCDCBC9674F439C /* MCSocialManager.h */,
 				1A6665B87DC1274BAD80D255 /* MCSocialManager.m */,
@@ -267,17 +253,6 @@
 			);
 			name = SDK;
 			path = ../SDK;
-			sourceTree = "<group>";
-		};
-		250CCD1321D488F500ECDF83 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				250CCD1421D488F500ECDF83 /* UIButton+BackgroundColor.m */,
-				250CCD1921D488F500ECDF83 /* DeviceUtils.m */,
-				250CCD1C21D488F500ECDF83 /* UIButton+BackgroundColor.h */,
-				250CCD2121D488F500ECDF83 /* DeviceUtils.h */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		250CCD2221D488F500ECDF83 /* Models */ = {
@@ -300,25 +275,6 @@
 				1A66676E2B11B834305E7545 /* MCAuthCell.h */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		250CCD3021D488F500ECDF83 /* Vender */ = {
-			isa = PBXGroup;
-			children = (
-				250CCD3121D488F500ECDF83 /* Toast */,
-			);
-			path = Vender;
-			sourceTree = "<group>";
-		};
-		250CCD3121D488F500ECDF83 /* Toast */ = {
-			isa = PBXGroup;
-			children = (
-				250CCD3221D488F500ECDF83 /* ToastUtils.h */,
-				250CCD3321D488F500ECDF83 /* UIView+Toast.h */,
-				250CCD3421D488F500ECDF83 /* ToastUtils.m */,
-				250CCD3521D488F500ECDF83 /* UIView+Toast.m */,
-			);
-			path = Toast;
 			sourceTree = "<group>";
 		};
 		25AA032C21A41CD10009A1D9 = {
@@ -472,15 +428,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MCShare/Pods-MCShare-resources.sh",
-				"${PODS_ROOT}/AlipaySDK-iOS/AlipaySDK.bundle",
-				"${PODS_ROOT}/Weibo_SDK/libWeiboSDK/WeiboSDK.bundle",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MCShare/Pods-MCShare-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AlipaySDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MCShare/Pods-MCShare-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -497,17 +450,13 @@
 				25AA034821A41CD40009A1D9 /* main.m in Sources */,
 				250CCD5421D488F500ECDF83 /* MCShareCell.m in Sources */,
 				250CCD5021D488F500ECDF83 /* MCSocialPlatformDto.m in Sources */,
-				250CCD4921D488F500ECDF83 /* UIButton+BackgroundColor.m in Sources */,
-				250CCD5621D488F500ECDF83 /* UIView+Toast.m in Sources */,
 				25AA033A21A41CD10009A1D9 /* AppDelegate.m in Sources */,
 				250CCD5D21D488F500ECDF83 /* MCSharePopView.m in Sources */,
 				250CCD4821D488F500ECDF83 /* MCSocialModule.m in Sources */,
 				250CCD5121D488F500ECDF83 /* MCShareDto.m in Sources */,
-				250CCD4C21D488F500ECDF83 /* DeviceUtils.m in Sources */,
 				1A666EFFF8E19F6A401307C1 /* RootTableController.m in Sources */,
 				1A666343FA04BD8EEDE1C252 /* CateDto.m in Sources */,
 				1A66677E1876008ED43A4E9C /* RootDataVM.m in Sources */,
-				250CCD5521D488F500ECDF83 /* ToastUtils.m in Sources */,
 				1A666467687D893362F2F566 /* MCSocialManager.m in Sources */,
 				1A6667BDA4F0A725A050D8FE /* NSObject+ShareApi.m in Sources */,
 				1A6662FFDAFA105D68055497 /* MCAuthHelper.m in Sources */,
@@ -664,9 +613,9 @@
 			baseConfigurationReference = F106022A4B5AF4208E12CF7B /* Pods-MCShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = ZZRVMAY782;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6FNUHS4H7D;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MCShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -676,7 +625,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.laiwang.DTShareKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "*";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
@@ -687,9 +636,9 @@
 			baseConfigurationReference = F4759F2888BE5ABC76D2044B /* Pods-MCShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6FNUHS4H7D;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MCShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

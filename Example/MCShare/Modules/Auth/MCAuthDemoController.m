@@ -8,9 +8,9 @@
 #import <MCBase/MCLog.h>
 
 #import "MCAuthDemoDataVM.h"
-#import "UIButton+BackgroundColor.h"
+#import "UIButton+MCBackgroundColor.h"
 #import "MCAuthPopView.h"
-#import "DeviceUtils.h"
+#import "MCDeviceUtils.h"
 #import "ShareItem.h"
 
 @interface MCAuthDemoController () <UITableViewDataSource, UITableViewDelegate>
@@ -71,7 +71,7 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 40 - [DeviceUtils xBottom]) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 40 - [MCDeviceUtils xBottom]) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
@@ -81,7 +81,7 @@
 
 - (UIButton *)authButton {
     if (!_authButton) {
-        _authButton = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame) - 40 - [DeviceUtils xBottom], CGRectGetWidth(self.view.frame), 40)];
+        _authButton = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame) - 40 - [MCDeviceUtils xBottom], CGRectGetWidth(self.view.frame), 40)];
         [_authButton setTitle:@"授权" forState:UIControlStateNormal];
         [_authButton setBackgroundColor:[UIColor grayColor] forState:UIControlStateNormal];
         [_authButton addTarget:self action:@selector(authButtonClick) forControlEvents:UIControlEventTouchUpInside];

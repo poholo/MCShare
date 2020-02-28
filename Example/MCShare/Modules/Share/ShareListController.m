@@ -10,14 +10,12 @@
 
 #import <MCStyle/MCColor.h>
 
-#import "UIButton+BackgroundColor.h"
+#import "UIButton+MCBackgroundColor.h"
 #import "MCSharePopView.h"
 #import "MCShareDto.h"
 #import "ShareListDataVM.h"
 #import "ShareItem.h"
-#import "DeviceUtils.h"
-#import "MCStyle.h"
-#import "MCStyleManager.h"
+#import "MCDeviceUtils.h"
 
 @interface ShareListController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -48,6 +46,9 @@
     __weak typeof(self) weakSelf = self;
     MCShareDto *dto = [self.dataVM prepareShareDto:item.type shareCallBack:^(LDSDKErrorCode code, NSError *error) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
+        if(code == LDSDKErrorUnknow) {
+            
+        }
     }];
 
     MCSharePopView *sharePopView = [MCSharePopView new];
@@ -79,7 +80,7 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 40 - [DeviceUtils xBottom]) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 40 - [MCDeviceUtils xBottom]) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
@@ -89,7 +90,7 @@
 
 - (UIButton *)shareButton {
     if (!_shareButton) {
-        _shareButton = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame) - 40 - [DeviceUtils xBottom], CGRectGetWidth(self.view.frame), 40)];
+        _shareButton = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame) - 40 - [MCDeviceUtils xBottom], CGRectGetWidth(self.view.frame), 40)];
         [_shareButton setTitle:@"分享" forState:UIControlStateNormal];
         [_shareButton setBackgroundColor:[UIColor grayColor] forState:UIControlStateNormal];
         [_shareButton addTarget:self action:@selector(shareButtonClick) forControlEvents:UIControlEventTouchUpInside];

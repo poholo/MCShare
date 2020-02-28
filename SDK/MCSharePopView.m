@@ -16,9 +16,9 @@
 #import "MCSocialPlatformDto.h"
 #import "MCShareDataVM.h"
 #import "MCShareHelper.h"
-#import "UIButton+BackgroundColor.h"
-#import "DeviceUtils.h"
-#import "ToastUtils.h"
+#import "UIButton+MCBackgroundColor.h"
+#import "MCToastUtils.h"
+#import "MCDeviceUtils.h"
 
 @interface MCSharePopView () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -78,7 +78,7 @@
     CGFloat row = self.dataVM.dataList.count / 5 + (self.dataVM.dataList.count % 5 > 0 ? 1 : 0);
 
 
-    CGFloat height = size.height * row + verticalMargin * (row - 1) + insets.top + insets.bottom + 49 + [DeviceUtils xBottom];
+    CGFloat height = size.height * row + verticalMargin * (row - 1) + insets.top + insets.bottom + 49 + [MCDeviceUtils xBottom];
 
     [self mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), height));
@@ -96,7 +96,7 @@
 
     [self.cancelBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.contentView);
-        make.bottom.equalTo(self.contentView.mas_bottom).offset(-[DeviceUtils xBottom]);
+        make.bottom.equalTo(self.contentView.mas_bottom).offset(-[MCDeviceUtils xBottom]);
         make.height.mas_equalTo(49);
     }];
 
@@ -147,14 +147,17 @@
     if (platformDto.platform == kShareAction2Copy) {
         UIPasteboard *general = [UIPasteboard generalPasteboard];
         [general setString:[self.dataVM.shareDto pasteText]];
-        [ToastUtils showOnTabTopTitle:@"复制成功"];
+        [MCToastUtils showOnTabTopTitle:@"复制成功"];
+    } else if(platformDto.platform == kShareActionUnknow) {
+        if(self.dataVM.shareDto.shareCallback) {
+            self.dataVM.shareDto.shareCallback(kShareActionUnknow, nil);
+        }
     } else if (platformDto.platform == kShareAction2System) {
         [self.dataVM.shareDto updateShareURL:self.dataVM.shareDto.toPlatform];
         UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[self.dataVM.shareDto.desc ?: @"", self.dataVM.shareDto.image ?: @"", self.dataVM.shareDto.shareUrl ?: @""] applicationActivities:NULL];
         [[UIApplication sharedApplication].windows.firstObject.rootViewController presentViewController:activityViewController animated:YES completion:NULL];
     } else {
         [MCShareHelper shareCommenShareDto:self.dataVM.shareDto callBack:nil];
-
     }
     [self hide];
 }

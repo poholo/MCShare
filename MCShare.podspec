@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
     s.dependency 'LDSDKManager'
     s.dependency 'MMPopupView'
-    s.dependency 'SDWebImage'
+    s.dependency 'SDWebImage/GIF'
     s.dependency 'SDVersion'
     s.dependency 'MCStyle', '0.0.6'
 

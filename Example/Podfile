@@ -5,8 +5,10 @@ platform :ios, '8.0'
 target 'MCShare' do
   pod 'LDSDKManager'
   pod 'MMPopupView'
-  pod 'SDWebImage'
+  pod 'SDWebImage/GIF'
   pod 'SDVersion', git: 'https://github.com/cguess/SDVersion'
-  pod 'MCStyle', '0.0.6'
+  pod 'MCStyle'
+  pod 'MCBase'
+  pod 'MCUIKit', git: 'https://github.com/poholo/MCUIKit'
   pod 'Reveal-iOS-SDK', :configurations => ['Debug']
 end

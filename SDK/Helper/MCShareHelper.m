@@ -5,9 +5,9 @@
 
 #import "MCShareHelper.h"
 
-#import <SDWebImage/SDWebImageManager.h>
 #import <LDSDKManager/LDSDKManager.h>
 #import <LDSDKManager/LDSDKShareService.h>
+#import <SDWebImage/SDWebImageManager.h>
 
 #import "MCShareDto.h"
 
@@ -15,11 +15,10 @@
 @implementation MCShareHelper
 
 + (void)shareCommenShareDto:(MCShareDto *)dto callBack:(void (^)(BOOL success, NSError *error))successBlock {
-    [self shareCommentAfterGetImageWithShareDto:dto callBack:successBlock];
-    return;
-
+  
     if (dto.image && !dto.imgUrl) {
-
+        [self shareCommentAfterGetImageWithShareDto:dto callBack:successBlock];
+        return;
     }
 
     NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:[NSURL URLWithString:dto.imgUrl]];
@@ -39,6 +38,7 @@
                                                             completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
                                                                 if (image) {
                                                                     dto.image = image;
+                                                                    [[SDWebImageManager sharedManager] saveImageToCache:image forURL:[NSURL URLWithString:dto.imgUrl]];
                                                                 }
                                                                 [[self class] shareCommentAfterGetImageWithShareDto:dto callBack:successBlock];
                                                             }];
