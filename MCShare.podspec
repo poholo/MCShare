@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "MCShare"
-    s.version          = "0.0.3"
+    s.version          = "0.0.4"
     s.summary          = "Social share & Auth(QQ、微信、微博、支付宝、Telegram、钉钉)."
     s.description      = "第三方分享、授权组件，依赖于LDSDKManager_IOS(QQ、微信、微博、支付宝、Telegram、钉钉)."
     s.license          = 'MIT'
@@ -34,6 +34,6 @@ Pod::Spec.new do |s|
     s.dependency 'MMPopupView'
     s.dependency 'SDWebImage/GIF'
     s.dependency 'SDVersion'
-    s.dependency 'MCStyle', '0.0.6'
+    s.dependency 'MCStyle'
 
 end

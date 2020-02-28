@@ -1,9 +1,7 @@
 {
   "success": true,
   "data": {
-    "colorI": "#ffffff",
-    "colorII": "#ffffff",
-    "colorV": "#333333",
-    "colorIX": "#666666"
+    "share_title_color": "#ffffff",
+    "share_background_color": "#333333"
   }
 }

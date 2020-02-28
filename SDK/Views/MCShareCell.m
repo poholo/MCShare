@@ -45,7 +45,7 @@
         }];
 
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
-        self.titleLabel.textColor = [MCColor colorII];
+        self.titleLabel.textColor = [MCColor custom:@"share_title_color"];
         self.titleLabel.font = [UIFont systemFontOfSize:12];
     }
     return self;

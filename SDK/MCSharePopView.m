@@ -189,7 +189,7 @@
         [path addLineToPoint:CGPointMake(0, scrrenHeight - r)];
         [path addLineToPoint:CGPointMake(0, r)];
         [path closePath];
-        _contentShapeLayer.fillColor = [MCColor colorV].CGColor;
+        _contentShapeLayer.fillColor = [MCColor custom:@"share_background_color"].CGColor;
         _contentShapeLayer.path = path.CGPath;
     }
     return _contentShapeLayer;
@@ -217,8 +217,9 @@
         _cancelBtn = [UIButton new];
         [_cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
         [_cancelBtn addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchUpInside];
-        [_cancelBtn setBackgroundColor:[MCColor colorIX] forState:UIControlStateNormal];
-        [_cancelBtn setTitleColor:[MCColor colorI] forState:UIControlStateNormal];
+        [_cancelBtn setBackgroundColor:[MCColor custom:@"share_background_color"] forState:UIControlStateNormal];
+        [_cancelBtn setTitleColor:[MCColor custom:@"share_title_color"] forState:UIControlStateNormal];
+
         _cancelBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     }
     return _cancelBtn;

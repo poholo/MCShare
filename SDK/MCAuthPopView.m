@@ -43,7 +43,7 @@
 
 - (void)createUI {
     [self addSubview:self.collectionView];
-    self.backgroundColor = [MCColor colorV];
+    self.backgroundColor = [MCColor custom:@"share_background_color"];
     self.layer.cornerRadius = 10;
     self.layer.masksToBounds = YES;
 }
