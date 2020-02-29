@@ -99,6 +99,7 @@
 		250CCD5E21D4890500ECDF83 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		255F70A121C78E850059A14C /* media.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = media.mp4; sourceTree = "<group>"; };
 		255F70A221C78E850059A14C /* think.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = think.jpg; sourceTree = "<group>"; };
+		256F5657240A4AC300693377 /* MCShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MCShare.entitlements; sourceTree = "<group>"; };
 		25AA033521A41CD10009A1D9 /* MCShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25AA033821A41CD10009A1D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		25AA033921A41CD10009A1D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -301,6 +302,7 @@
 		25AA033721A41CD10009A1D9 /* MCShare */ = {
 			isa = PBXGroup;
 			children = (
+				256F5657240A4AC300693377 /* MCShare.entitlements */,
 				25AA033821A41CD10009A1D9 /* AppDelegate.h */,
 				25AA033921A41CD10009A1D9 /* AppDelegate.m */,
 				25AA033E21A41CD10009A1D9 /* Main.storyboard */,
@@ -613,6 +615,7 @@
 			baseConfigurationReference = F106022A4B5AF4208E12CF7B /* Pods-MCShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MCShare/MCShare.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6FNUHS4H7D;
@@ -636,6 +639,7 @@
 			baseConfigurationReference = F4759F2888BE5ABC76D2044B /* Pods-MCShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MCShare/MCShare.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6FNUHS4H7D;

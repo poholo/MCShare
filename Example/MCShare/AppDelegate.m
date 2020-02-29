@@ -94,6 +94,7 @@
         MCShareConfigDto *configDto = [MCShareConfigDto new];
         configDto.appId = @"wxd6b4d4ada6beb442";
         configDto.appSecret = @"a2be3d08a304c26d1e538cd3f02e5362";
+        configDto.redirectURI = @"https://sns.whalecloud.com/sina2/callback";
         configDto.appPlatformType = LDSDKPlatformWeChat;
         [configs addObject:configDto];
     }
