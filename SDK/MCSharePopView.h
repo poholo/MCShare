@@ -15,6 +15,8 @@
 #define kShareAction2System 98
 #define kShareActionUnknow 97
 #define kShareErrorObj @"share_error_obj"
+#define kSharePlatformObj @"share_platform_obj"
+
 
 @interface MCSharePopView : MMPopupView
 
