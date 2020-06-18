@@ -12,7 +12,9 @@
 
 
 @interface MCShareHelper : NSObject
-
-+ (void)shareCommenShareDto:(MCShareDto *)shareDto callBack:(void (^)(BOOL success, NSError *error))successBlock;
+/**
+ * callback 用MCShareDto.shareCallback
+ */
++ (void)shareCommenShareDto:(MCShareDto *)shareDto;
 
 @end

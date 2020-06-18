@@ -158,7 +158,7 @@
         UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[self.dataVM.shareDto.desc ?: @"", self.dataVM.shareDto.image ?: @"", self.dataVM.shareDto.shareUrl ?: @""] applicationActivities:NULL];
         [[UIApplication sharedApplication].windows.firstObject.rootViewController presentViewController:activityViewController animated:YES completion:NULL];
     } else {
-        [MCShareHelper shareCommenShareDto:self.dataVM.shareDto callBack:nil];
+        [MCShareHelper shareCommenShareDto:self.dataVM.shareDto];
     }
     [self hide];
 }

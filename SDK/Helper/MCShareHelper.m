@@ -14,8 +14,7 @@
 
 @implementation MCShareHelper
 
-+ (void)shareCommenShareDto:(MCShareDto *)dto callBack:(void (^)(BOOL success, NSError *error))successBlock {
-  
++ (void)shareCommenShareDto:(MCShareDto *)dto  {
     if (dto.image && !dto.imgUrl) {
         [self shareCommentAfterGetImageWithShareDto:dto callBack:successBlock];
         return;
@@ -30,7 +29,7 @@
         } else if (iDisk) {
             dto.image = iDisk;
         }
-        [MCShareHelper shareCommentAfterGetImageWithShareDto:dto callBack:successBlock];
+        [MCShareHelper shareCommentAfterGetImageWithShareDto:dto];
     } else {
         [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:dto.imgUrl]
                                                               options:0
@@ -40,33 +39,15 @@
                                                                     dto.image = image;
                                                                     [[SDWebImageManager sharedManager] saveImageToCache:image forURL:[NSURL URLWithString:dto.imgUrl]];
                                                                 }
-                                                                [[self class] shareCommentAfterGetImageWithShareDto:dto callBack:successBlock];
+                                                                [[self class] shareCommentAfterGetImageWithShareDto:dto];
                                                             }];
     }
 }
 
-+ (void)shareCommentAfterGetImageWithShareDto:(MCShareDto *)shareDto callBack:(void (^)(BOOL success, NSError *error))successBlock {
++ (void)shareCommentAfterGetImageWithShareDto:(MCShareDto *)shareDto {
     [shareDto updateShareURL:shareDto.toPlatform];
-//    [shareDto logProcess:[@([MCShareDto target:shareDto.toPlatform]) stringValue]];
-
     NSDictionary *param = [shareDto shareDict];
-//        UIPasteboard *general = [UIPasteboard generalPasteboard];
-//        NSString *pasteText = [StringUtils hasText:shareDto.pasteText] ? shareDto.pasteText : param[LDSDKShareUrlKey];
-//        [general setString:pasteText];
-//        [ToastUtils showOnTabTopTitle:@"复制成功"];
     id <LDSDKShareService> shareService = [[LDSDKManager share] shareService:shareDto.toPlatform];
     [shareService shareContent:param];
-//
-//        [shareService shareWithContent:param shareModule:[MCShareHelper shareType:socialPlatform] onComplete:^(BOOL success, NSError *error) {
-//            [GCDQueue executeInMainQueue:^{
-//                if (success) {
-//                    NSString *targat = [NSString stringWithFormat:@"%ld", (long) [MCShareDto target:shareDto.platform]];
-//                    [shareDto logResult:targat];
-//                }
-//                if (successBlock) {
-//                    successBlock(success, error);
-//                }
-//            }];
-//        }];
 }
 @end

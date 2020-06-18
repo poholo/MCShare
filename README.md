@@ -258,10 +258,11 @@ ShareDto *shareDto = [ShareDto createShareURL:@"https://github.com/poholo/MCShar
                                     desc:@"集成的第三方SDK（目前包括QQ,微信,易信,支付宝）进行集中管理，按照功能（目前包括第三方登录,分享,支付）开放给各个产品使用。通过接口的方式进行产品集成，方便对第三方SDK进行升级维护。"
                                    image:@"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1903202034,3702680589&fm=55&app=22&f=JPEG?w=121&h=81&s=AD336397508303F1059CBC0D0300E042"
                                pasteText:@""];
+shareDto.shareCallback = ^(LDSDKErrorCode code, NSError *error) {
+    //这里处理分享结果的回调
+};
 MCSharePopView *sharePopView = [MCSharePopView new];
-[sharePopView shareCommenShareDto:shareDto callBack:^(BOOL success, NSError *error) {
-
-}];
+[sharePopView shareCommenShareDto:shareDto];
 ```
 
 ### 3.授权能力
