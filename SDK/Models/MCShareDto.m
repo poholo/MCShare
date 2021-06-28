@@ -24,7 +24,15 @@
     param[LDSDKShareTitleKey] = self.title;
     param[LDSDKShareDescKey] = self.desc;
     param[LDSDKShareImageKey] = self.image;
-    param[LDSDKShareUrlKey] = [NSString stringWithFormat:@"%@&%@", self.shareUrl, [MCShareDto sharePlatform:self.toPlatform type:self.toModule]];
+    param[LDSDKShareUrlKey] = ({
+        NSString * url = self.shareUrl;
+        if([self.shareUrl containsString:@"?"]) {
+            url = [NSString stringWithFormat:@"%@&%@", self.shareUrl, [MCShareDto sharePlatform:self.toPlatform type:self.toModule]];
+        } else {
+            url = [NSString stringWithFormat:@"%@?%@", self.shareUrl, [MCShareDto sharePlatform:self.toPlatform type:self.toModule]];
+        }
+        url;
+    });
     param[LDSDKShareMeidaUrlKey] = self.meidaUrl;
     param[LDSDKShareRedirectURIKey] = @"https://sns.whalecloud.com/sina2/callback";
 
