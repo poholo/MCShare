@@ -26,6 +26,9 @@
 @property(nonatomic, assign) LDSDKShareToModule toModule;
 @property(nonatomic, assign) LDSDKShareType toType;
 
+@property(nonatomic, assign) LDSDKMiniProgramType miniProgramType;
+@property(nonatomic, nullable, copy) NSString *miniProgramKey;
+
 @property(nonatomic, copy) LDSDKShareCallback shareCallback;
 
 
@@ -49,7 +52,7 @@
 
 + (MCShareDto *)createShareFile:(NSString *)title desc:(NSString *)desc link:(NSString *)link image:(NSString *)image file:(NSString *)filePath callBack:(LDSDKShareCallback)callBack;
 
-+ (MCShareDto *)createShareMiniProgram:(NSString *)programKey miniProgramType:(LDSDKMiniProgramType)type link:(NSString *)link callBack:(LDSDKShareCallback)callBack;
++ (MCShareDto *)createShareMiniProgram:(NSString *)programKey miniProgramType:(LDSDKMiniProgramType)miniProgramType link:(NSString *)link title:(NSString *)title desc:(NSString *)desc image:(NSString *)image callBack:(LDSDKShareCallback)callBack;
 
 + (MCShareDto *)createCommenShareURL:(NSString *)url title:(NSString *)title desc:(NSString *)desc image:(NSString *)image;
 

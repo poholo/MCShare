@@ -19,7 +19,10 @@
     param[LDSDKPlatformTypeKey] = @(self.toPlatform);
     param[LDSDKShareToMoudleKey] = @(self.toModule);
     param[LDSDKShareTypeKey] = @(self.toType);
-
+    
+    param[LDSDKShareNiniProgramTypeKey] = @(self.miniProgramType);
+    param[LDSDKShareMiniProgramIdKey] = self.miniProgramKey;
+    
     param[LDSDKIdentifierKey] = self.dtoId;
     param[LDSDKShareTitleKey] = self.title;
     param[LDSDKShareDescKey] = self.desc;
@@ -117,13 +120,16 @@
     return dto;
 }
 
-+ (MCShareDto *)createShareMiniProgram:(NSString *)programKey miniProgramType:(LDSDKMiniProgramType)type link:(NSString *)link callBack:(LDSDKShareCallback)callBack {
-
-    return nil;
++ (MCShareDto *)createShareMiniProgram:(NSString *)programKey miniProgramType:(LDSDKMiniProgramType)miniProgramType link:(NSString *)link title:(NSString *)title desc:(NSString *)desc   image:(NSString *)image callBack:(LDSDKShareCallback)callBack {
+    MCShareDto *dto = [MCShareDto createShareNews:title desc:desc link:link image:image callBack:callBack];
+    dto.miniProgramKey = programKey;
+    dto.miniProgramType = miniProgramType;
+    dto.toType = LDSDKShareTypeMiniProgram;
+    return dto;
 }
 
 + (MCShareDto *)createCommenShareURL:(NSString *)url title:(NSString *)title desc:(NSString *)desc image:(NSString *)image {
-    return nil;
+    return [MCShareDto createShareNews:title desc:desc link:url image:image callBack:NULL];
 }
 
 

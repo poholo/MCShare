@@ -16,7 +16,7 @@
 
 + (void)shareCommenShareDto:(MCShareDto *)dto  {
     if (dto.image && !dto.imgUrl) {
-        [self shareCommentAfterGetImageWithShareDto:dto callBack:successBlock];
+        [self shareCommentAfterGetImageWithShareDto:dto];
         return;
     }
 

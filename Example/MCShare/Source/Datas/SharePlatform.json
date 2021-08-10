@@ -1,6 +1,13 @@
 {
   "success": true,
   "data": [
+  {
+    "id": "0",
+    "name": "微信-小程序",
+    "image": "ic_wechat",
+    "platform": 1,
+    "module": 0
+  },
     {
       "id": "0",
       "name": "微信",

@@ -3,6 +3,7 @@
 0.0.1 support cocoapods
 0.0.2 support CustomStyle
 0.0.3 support Auth & config
+0.0.4 微信小程序分享 dev
 ```
 
 # MCShare
@@ -20,6 +21,7 @@ MCShare是一个iOS分享组件，旨在减少分享模块的开发工作量，�
 5 自定义样式(MCStyle)
 6 support 2018 devices
 7 support auth & configs
+8 support 微信小程序分享功能
 ```
 
 ## Screenshot

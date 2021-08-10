@@ -110,7 +110,8 @@
         }
             break;
         case LDSDKShareTypeMiniProgram: {
-            dto = [MCShareDto createShareMiniProgram:@"" miniProgramType:LDSDKMiniProgramTypePreview link:self.link callBack:shareCallBack];
+            dto = [MCShareDto createShareMiniProgram:@"gh_xxxxxx" miniProgramType:LDSDKMiniProgramTypeRelease link:@"pages/work/detail?worksId=xxxxx" title:@"test" desc:@"test" image:@"think.jpg" callBack:shareCallBack];
+            //[MCShareDto createShareMiniProgram:@"" miniProgramType:LDSDKMiniProgramTypePreview link:self.link callBack:shareCallBack];
         }
             break;
     }
